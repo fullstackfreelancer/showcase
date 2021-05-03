@@ -2,7 +2,7 @@
     "name": "simonkoehler/showcase",
     "type": "typo3-cms-extension",
     "version": "1.0.0",
-    "description": "Fallback ViewHelper for images",
+    "description": "Create beautiful showcases and portfolios",
     "authors": [
         {
             "name": "Simon Köhler",
