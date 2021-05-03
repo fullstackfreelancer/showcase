@@ -1,0 +1,16 @@
+
+plugin.tx_showcase {
+	persistence {
+		# cat=plugin.tx_showcase//a; type=string; label=Default storage PID
+		storagePid = 15
+	}
+	settings{
+		pagetypes{
+			project_ajax = 78
+		}
+		show{
+			# cat=plugin.tx_showcase//a; type=string; label=Type can me modal or page
+			type = modal
+		}
+	}
+}

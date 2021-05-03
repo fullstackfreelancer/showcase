@@ -1,0 +1,78 @@
+<div class="tx-showcase-projects">
+    <div class="row">
+        <f:for each="{projects}" as="project">
+        <f:switch expression="{project.listLayout}">
+            <f:case value="card-img-top">
+                <f:render section="CardImageTop" arguments="{_all}"/>
+            </f:case>
+            <f:case value="card-img-left">
+                <f:render section="CardImageLeft" arguments="{_all}"/>
+            </f:case>
+            <f:defaultCase>
+
+            </f:defaultCase>
+        </f:switch>
+        </f:for>
+    </div>
+</div>
+
+<f:section name="CardImageTop">
+<div class="col-lg-6 mb-4">
+    <div class="card">
+        <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
+        <img src="{f:uri.image(image:project.previewImage.0,width:300c)}" alt="" class="card-img-top">
+        </f:link.action>
+        <div class="card-body">
+            <h5 class="card-title">{project.title}</h5>
+            <p class="card-text">
+                <f:format.html>{project.teaser}</f:format.html>
+            </p>
+            <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">Modal link</f:link.action>
+        </div>
+    </div>
+</div>
+</f:section>
+
+<f:section name="CardImageLeft">
+<div class="col-lg-6">
+    <div class="card mb-3">
+        <div class="row">
+            <div class="col-md-5">
+                <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
+                <img src="{f:uri.image(image:project.previewImage.0,width:300c)}" alt="" class="card-img-top">
+                </f:link.action>
+            </div>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <h5 class="card-title">{project.title}</h5>
+                    <p class="card-text">
+                        <f:format.html>{project.teaser}</f:format.html>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</f:section>
+
+
+<f:section name="HeaderAssets">
+    <link rel="stylesheet" href="typo3conf/ext/showcase/Resources/Public/Css/style.css">
+</f:section>
+<f:section name="FooterAssets">
+    <script>
+		const SHOWCASE = {
+			baseurl: 'http://localhost/t310/showcase'
+		};
+    </script>
+    <script src="typo3conf/ext/showcase/Resources/Public/Js/Classes/AjaxLoader.js"></script>
+    <script src="typo3conf/ext/showcase/Resources/Public/Js/Bootstrap4/Showcase.js"></script>
+</f:section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="project-modal" tabindex="-1" role="dialog" aria-labelledby="project-modal" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content"><!-- Dynamic Content from Ajax --></div>
+  </div>
+</div>

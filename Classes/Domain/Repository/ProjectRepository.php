@@ -1,0 +1,21 @@
+<?php
+namespace SIMONKOEHLER\Showcase\Domain\Repository;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Database\ConnectionPool;
+use TYPO3\CMS\Core\Resource\ResourceFactory;
+use TYPO3\CMS\Core\DataHandling\DataHandler;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+
+class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
+
+    protected $defaultOrderings = [
+        'sorting' => QueryInterface::ORDER_ASCENDING,
+    ];
+
+    public function initializeObject() {
+        $querySettings = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings::class);
+        $querySettings->setRespectStoragePage(false);
+        $this->setDefaultQuerySettings($querySettings);
+    }
+
+}

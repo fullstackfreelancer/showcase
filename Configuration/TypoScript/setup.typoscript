@@ -1,0 +1,51 @@
+
+plugin.tx_showcase {
+	view {
+		templateRootPaths.0 = {$plugin.tx_showcase.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_showcase.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_showcase.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_showcase.persistence.storagePid}
+	}
+	settings{
+		pagetypes{
+			project_ajax = {$plugin.tx_showcase.settings.pagetypes.project_ajax}
+		}
+		show{
+			type = {$plugin.tx_showcase.settings.show.type}
+		}
+	}
+}
+
+project_ajax = PAGE
+project_ajax {
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-Type:text/html;charset=utf-8
+        admPanel = 0
+        debug = 0
+        no_cache = 1
+    }
+    typeNum = {$plugin.tx_showcase.settings.pagetypes.project_ajax}
+    10 = COA
+    10 {
+        10 = USER
+        10 {
+            userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+            extensionName = Showcase
+            pluginName = List
+            vendorName = SIMONKOEHLER
+            controller = Project
+            action = show
+            switchableControllerActions {
+                Project {
+                    1 = show
+                }
+            }
+            view < plugin.tx_showcase.view
+            persistence < plugin.tx_showcase.persistence
+            settings < plugin.tx_showcase.settings
+        }
+    }
+}

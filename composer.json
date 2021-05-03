@@ -1,0 +1,32 @@
+{
+    "name": "simonkoehler/showcase",
+    "type": "typo3-cms-extension",
+    "version": "1.0.0",
+    "description": "Fallback ViewHelper for images",
+    "authors": [
+        {
+            "name": "Simon Köhler",
+            "email": "info@simon-koehler.com",
+            "homepage": "https://simon-koehler.com/en",
+            "role": "Developer"
+        }
+    ],
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "typo3/cms-core": "^9.5 || ^10.5"
+    },
+    "replace": {
+        "simonkoehler/fallback": "self.version",
+        "typo3-ter/fallback": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "fallback"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "SIMONKOEHLER\\Showcase\\": "Classes/"
+        }
+    }
+}
