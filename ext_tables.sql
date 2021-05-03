@@ -20,7 +20,7 @@ CREATE TABLE tx_showcase_domain_model_project (
 	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	starttime int(11) unsigned DEFAULT '0' NOT NULL,
 	endtime int(11) unsigned DEFAULT '0' NOT NULL,
-    sorting int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting int(11) unsigned DEFAULT '0' NOT NULL,
 	categories int(11) unsigned DEFAULT '0' NOT NULL,
 	seotitle varchar(255) DEFAULT '' NOT NULL,
 	seodescription text DEFAULT '' NOT NULL,
@@ -31,6 +31,6 @@ CREATE TABLE tx_showcase_domain_model_project (
 
 	PRIMARY KEY (uid),
 	KEY parent (pid),
-    KEY language (l10n_parent,sys_language_uid)
+	KEY language (l10n_parent,sys_language_uid)
 
 );
