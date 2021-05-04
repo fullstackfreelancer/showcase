@@ -22,11 +22,13 @@ class ProjectController extends ActionController
      */
     public function listAction()
     {
+        $pageUid = (int)\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('id');
         $projects = $this->projectRepository->findAll();
-        $categories = $this->projectRepository->getCategoriesFromRoot(3);
+        $categories = $this->projectRepository->getCategoriesFromRoot($this->settings['categories']['root']);
         $this->view->assign('categories',$categories);
         $this->view->assign('projects',$projects);
         $this->view->assign('settings',$this->settings);
+        $this->view->assign('pageUid',$pageUid);
     }
 
     /**
