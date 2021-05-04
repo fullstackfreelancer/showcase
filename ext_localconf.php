@@ -15,5 +15,10 @@ call_user_func(
                 \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'list,show',
             ]
         );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:showcase/Configuration/TsConfig/Page/Mod/Wizards/NewContentElement.tsconfig">'
+        );
+
     }
 );
