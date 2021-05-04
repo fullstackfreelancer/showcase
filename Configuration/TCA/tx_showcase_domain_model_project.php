@@ -18,7 +18,7 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime'
         ],
-        'iconfile' => 'EXT:showcase/Resources/Public/Icons/ContentElements/logo.svg',
+        'iconfile' => 'EXT:showcase/ext_icon.svg',
     ],
     'interface' => [
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, title, description, media, starttime, endtime',

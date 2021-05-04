@@ -20,5 +20,18 @@ call_user_func(
             '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:showcase/Configuration/TsConfig/Page/Mod/Wizards/NewContentElement.tsconfig">'
         );
 
+        $icons = [
+            'showcase-list' => 'EXT:showcase/ext_icon.svg',
+        ];
+
+        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+        foreach ($icons as $identifier => $path) {
+            $iconRegistry->registerIcon(
+                $identifier,
+                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+                ['source' => $path]
+            );
+        }
+
     }
 );

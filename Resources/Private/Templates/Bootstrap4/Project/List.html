@@ -130,7 +130,7 @@
 <div class="{columnClass} mb-4 grid-item<f:for each="{project.categories}" as="cat"> cat-{cat.uid}</f:for>">
     <div class="bg-light">
         <div class="row no-gutters">
-            <div class="col-5">
+            <div class="col-5 display-flex align-items-center">
                 <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
                 <f:image image="{project.previewImage.0}" class="img-fluid" width="320c" height="180c"/>
                 </f:link.action>
@@ -162,7 +162,7 @@
                     <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">more</f:link.action>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col-5 display-flex align-items-center">
                 <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
                 <f:image image="{project.previewImage.0}" class="img-fluid" width="320c" height="180c"/>
                 </f:link.action>

@@ -4,7 +4,7 @@
    'Showcase',
    'List',
    'Projects List',
-   'EXT:showcase/Resources/Public/Icons/ContentElements/logo.svg'
+   'showcase-list'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('showcase', 'Configuration/TypoScript', 'Showcase');

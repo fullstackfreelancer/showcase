@@ -3,7 +3,7 @@ mod.wizards {
         plugins {
             elements {
                 showcase_list {
-                    iconIdentifier = example-registration
+                    iconIdentifier = showcase-list
                     title = Showcase Portfolio List
                     description = Creates a showcase listing of projects with various settings
                     tt_content_defValues {
