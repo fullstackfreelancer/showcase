@@ -15,6 +15,9 @@ plugin.tx_showcase {
 		show{
 			type = {$plugin.tx_showcase.settings.show.type}
 		}
+		categories{
+			root = {$plugin.tx_showcase.settings.categories.root}
+		}
 	}
 }
 
@@ -27,6 +30,11 @@ page{
 		showcase_isotope_cbc = EXT:showcase/Resources/Public/Libs/isotope.cellsByColumn.js
 		showcase_ajax = EXT:showcase/Resources/Public/Js/Classes/AjaxLoader.js
 		showcase_bootstrap4 = EXT:showcase/Resources/Public/Js/Bootstrap4/Showcase.js
+	}
+	footerData{
+		300 = TEXT
+		300.data = getIndpEnv:TYPO3_REQUEST_URL
+		300.wrap = <script>const SHOWCASE = { baseurl: '|'};</script>
 	}
 }
 
