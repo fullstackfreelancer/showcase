@@ -2,9 +2,11 @@
 
 This extension provides a simple ViewHelper to check if an image exists.
 
-## Want to report an issue?
+## ToDo
 
-https://github.com/koehlersimon/showcase/issues
+- Update translations
+- Add functionality
+- Fix bugs
 
 ## All other requests
 
