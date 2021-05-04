@@ -24,7 +24,7 @@ return [
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, title, description, media, starttime, endtime',
     ],
     'types' => [
-        '1' => ['showitem' => 'l10n_parent, l10n_diffsource, list_layout, title, teaser, description, preview_image, media, background_class,--div--;SEO, seotitle, seodescription, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'l10n_parent, l10n_diffsource, urls, title, teaser, description, preview_image, --div--;LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tab.media, media, --div--;LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tab.layout, list_layout,--div--;LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tab.seo, seotitle, seodescription, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'palettes' =>[
 
@@ -108,7 +108,7 @@ return [
         ],
         'list_layout' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:layout',
+            'label' => 'LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tx_showcase_domain_model_project.list_layout',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -117,7 +117,8 @@ return [
                     ['Card Image Top', 'card-img-top'],
                     ['Card Image Bottom', 'card-img-bottom'],
                     ['Card Image Left', 'card-img-left'],
-                    ['Card Image Right', 'card-img-right']
+                    ['Card Image Right', 'card-img-right'],
+                    ['Hover Title', 'hover-title']
                 ],
             ],
         ],
@@ -216,7 +217,12 @@ return [
                             'showitem' => '
                             --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
                             --palette--;;filePalette'
-                        ]
+                        ],
+                        \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
+                            'showitem' => '
+                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                            --palette--;;filePalette'
+                        ],
                     ],
                     'maxitems' => 50
                 ]
@@ -233,6 +239,20 @@ return [
                     ['LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:background_class.gray_light', 'bg-gray-light'],
                     ['LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:background_class.gray_medium', 'bg-gray-medium'],
                     ['LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:background_class.gray_dark', 'bg-gray-dark'],
+                ],
+            ],
+        ],
+        'urls' => [
+            'exclude' => 1,
+            'label' => 'URLs',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_showcase_domain_model_url',
+                'foreign_field' => 'parent_record',
+                'maxitems' => 10,
+                'appearance' => [
+                    'collapseAll' => 1,
+                    'expandSingle' => 1,
                 ],
             ],
         ],

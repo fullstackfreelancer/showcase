@@ -18,6 +18,18 @@ plugin.tx_showcase {
 	}
 }
 
+page{
+	includeCSS {
+	    showcase = EXT:showcase/Resources/Public/Css/style.css
+	}
+	includeJSFooter{
+		showcase_isotope = EXT:showcase/Resources/Public/Libs/isotope.pkgd.min.js
+		showcase_isotope_cbc = EXT:showcase/Resources/Public/Libs/isotope.cellsByColumn.js
+		showcase_ajax = EXT:showcase/Resources/Public/Js/Classes/AjaxLoader.js
+		showcase_bootstrap4 = EXT:showcase/Resources/Public/Js/Bootstrap4/Showcase.js
+	}
+}
+
 project_ajax = PAGE
 project_ajax {
     config {

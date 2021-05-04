@@ -13,6 +13,13 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $categories;
 
     /**
+    * urls
+    *
+    * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SIMONKOEHLER\Showcase\Domain\Model\Url>
+    */
+    protected $urls;
+
+    /**
      * backgroundClass
      *
      * @var string
@@ -224,6 +231,15 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function setSeodescription($seodescription) {
         $this->seodescription = $seodescription;
+    }
+
+    /**
+    * Returns the urls
+    *
+    * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SIMONKOEHLER\Showcase\Domain\Model\Url> $urls
+    */
+    public function getUrls() {
+        return $this->urls;
     }
 
 }

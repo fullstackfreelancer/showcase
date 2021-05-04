@@ -23,6 +23,8 @@ class ProjectController extends ActionController
     public function listAction()
     {
         $projects = $this->projectRepository->findAll();
+        $categories = $this->projectRepository->getCategoriesFromRoot(3);
+        $this->view->assign('categories',$categories);
         $this->view->assign('projects',$projects);
         $this->view->assign('settings',$this->settings);
     }

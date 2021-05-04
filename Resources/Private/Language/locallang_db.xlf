@@ -3,6 +3,7 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2021-05-01T12:05:37Z" product-name="showcase">
 		<header/>
 		<body>
+
 			<trans-unit id="tx_showcase_domain_model_project">
 				<source>Project</source>
 			</trans-unit>
@@ -33,6 +34,35 @@
 			<trans-unit id="tx_showcase_domain_model_project.seopreview">
 				<source>Google-Preview</source>
 			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.list_layout">
+				<source>List Layout</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_showcase_domain_model_url">
+				<source>Url</source>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_url.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_url.url">
+				<source>URL</source>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_url.target">
+				<source>Target</source>
+			</trans-unit>
+
+
+			<trans-unit id="tab.media">
+				<source>Media</source>
+			</trans-unit>
+			<trans-unit id="tab.seo">
+				<source>SEO</source>
+			</trans-unit>
+			<trans-unit id="tab.layout">
+				<source>Layout</source>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>

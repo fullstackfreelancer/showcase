@@ -1,23 +1,96 @@
-<div class="tx-showcase-projects">
-    <div class="row">
-        <f:for each="{projects}" as="project">
-        <f:switch expression="{project.listLayout}">
-            <f:case value="card-img-top">
-                <f:render section="CardImageTop" arguments="{_all}"/>
-            </f:case>
-            <f:case value="card-img-left">
-                <f:render section="CardImageLeft" arguments="{_all}"/>
-            </f:case>
-            <f:defaultCase>
+<ul class="nav justify-content-center'">
+    <li class="nav-item">
+        <a class="nav-link active showcase-cat-link" data-cat="*" href="#">All</a>
+    </li>
+    <f:for each="{categories}" as="category">
+        <li class="nav-item">
+            <a class="nav-link showcase-cat-link" data-cat=".cat-{category.uid}" href="#">{category.title}</a>
+        </li>
+    </f:for>
+</ul>
 
-            </f:defaultCase>
-        </f:switch>
-        </f:for>
-    </div>
+<hr>
+
+<f:if condition="{settings.columns}">
+    <f:switch expression="{settings.columns}">
+        <f:case value="1">
+            <f:variable name="columnClass" value="col-lg-12"/>
+        </f:case>
+        <f:case value="2">
+            <f:variable name="columnClass" value="col-lg-6"/>
+        </f:case>
+        <f:case value="3">
+            <f:variable name="columnClass" value="col-lg-4"/>
+        </f:case>
+        <f:case value="4">
+            <f:variable name="columnClass" value="col-lg-3"/>
+        </f:case>
+        <f:case value="6">
+            <f:variable name="columnClass" value="col-lg-2"/>
+        </f:case>
+        <f:defaultCase>
+            <f:variable name="columnClass" value="col-lg-3"/>
+        </f:defaultCase>
+    </f:switch>
+</f:if>
+
+<div class="tx-showcase-projects">
+    <f:if condition="{settings.listlayout}">
+        <f:then>
+            <div class="row grid" data-isotope='{ "itemSelector": ".grid-item" }'>
+                <f:for each="{projects}" as="project">
+                    <f:render section="ProjectRecord" arguments="{layout:settings.listlayout,project:project,columnClass:columnClass}"/>
+                </f:for>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="row grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'>
+                <f:for each="{projects}" as="project">
+                <f:render section="ProjectRecord" arguments="{layout:project.listLayout,project:project,columnClass:columnClass}"/>
+                </f:for>
+            </div>
+        </f:else>
+    </f:if>
 </div>
 
+<f:section name="ProjectRecord">
+    <f:switch expression="{layout}">
+        <f:case value="card-img-top">
+            <f:render section="CardImageTop" arguments="{project:project,columnClass:columnClass}"/>
+        </f:case>
+        <f:case value="card-img-bottom">
+            <f:render section="CardImageBottom" arguments="{project:project,columnClass:columnClass}"/>
+        </f:case>
+        <f:case value="card-img-left">
+            <f:render section="CardImageLeft" arguments="{project:project,columnClass:columnClass}"/>
+        </f:case>
+        <f:case value="hover-title">
+            <f:render section="HoverTitle" arguments="{project:project,columnClass:columnClass}"/>
+        </f:case>
+        <f:defaultCase>
+
+        </f:defaultCase>
+    </f:switch>
+</f:section>
+
+<f:section name="HoverTitle">
+<div class="{columnClass} mb-4 grid-item<f:for each="{project.categories}" as="cat"> cat-{cat.uid}</f:for>">
+    <f:link.action class="card-hover" action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
+    <f:image image="{project.previewImage.0}" width="800c" height="450c" />
+    <div class="overlay text-light text-center">
+        <div>
+        <h5 class="overlay-title m-0">{project.title}</h5>
+        <p class="overlay-teaser m-0">
+            <f:format.html>{project.teaser}</f:format.html>
+        </p>
+        </div>
+    </div>
+    </f:link.action>
+</div>
+</f:section>
+
 <f:section name="CardImageTop">
-<div class="col-lg-6 mb-4">
+<div class="{columnClass} mb-4 grid-item<f:for each="{project.categories}" as="cat"> cat-{cat.uid}</f:for>">
     <div class="card">
         <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
         <img src="{f:uri.image(image:project.previewImage.0,width:300c)}" alt="" class="card-img-top">
@@ -27,27 +100,45 @@
             <p class="card-text">
                 <f:format.html>{project.teaser}</f:format.html>
             </p>
-            <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">Modal link</f:link.action>
+            <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">more</f:link.action>
         </div>
     </div>
 </div>
 </f:section>
 
+<f:section name="CardImageBottom">
+<div class="{columnClass} mb-4 grid-item<f:for each="{project.categories}" as="cat"> cat-{cat.uid}</f:for>">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{project.title}</h5>
+            <p class="card-text">
+                <f:format.html>{project.teaser}</f:format.html>
+            </p>
+            <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">more</f:link.action>
+        </div>
+        <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
+        <img src="{f:uri.image(image:project.previewImage.0,width:300c)}" alt="" class="card-img-bottom">
+        </f:link.action>
+    </div>
+</div>
+</f:section>
+
 <f:section name="CardImageLeft">
-<div class="col-lg-6">
-    <div class="card mb-3">
-        <div class="row">
-            <div class="col-md-5">
+<div class="{columnClass} mb-4 grid-item<f:for each="{project.categories}" as="cat"> cat-{cat.uid}</f:for>">
+    <div class="bg-light">
+        <div class="row no-gutters">
+            <div class="col-5">
                 <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
-                <img src="{f:uri.image(image:project.previewImage.0,width:300c)}" alt="" class="card-img-top">
+                <f:image image="{project.previewImage.0}" class="img-fluid" width="320c" height="180c"/>
                 </f:link.action>
             </div>
-            <div class="col-md-7">
-                <div class="card-body">
-                    <h5 class="card-title">{project.title}</h5>
-                    <p class="card-text">
-                        <f:format.html>{project.teaser}</f:format.html>
+            <div class="col-7 display-flex align-items-center">
+                <div class="p-3 p-lg-5">
+                    <h5 class="m-0">{project.title}</h5>
+                    <p class="d-none d-lg-block">
+                        <f:format.raw>{project.teaser}</f:format.raw>
                     </p>
+                    <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">more</f:link.action>
                 </div>
             </div>
         </div>
@@ -56,23 +147,18 @@
 </f:section>
 
 
-<f:section name="HeaderAssets">
-    <link rel="stylesheet" href="typo3conf/ext/showcase/Resources/Public/Css/style.css">
-</f:section>
 <f:section name="FooterAssets">
     <script>
 		const SHOWCASE = {
 			baseurl: 'http://localhost/t310/showcase'
 		};
     </script>
-    <script src="typo3conf/ext/showcase/Resources/Public/Js/Classes/AjaxLoader.js"></script>
-    <script src="typo3conf/ext/showcase/Resources/Public/Js/Bootstrap4/Showcase.js"></script>
 </f:section>
 
 
 <!-- Modal -->
 <div class="modal fade" id="project-modal" tabindex="-1" role="dialog" aria-labelledby="project-modal" aria-hidden="true">
-  <div class="modal-dialog modal-xl" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content"><!-- Dynamic Content from Ajax --></div>
   </div>
 </div>
