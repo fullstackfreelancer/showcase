@@ -1,0 +1,17 @@
+mod.wizards {
+    newContentElement.wizardItems {
+        plugins {
+            elements {
+                showcase_list {
+                    iconIdentifier = example-registration
+                    title = Showcase Portfolio List
+                    description = Creates a showcase listing of projects with various settings
+                    tt_content_defValues {
+                        CType = list
+                        list_type = showcase_list
+                    }
+                }
+            }
+        }
+    }
+}
