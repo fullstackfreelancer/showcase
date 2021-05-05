@@ -2,6 +2,8 @@
 
 This extension provides a portfolio with categorized projects and various layout options.
 
+<img src="https://raw.githubusercontent.com/koehlersimon/showcase/master/Resources/Public/Images/Screenshots/list-hover-title.png">
+
 ## Features
 
 - Works seamlessly with the Bootstrap Package for TYPO3
