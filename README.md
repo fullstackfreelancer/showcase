@@ -10,10 +10,10 @@ Benefit from frequent updates and new features:
 
 <table>
 <tr>
-<td>
+<td width="50%" valign="top">
 <img src="https://raw.githubusercontent.com/koehlersimon/showcase/master/Resources/Public/Images/Screenshots/list-hover-title.png">
 </td>
-<td>
+<td width="50%" valign="top">
 <img src="https://raw.githubusercontent.com/koehlersimon/showcase/master/Resources/Public/Images/Screenshots/plugin.jpg">
 </td>
 </tr>
