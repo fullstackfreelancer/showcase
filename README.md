@@ -10,7 +10,7 @@ This extension provides a portfolio with categorized projects and various layout
 </td>
 <td>
 <h5> Backend
-<img src="https://raw.githubusercontent.com/koehlersimon/showcase/master/Resources/Public/Images/Screenshots/plugin.png">
+<img src="https://raw.githubusercontent.com/koehlersimon/showcase/master/Resources/Public/Images/Screenshots/plugin.jpg">
 </td>
 </tr>
 </table>
