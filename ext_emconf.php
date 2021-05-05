@@ -1,9 +1,4 @@
 <?php
-
-/***************************************************************
- * Made by Simon Köhler @ simon-koehler.com
- ***************************************************************/
-
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Showcase',
     'description' => 'Create beautiful showcases and portfolios',
