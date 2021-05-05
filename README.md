@@ -8,6 +8,7 @@ This extension provides a showcase/portfolio with categorized projects and vario
 Benefit from frequent updates and new features:
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/typo3freelancer/25)
 
+## Screenshots
 <table>
 <tr>
 <td width="50%" valign="top">
