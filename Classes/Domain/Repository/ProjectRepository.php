@@ -23,9 +23,10 @@ class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
         $statement = $queryBuilder
             ->select('*')
             ->from('sys_category')
+            ->orderBy('sorting')
             ->where(
               $queryBuilder->expr()->eq('parent', $queryBuilder->createNamedParameter($root, \PDO::PARAM_INT))
-           )
+            )
             ->execute();
         $output = array();
         while ($row = $statement->fetch()) {
