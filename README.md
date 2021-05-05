@@ -2,7 +2,18 @@
 
 This extension provides a portfolio with categorized projects and various layout options.
 
+<table>
+<tr>
+<td>
+<h5>Frontend
 <img src="https://raw.githubusercontent.com/koehlersimon/showcase/master/Resources/Public/Images/Screenshots/list-hover-title.png">
+</td>
+<td>
+<h5> Backend
+<img src="https://raw.githubusercontent.com/koehlersimon/showcase/master/Resources/Public/Images/Screenshots/plugin.png">
+</td>
+</tr>
+</table>
 
 ## Features
 
@@ -25,6 +36,7 @@ This extension provides a portfolio with categorized projects and various layout
 
 ## ToDo
 
+- make detail view awesome
 - update translations
 - add Bootstrap 5 templates
 - fix bugs, a lot of bugs...
