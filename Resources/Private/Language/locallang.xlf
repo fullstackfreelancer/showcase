@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2014-08-19T12:05:37Z" product-name="showcase">
+	<file source-language="en" datatype="plaintext" original="messages" date="2021-05-05T12:05:37Z" product-name="showcase">
 		<header/>
 		<body>
 			<trans-unit id="tx_showcase_domain_model_project">
@@ -36,6 +36,9 @@
 			</trans-unit>
 			<trans-unit id="plugin_list.listlayout">
 				<source>List Layout</source>
+			</trans-unit>
+			<trans-unit id="plugin_list.display_mode">
+				<source>Display Mode</source>
 			</trans-unit>
 
 		</body>

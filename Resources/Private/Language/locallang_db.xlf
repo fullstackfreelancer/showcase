@@ -22,8 +22,8 @@
 			<trans-unit id="tx_showcase_domain_model_project.media">
 				<source>Media</source>
 			</trans-unit>
-			<trans-unit id="tx_showcase_domain_model_project.url">
-				<source>Url</source>
+			<trans-unit id="tx_showcase_domain_model_project.urls">
+				<source>URLs</source>
 			</trans-unit>
 			<trans-unit id="tx_showcase_domain_model_project.seotitle">
 				<source>Title</source>

@@ -244,7 +244,7 @@ return [
         ],
         'urls' => [
             'exclude' => 1,
-            'label' => 'URLs',
+            'label' => 'LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tx_showcase_domain_model_project.urls',
             'config' => [
                 'type' => 'inline',
                 'foreign_table' => 'tx_showcase_domain_model_url',
