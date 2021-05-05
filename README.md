@@ -11,11 +11,9 @@ Benefit from frequent updates and new features:
 <table>
 <tr>
 <td>
-<h5>Frontend
 <img src="https://raw.githubusercontent.com/koehlersimon/showcase/master/Resources/Public/Images/Screenshots/list-hover-title.png">
 </td>
 <td>
-<h5> Backend
 <img src="https://raw.githubusercontent.com/koehlersimon/showcase/master/Resources/Public/Images/Screenshots/plugin.jpg">
 </td>
 </tr>
