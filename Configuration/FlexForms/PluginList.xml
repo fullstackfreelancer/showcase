@@ -98,6 +98,7 @@
                         </TCEforms>
                     </settings.listlayout>
 
+                    <!--
                     <settings.orderby>
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin_list.orderby</label>
@@ -117,6 +118,7 @@
                             </config>
                         </TCEforms>
                     </settings.orderby>
+                    -->
 
                 </el>
             </ROOT>
