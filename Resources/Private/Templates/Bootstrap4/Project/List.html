@@ -1,16 +1,3 @@
-<ul class="nav justify-content-center'">
-    <li class="nav-item">
-        <a class="nav-link active showcase-cat-link" data-cat="*" href="#">All</a>
-    </li>
-    <f:for each="{categories}" as="category">
-        <li class="nav-item">
-            <a class="nav-link showcase-cat-link" data-cat=".cat-{category.uid}" href="#">{category.title}</a>
-        </li>
-    </f:for>
-</ul>
-
-<hr>
-
 <f:if condition="{settings.columns}">
     <f:switch expression="{settings.columns}">
         <f:case value="1">
@@ -34,7 +21,21 @@
     </f:switch>
 </f:if>
 
-<div class="tx-showcase-projects">
+<div class="tx-showcase-list">
+
+    <ul class="nav justify-content-center'">
+        <li class="nav-item">
+            <a class="nav-link active showcase-cat-link" data-cat="*" href="#">All</a>
+        </li>
+        <f:for each="{categories}" as="category">
+            <li class="nav-item">
+                <a class="nav-link showcase-cat-link" data-cat=".cat-{category.uid}" href="#">{category.title}</a>
+            </li>
+        </f:for>
+    </ul>
+
+    <hr>
+
     <f:if condition="{settings.listlayout}">
         <f:then>
             <div class="row grid" data-isotope='{ "itemSelector": ".grid-item" }'>
@@ -51,6 +52,7 @@
             </div>
         </f:else>
     </f:if>
+
 </div>
 
 <f:section name="ProjectRecord">
@@ -84,7 +86,7 @@
         <div>
         <h5 class="overlay-title m-0">{project.title}</h5>
         <p class="overlay-teaser m-0">
-            <f:format.html>{project.teaser}</f:format.html>
+            <f:format.raw>{project.teaser}</f:format.raw>
         </p>
         </div>
     </div>
@@ -101,7 +103,7 @@
         <div class="card-body">
             <h5 class="card-title">{project.title}</h5>
             <p class="card-text">
-                <f:format.html>{project.teaser}</f:format.html>
+                <f:format.raw>{project.teaser}</f:format.raw>
             </p>
             <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">more</f:link.action>
         </div>
@@ -115,7 +117,7 @@
         <div class="card-body">
             <h5 class="card-title">{project.title}</h5>
             <p class="card-text">
-                <f:format.html>{project.teaser}</f:format.html>
+                <f:format.raw>{project.teaser}</f:format.raw>
             </p>
             <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">more</f:link.action>
         </div>
@@ -175,7 +177,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="project-modal" tabindex="-1" role="dialog" aria-labelledby="project-modal" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content"><!-- Dynamic Content from Ajax --></div>
+  <div class="modal-dialog modal-dialog-showcase" role="document">
+    <div class="modal-content modal-content-showcase"><!-- Dynamic Content from Ajax --></div>
   </div>
 </div>

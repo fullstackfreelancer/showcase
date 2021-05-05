@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',function(){
         event.currentTarget.querySelector('.modal-content').innerHTML = '';
     })
 
-    let grid = $('.tx-showcase-projects .grid').isotope({
+    let grid = $('.tx-showcase-list .grid').isotope({
 
     });
 
