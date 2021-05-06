@@ -26,7 +26,7 @@
 			</trans-unit>
 
 			<trans-unit id="plugin_list.title">
-				<source>Project List</source>
+				<source>Showcase List</source>
 			</trans-unit>
 			<trans-unit id="plugin_list.orderby">
 				<source>Order by</source>
