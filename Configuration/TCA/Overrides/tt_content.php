@@ -3,7 +3,7 @@
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
    'Showcase',
    'List',
-   'Projects List',
+   'LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin_list.title',
    'showcase-list'
 );
 
