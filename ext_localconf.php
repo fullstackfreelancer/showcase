@@ -7,7 +7,7 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Showcase',
-            'List',
+            'Showcase',
             [
                 \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'list,show',
             ],
@@ -21,7 +21,7 @@ call_user_func(
         );
 
         $icons = [
-            'showcase-list' => 'EXT:showcase/ext_icon.svg',
+            'showcase' => 'EXT:showcase/ext_icon.svg',
         ];
 
         $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
