@@ -28,6 +28,7 @@ page{
 	includeJSFooter{
 		showcase_isotope = EXT:showcase/Resources/Public/Libs/isotope.pkgd.min.js
 		showcase_isotope_cbc = EXT:showcase/Resources/Public/Libs/isotope.cellsByColumn.js
+		showcase_imagesloaded = EXT:showcase/Resources/Public/Libs/imagesloaded.pkgd.min.js
 		showcase_ajax = EXT:showcase/Resources/Public/Js/Classes/AjaxLoader.js
 		showcase_bootstrap4 = EXT:showcase/Resources/Public/Js/Bootstrap4/Showcase.js
 	}
@@ -54,7 +55,7 @@ project_ajax {
         10 {
             userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
             extensionName = Showcase
-            pluginName = List
+            pluginName = Showcase
             vendorName = SIMONKOEHLER
             controller = Project
             action = show
