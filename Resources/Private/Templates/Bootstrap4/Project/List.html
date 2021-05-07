@@ -21,20 +21,36 @@
     </f:switch>
 </f:if>
 
-<div class="tx-showcase-list">
+<div class="tx-showcase-plugin">
 
-    <ul class="nav justify-content-center'">
-        <li class="nav-item">
-            <a class="nav-link active showcase-cat-link" data-cat="*" href="#">All</a>
-        </li>
-        <f:for each="{categories}" as="category">
+    <f:if condition="{settings.showcategorymenu}">
+
+    <nav class="navbar navbar-expand-md navbar-light">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showcaseCategoryMenu" aria-controls="showcaseCategoryMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="showcaseCategoryMenu">
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link showcase-cat-link" data-cat=".cat-{category.uid}" href="#">{category.title}</a>
+                <a class="nav-link active showcase-cat-link" data-cat="*" href="#">
+                    <span class="nav-link-text">All</span>
+                </a>
             </li>
-        </f:for>
-    </ul>
+            <f:for each="{categories}" as="category">
+                <li class="nav-item">
+                    <a class="nav-link showcase-cat-link" data-cat=".cat-{category.uid}" href="#">
+                        <span class="nav-link-text">{category.title}</span>
+                    </a>
+                </li>
+            </f:for>
+        </ul>
+      </div>
+    </nav>
 
     <hr>
+    </f:if>
 
     <f:if condition="{settings.listlayout}">
         <f:then>
@@ -69,7 +85,7 @@
         <f:case value="card-img-right">
             <f:render section="CardImageRight" arguments="{project:project,columnClass:columnClass}"/>
         </f:case>
-        <f:case value="hover-title">
+        <f:case value="card-hover">
             <f:render section="HoverTitle" arguments="{project:project,columnClass:columnClass}"/>
         </f:case>
         <f:defaultCase>
