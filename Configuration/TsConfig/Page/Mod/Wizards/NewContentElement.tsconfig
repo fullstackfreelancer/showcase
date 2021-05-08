@@ -2,13 +2,13 @@ mod.wizards {
     newContentElement.wizardItems {
         plugins {
             elements {
-                showcase_list {
-                    iconIdentifier = showcase-list
-                    title = Showcase Portfolio List
-                    description = Creates a showcase listing of projects with various settings
+                showcase_showcase {
+                    iconIdentifier = showcase
+                    title = LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.title
+                    description = LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.description
                     tt_content_defValues {
                         CType = list
-                        list_type = showcase_list
+                        list_type = showcase_showcase
                     }
                 }
             }

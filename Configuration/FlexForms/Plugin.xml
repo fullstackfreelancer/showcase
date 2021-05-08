@@ -110,6 +110,16 @@
                         </TCEforms>
                     </settings.listlayout>
 
+                    <settings.previewimagemaxwidth>
+                        <TCEforms>
+                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.previewimagemaxwidth</label>
+                            <config>
+                                <type>input</type>
+                                <default>480</default>
+                            </config>
+                        </TCEforms>
+                    </settings.previewimagemaxwidth>
+
                     <!--
                     <settings.orderby>
                         <TCEforms>
