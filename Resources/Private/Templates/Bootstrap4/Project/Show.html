@@ -1,3 +1,5 @@
+<f:flashMessages />
+
 <div class="row">
     <div class="col-lg-6">
         <h1>{project.title}</h1>
@@ -5,6 +7,13 @@
         <f:format.html>{project.description}</f:format.html>
     </div>
     <div class="col-lg-6">
-        <f:image image="{project.previewImage.0}" width="480c" class="img-fluid"/>
+        <f:if condition="{project.previewImage.0}">
+            <f:then>
+                <f:image image="{project.previewImage.0}" width="480c" class="img-fluid"/>
+            </f:then>
+            <f:else>
+                <img src="https://via.placeholder.com/480x300" alt="Placeholder">
+            </f:else>
+        </f:if>
     </div>
 </div>
