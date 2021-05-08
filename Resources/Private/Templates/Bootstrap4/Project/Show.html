@@ -1,52 +1,10 @@
-<f:switch expression="{settings.show.type}">
-    <f:case value="modal">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body p-5">
-            <h2 class="modal-title">{project.title}</h2>
-            <f:if condition="{project.categories}">
-                <div class="mb-3">
-                <f:for each="{project.categories}" as="category">
-                    <span class="text-primary">{category.title}</span>
-                </f:for>
-                </div>
-            </f:if>
-            <div class="row">
-                <div class="col">
-                    <p class="lead"><f:format.raw>{project.teaser}</f:format.raw></p>
-                    <f:format.html>{project.description}</f:format.html>
-                </div>
-                <f:if condition="{project.urls}">
-                    <div class="col-lg-5">
-                        <f:render partial="UrlList" arguments="{urls:project.urls}"/>
-                    </div>
-                </f:if>
-            </div>
-            <div class="row">
-                <f:for each="{project.media}" as="media">
-                    <div class="col-lg-4 mb-3">
-                        <f:media file="{media}" class="showcase-media-item"/>
-                    </div>
-                </f:for>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal"><span aria-hidden="true">&times;</span> Close</button>
-        </div>
-    </f:case>
-    <f:defaultCase>
-        <div class="row">
-            <div class="col-lg-6">
-                <h1>{project.title}</h1>
-                <p class="lead">{project.teaser}</p>
-                <f:format.html>{project.description}</f:format.html>
-            </div>
-            <div class="col-lg-6">
-                <f:image image="{project.previewImage.0}" width="480c" class="img-fluid"/>
-            </div>
-        </div>
-    </f:defaultCase>
-</f:switch>
+<div class="row">
+    <div class="col-lg-6">
+        <h1>{project.title}</h1>
+        <p class="lead">{project.teaser}</p>
+        <f:format.html>{project.description}</f:format.html>
+    </div>
+    <div class="col-lg-6">
+        <f:image image="{project.previewImage.0}" width="480c" class="img-fluid"/>
+    </div>
+</div>
