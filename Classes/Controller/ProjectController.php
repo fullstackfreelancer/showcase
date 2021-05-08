@@ -1,6 +1,8 @@
 <?php
 namespace SIMONKOEHLER\Showcase\Controller;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\MetaTag\MetaTagManagerRegistry;
 
 class ProjectController extends ActionController
 {
@@ -66,6 +68,14 @@ class ProjectController extends ActionController
                 );
             }
         }
+
+        // Set page title
+        $titleProvider = GeneralUtility::makeInstance(\SIMONKOEHLER\Showcase\PageTitle\TitleProvider::class);
+        $titleProvider->setTitle($projectRender->getSeotitle() ?: $projectRender->getTitle());
+
+        // Set meta description
+        $metaTagManager = GeneralUtility::makeInstance(MetaTagManagerRegistry::class)->getManagerForProperty('description');
+        $metaTagManager->addProperty('description', $projectRender->getSeodescription());
 
         $this->view->assign('project',$projectRender);
         $this->view->assign('settings',$this->settings);
