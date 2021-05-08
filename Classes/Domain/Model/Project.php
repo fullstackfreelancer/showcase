@@ -20,6 +20,13 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $urls;
 
     /**
+    * related
+    *
+    * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SIMONKOEHLER\Showcase\Domain\Model\Project>
+    */
+    protected $related;
+
+    /**
      * backgroundClass
      *
      * @var string
@@ -240,6 +247,15 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     */
     public function getUrls() {
         return $this->urls;
+    }
+
+    /**
+    * Returns the related projects
+    *
+    * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SIMONKOEHLER\Showcase\Domain\Model\Project> $related
+    */
+    public function getRelated() {
+        return $this->related;
     }
 
 }
