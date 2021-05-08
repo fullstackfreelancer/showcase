@@ -26,16 +26,25 @@
 				<source>URLs</source>
 			</trans-unit>
 			<trans-unit id="tx_showcase_domain_model_project.seotitle">
-				<source>Title</source>
+				<source>Page Title</source>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.seotitle.description">
+				<source>We recommend that you keep your titles between 30 to 60 characters long so that they don't become too long and exceed Google's character limits</source>
 			</trans-unit>
 			<trans-unit id="tx_showcase_domain_model_project.seodescription">
-				<source>Description</source>
+				<source>Meta Description</source>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.seodescription.description">
+				<source>Meta descriptions can be any length, but Google generally truncates snippets to ~155–160 characters</source>
 			</trans-unit>
 			<trans-unit id="tx_showcase_domain_model_project.seopreview">
 				<source>Google-Preview</source>
 			</trans-unit>
 			<trans-unit id="tx_showcase_domain_model_project.list_layout">
 				<source>List Layout</source>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.slug">
+				<source>URL Slug</source>
 			</trans-unit>
 
 

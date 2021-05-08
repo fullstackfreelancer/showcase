@@ -34,11 +34,26 @@
 			<trans-unit id="plugin.detailpage">
 				<source>Detail page</source>
 			</trans-unit>
+			<trans-unit id="plugin.detailpage.description">
+				<source>Select a page that contains the plugin with a selected Show mode</source>
+			</trans-unit>
 			<trans-unit id="plugin.teaserlength">
 				<source>Teaser length</source>
 			</trans-unit>
 			<trans-unit id="plugin.previewimagemaxwidth">
 				<source>Max width of preview image</source>
+			</trans-unit>
+			<trans-unit id="plugin.singlerecord">
+				<source>Record of single project</source>
+			</trans-unit>
+			<trans-unit id="plugin.singlerecord.description">
+				<source>This record is shown when the plugin is called in the frontend without further parameters. When a project is set as get parameter from the list plugin, it will overwrite your selection.</source>
+			</trans-unit>
+			<trans-unit id="fe.project_urls_header">
+				<source>Links</source>
+			</trans-unit>
+			<trans-unit id="fe.project_related_header">
+				<source>Related</source>
 			</trans-unit>
 
 		</body>
