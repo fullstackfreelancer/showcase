@@ -58,10 +58,10 @@ project_ajax {
             pluginName = Showcase
             vendorName = SIMONKOEHLER
             controller = Project
-            action = show
+            action = modal
             switchableControllerActions {
                 Project {
-                    1 = show
+                    1 = modal
                 }
             }
             view < plugin.tx_showcase.view
