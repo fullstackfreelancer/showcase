@@ -70,3 +70,10 @@ project_ajax {
         }
     }
 }
+
+config.pageTitleProviders {
+	showcase {
+		provider = SIMONKOEHLER\Showcase\PageTitle\TitleProvider
+		before = seo
+	}
+}
