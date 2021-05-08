@@ -34,6 +34,12 @@
 			<trans-unit id="plugin.detailpage">
 				<source>Detail page</source>
 			</trans-unit>
+			<trans-unit id="plugin.teaserlength">
+				<source>Teaser length</source>
+			</trans-unit>
+			<trans-unit id="plugin.previewimagemaxwidth">
+				<source>Max width of preview image</source>
+			</trans-unit>
 
 		</body>
 	</file>
