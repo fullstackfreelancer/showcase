@@ -9,10 +9,10 @@ call_user_func(
             'Showcase',
             'Showcase',
             [
-                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'list,show',
+                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'list,modal,show',
             ],
             [
-                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'list,show',
+                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'list,modal,show',
             ]
         );
 
