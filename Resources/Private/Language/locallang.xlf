@@ -19,14 +19,20 @@
 			<trans-unit id="plugin.listlayout">
 				<source>List Layout</source>
 			</trans-unit>
-			<trans-unit id="plugin.display_mode">
+			<trans-unit id="plugin.displaymode">
 				<source>Display Mode</source>
+			</trans-unit>
+			<trans-unit id="plugin.detailmode">
+				<source>Detail Mode</source>
 			</trans-unit>
 			<trans-unit id="plugin.categories">
 				<source>Categories</source>
 			</trans-unit>
 			<trans-unit id="plugin.showcategorymenu">
 				<source>Show category menu</source>
+			</trans-unit>
+			<trans-unit id="plugin.detailpage">
+				<source>Detail page</source>
 			</trans-unit>
 
 		</body>
