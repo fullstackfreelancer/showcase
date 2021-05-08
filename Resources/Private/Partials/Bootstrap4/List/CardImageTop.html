@@ -1,0 +1,14 @@
+<div class="{columnClass} mb-4 grid-item<f:for each="{project.categories}" as="cat"> cat-{cat.uid}</f:for>">
+    <div class="card">
+        <f:link.action action="show" pageUid="{settings.detailpage}" arguments="{project:project}" additionalAttributes="{data-toggle:'{settings.detailmode}',data-target:'#project-modal',data-project:project.uid}">
+            <f:render partial="List/PreviewImage" arguments="{image:project.previewImage.0,maxwidth:settings.previewimagemaxwidth,imgclass:'img-fluid w-100'}"/>
+        </f:link.action>
+        <div class="card-body">
+            <h5 class="card-title">{project.title}</h5>
+            <p class="card-text">
+                <f:format.raw>{project.teaser -> f:format.crop(maxCharacters: settings.teaserlength)}</f:format.raw>
+            </p>
+            <f:link.action action="show" pageUid="{settings.detailpage}" arguments="{project:project}" additionalAttributes="{data-toggle:'{settings.detailmode}',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">more</f:link.action>
+        </div>
+    </div>
+</div>

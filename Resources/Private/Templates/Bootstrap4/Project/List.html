@@ -54,180 +54,42 @@
 
     <f:if condition="{settings.listlayout}">
         <f:then>
-            <div class="row grid" data-isotope='{ "itemSelector": ".grid-item" }'>
-                <f:for each="{projects}" as="project">
-                    <f:render section="ProjectRecord" arguments="{layout:settings.listlayout,project:project,columnClass:columnClass,settings:settings}"/>
-                </f:for>
-            </div>
+            <f:variable name="listlayout" value="{settings.listlayout}"/>
         </f:then>
         <f:else>
-            <div class="row grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'>
-                <f:for each="{projects}" as="project">
-                <f:render section="ProjectRecord" arguments="{layout:project.listLayout,project:project,columnClass:columnClass,settings:settings}"/>
-                </f:for>
-            </div>
+            <f:variable name="listlayout" value="{project.listlayout}"/>
         </f:else>
     </f:if>
+
+    <div class="row grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'>
+        <f:for each="{projects}" as="project">
+            <f:render section="ProjectRecord" arguments="{layout:listlayout,project:project,columnClass:columnClass,settings:settings}"/>
+        </f:for>
+    </div>
 
 </div>
 
 <f:section name="ProjectRecord">
     <f:switch expression="{layout}">
         <f:case value="card-img-top">
-            <f:render section="CardImageTop" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+            <f:render partial="List/CardImageTop" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
         </f:case>
         <f:case value="card-img-bottom">
-            <f:render section="CardImageBottom" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+            <f:render partial="List/CardImageBottom" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
         </f:case>
         <f:case value="card-img-left">
-            <f:render section="CardImageLeft" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+            <f:render partial="List/CardImageLeft" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
         </f:case>
         <f:case value="card-img-right">
-            <f:render section="CardImageRight" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+            <f:render partial="List/CardImageRight" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
         </f:case>
         <f:case value="card-hover">
-            <f:render section="HoverTitle" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+            <f:render partial="List/CardHover" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
         </f:case>
         <f:defaultCase>
 
         </f:defaultCase>
     </f:switch>
-</f:section>
-
-<f:section name="HoverTitle">
-<div class="{columnClass} mb-4 grid-item<f:for each="{project.categories}" as="cat"> cat-{cat.uid}</f:for>">
-    <f:link.action class="card-hover" action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
-    <f:variable name="image" value="{project.previewImage.0}"/>
-    <picture>
-        <source srcset="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" media="(min-width: 1200px)">
-        <source srcset="{f:uri.image(image: image, maxWidth: '992', cropVariant: 'default')}, {f:uri.image(image: image, maxWidth: '1984', cropVariant: 'default')} 2x" media="(min-width: 992px)">
-        <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'tablet')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'tablet')} 2x" media="(min-width: 768px)">
-        <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'mobile')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'mobile')} 2x" media="(max-width: 767px)">
-        <!---Fallback--->
-        <img class="img-fluid w-100" src="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" alt="{image.alternative}" longdesc="{image.description}" title="{image.title}">
-    </picture>
-    <div class="overlay text-light text-center">
-        <div>
-        <h5 class="overlay-title m-0">{project.title}</h5>
-        <p class="overlay-teaser m-0">
-            <f:format.raw>{project.teaser}</f:format.raw>
-        </p>
-        </div>
-    </div>
-    </f:link.action>
-</div>
-</f:section>
-
-<f:section name="CardImageTop">
-<div class="{columnClass} mb-4 grid-item<f:for each="{project.categories}" as="cat"> cat-{cat.uid}</f:for>">
-    <div class="card">
-        <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
-        <f:variable name="image" value="{project.previewImage.0}"/>
-        <picture>
-            <source srcset="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" media="(min-width: 1200px)">
-            <source srcset="{f:uri.image(image: image, maxWidth: '992', cropVariant: 'default')}, {f:uri.image(image: image, maxWidth: '1984', cropVariant: 'default')} 2x" media="(min-width: 992px)">
-            <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'tablet')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'tablet')} 2x" media="(min-width: 768px)">
-            <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'mobile')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'mobile')} 2x" media="(max-width: 767px)">
-            <!---Fallback--->
-            <img class="card-img-top" src="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" alt="{image.alternative}" longdesc="{image.description}" title="{image.title}">
-        </picture>
-        </f:link.action>
-        <div class="card-body">
-            <h5 class="card-title">{project.title}</h5>
-            <p class="card-text">
-                <f:format.raw>{project.teaser}</f:format.raw>
-            </p>
-            <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">more</f:link.action>
-        </div>
-    </div>
-</div>
-</f:section>
-
-<f:section name="CardImageBottom">
-<div class="{columnClass} mb-4 grid-item<f:for each="{project.categories}" as="cat"> cat-{cat.uid}</f:for>">
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">{project.title}</h5>
-            <p class="card-text">
-                <f:format.raw>{project.teaser}</f:format.raw>
-            </p>
-            <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">more</f:link.action>
-        </div>
-        <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
-            <f:variable name="image" value="{project.previewImage.0}"/>
-            <picture>
-                <source srcset="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" media="(min-width: 1200px)">
-                <source srcset="{f:uri.image(image: image, maxWidth: '992', cropVariant: 'default')}, {f:uri.image(image: image, maxWidth: '1984', cropVariant: 'default')} 2x" media="(min-width: 992px)">
-                <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'tablet')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'tablet')} 2x" media="(min-width: 768px)">
-                <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'mobile')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'mobile')} 2x" media="(max-width: 767px)">
-                <!---Fallback--->
-                <img class="card-img-bottom" src="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" alt="{image.alternative}" longdesc="{image.description}" title="{image.title}">
-            </picture>
-        </f:link.action>
-    </div>
-</div>
-</f:section>
-
-<f:section name="CardImageLeft">
-<div class="{columnClass} mb-4 grid-item<f:for each="{project.categories}" as="cat"> cat-{cat.uid}</f:for>">
-    <div class="bg-light">
-        <div class="row no-gutters">
-            <div class="col-5 display-flex align-items-center">
-                <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
-                <f:variable name="image" value="{project.previewImage.0}"/>
-                <picture>
-                    <source srcset="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" media="(min-width: 1200px)">
-                    <source srcset="{f:uri.image(image: image, maxWidth: '992', cropVariant: 'default')}, {f:uri.image(image: image, maxWidth: '1984', cropVariant: 'default')} 2x" media="(min-width: 992px)">
-                    <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'tablet')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'tablet')} 2x" media="(min-width: 768px)">
-                    <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'mobile')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'mobile')} 2x" media="(max-width: 767px)">
-                    <!---Fallback--->
-                    <img class="img-fluid w-100" src="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" alt="{image.alternative}" longdesc="{image.description}" title="{image.title}">
-                </picture>
-                </f:link.action>
-            </div>
-            <div class="col-7 display-flex align-items-center">
-                <div class="p-3 p-lg-5">
-                    <h5 class="m-0">{project.title}</h5>
-                    <p class="d-none d-lg-block">
-                        <f:format.raw>{project.teaser}</f:format.raw>
-                    </p>
-                    <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">more</f:link.action>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</f:section>
-
-<f:section name="CardImageRight">
-<div class="{columnClass} mb-4 grid-item<f:for each="{project.categories}" as="cat"> cat-{cat.uid}</f:for>">
-    <div class="bg-light">
-        <div class="row no-gutters">
-            <div class="col-7 display-flex align-items-center">
-                <div class="p-3 p-lg-5">
-                    <h5 class="m-0">{project.title}</h5>
-                    <p class="d-none d-lg-block">
-                        <f:format.raw>{project.teaser}</f:format.raw>
-                    </p>
-                    <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">more</f:link.action>
-                </div>
-            </div>
-            <div class="col-5 display-flex align-items-center">
-                <f:link.action action="show" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
-                    <f:variable name="image" value="{project.previewImage.0}"/>
-                    <picture>
-                        <source srcset="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" media="(min-width: 1200px)">
-                        <source srcset="{f:uri.image(image: image, maxWidth: '992', cropVariant: 'default')}, {f:uri.image(image: image, maxWidth: '1984', cropVariant: 'default')} 2x" media="(min-width: 992px)">
-                        <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'tablet')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'tablet')} 2x" media="(min-width: 768px)">
-                        <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'mobile')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'mobile')} 2x" media="(max-width: 767px)">
-                        <!---Fallback--->
-                        <img class="img-fluid w-100" src="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" alt="{image.alternative}" longdesc="{image.description}" title="{image.title}">
-                    </picture>
-                </f:link.action>
-            </div>
-        </div>
-    </div>
-</div>
 </f:section>
 
 
