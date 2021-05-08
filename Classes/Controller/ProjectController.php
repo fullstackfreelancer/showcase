@@ -47,9 +47,27 @@ class ProjectController extends ActionController
      *
      * @return string
      */
-    public function showAction(\SIMONKOEHLER\Showcase\Domain\Model\Project $project)
+    public function showAction()
     {
-        $this->view->assign('project',$project);
+
+        if($this->request->hasArgument('project')){
+            $projectRender = $this->projectRepository->findByUid($this->request->getArgument('project'));
+        }
+        else{
+            if($this->settings['singlerecord']){
+                $projectRender = $this->projectRepository->findByUid($this->settings['singlerecord']);
+            }
+            else{
+                $this->addFlashMessage(
+                   'No single record given',
+                   $messageTitle = 'Note',
+                   $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
+                   $storeInSession = TRUE
+                );
+            }
+        }
+
+        $this->view->assign('project',$projectRender);
         $this->view->assign('settings',$this->settings);
     }
 
