@@ -32,7 +32,18 @@ class ProjectController extends ActionController
     }
 
     /**
-     * Index show
+     * Action modal
+     *
+     * @return string
+     */
+    public function modalAction(\SIMONKOEHLER\Showcase\Domain\Model\Project $project)
+    {
+        $this->view->assign('project',$project);
+        $this->view->assign('settings',$this->settings);
+    }
+
+    /**
+     * Action show
      *
      * @return string
      */
@@ -40,7 +51,6 @@ class ProjectController extends ActionController
     {
         $this->view->assign('project',$project);
         $this->view->assign('settings',$this->settings);
-        $this->view->assign('type','modal');
     }
 
     /**
