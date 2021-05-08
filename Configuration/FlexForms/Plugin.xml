@@ -113,6 +113,7 @@
                     <settings.detailpage>
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailpage</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailpage.description</description>
                             <displayCond>FIELD:settings.detailmode:=:page</displayCond>
                             <config>
                                 <type>group</type>
@@ -130,6 +131,7 @@
                     <settings.singlerecord>
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.singlerecord</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.singlerecord.description</description>
                             <displayCond>FIELD:switchableControllerActions:=:Project->show</displayCond>
                             <config>
                                 <type>group</type>
