@@ -61,6 +61,13 @@
         </f:else>
     </f:if>
 
+    <f:if condition="{settings.detailmode} == ''">
+        <div class="alert alert-info">
+            No detail mode set, please check plugin settings!
+        </div>
+    </f:if>
+
+
     <div class="row grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'>
         <f:for each="{projects}" as="project">
             <f:render section="ProjectRecord" arguments="{layout:listlayout,project:project,columnClass:columnClass,settings:settings}"/>
