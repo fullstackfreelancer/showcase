@@ -5,9 +5,6 @@ plugin.tx_showcase {
 		partialRootPaths.0 = {$plugin.tx_showcase.view.partialRootPath}
 		layoutRootPaths.0 = {$plugin.tx_showcase.view.layoutRootPath}
 	}
-	persistence {
-		storagePid = {$plugin.tx_showcase.persistence.storagePid}
-	}
 	settings{
 		pagetypes{
 			project_ajax = {$plugin.tx_showcase.settings.pagetypes.project_ajax}
