@@ -27,7 +27,7 @@
                                    <numIndex index="1">Project->show</numIndex>
                                 </numIndex>
                                 <numIndex index="3">
-                                   <numIndex index="0">Slider</numIndex>
+                                   <numIndex index="0">Slider (Prototype)</numIndex>
                                    <numIndex index="1">Project->slider</numIndex>
                                 </numIndex>
                              </items>
@@ -38,6 +38,7 @@
                     <settings.recordstorage>
                         <TCEforms>
                             <label>Record Storage Folder</label>
+                            <displayCond>FIELD:switchableControllerActions:=:Project->list</displayCond>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>
@@ -211,6 +212,36 @@
                         </TCEforms>
                     </settings.previewimagemaxwidth>
 
+                    <settings.showcategorymenu>
+                        <TCEforms>
+                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.showcategorymenu</label>
+                            <displayCond>FIELD:switchableControllerActions:=:Project->list</displayCond>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.showcategorymenu>
+
+                    <settings.categoryroot>
+                        <TCEforms>
+                            <label>Category Root</label>
+                            <displayCond>FIELD:switchableControllerActions:=:Project->list</displayCond>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>sys_category</allowed>
+                                <minitems>1</minitems>
+                                <maxitems>1</maxitems>
+                                <wizards>
+                                    <suggest>
+                                        <type>suggest</type>
+                                    </suggest>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.categoryroot>
+
                     <!--
                     <settings.orderby>
                         <TCEforms>
@@ -236,43 +267,5 @@
                 </el>
             </ROOT>
         </sDEF>
-        <sheet2>
-            <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.categories</sheetTitle>
-                </TCEforms>
-                <type>array</type>
-                <el>
-                    <settings.showcategorymenu>
-                        <TCEforms>
-                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.showcategorymenu</label>
-                            <config>
-                                <type>check</type>
-                                <default>1</default>
-                            </config>
-                        </TCEforms>
-                    </settings.showcategorymenu>
-
-                    <settings.categoryroot>
-                        <TCEforms>
-                            <label>Category Root</label>
-                            <config>
-                                <type>group</type>
-                                <internal_type>db</internal_type>
-                                <allowed>sys_category</allowed>
-                                <minitems>1</minitems>
-                                <maxitems>1</maxitems>
-                                <wizards>
-                                    <suggest>
-                                        <type>suggest</type>
-                                    </suggest>
-                                </wizards>
-                            </config>
-                        </TCEforms>
-                    </settings.categoryroot>
-
-                </el>
-            </ROOT>
-        </sheet2>
     </sheets>
 </T3DataStructure>

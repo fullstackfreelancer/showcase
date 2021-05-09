@@ -1,0 +1,38 @@
+<div class="glide">
+  <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+      <f:for each="{projects}" as="project">
+          <li class="glide__slide">
+              <f:image image="{project.previewImage.0}" width="480c" height="270c" class="img-fluid" />
+          </li>
+      </f:for>
+    </ul>
+  </div>
+
+  <div class="glide__bullets" data-glide-el="controls[nav]">
+      <f:for each="{projects}" as="project" iteration="i">
+            <button class="glide__bullet" data-glide-dir="={i.index}"></button>
+      </f:for>
+  </div>
+</div>
+
+<f:section name="FooterAssets">
+<script>
+  new Glide('.glide', {
+  type: 'carousel',
+  focusAt: 'center',
+  startAt: 0,
+  perView: 3,
+  gap: 20,
+  autoplay: 4000,
+  breakpoints: {
+    1024: {
+      perView: 2
+    },
+    600: {
+      perView: 1
+    }
+  }
+}).mount()
+</script>
+</f:section>
