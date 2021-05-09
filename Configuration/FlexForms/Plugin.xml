@@ -31,7 +31,7 @@
                        </TCEforms>
                     </switchableControllerActions>
 
-                    <settings.recordStorage>
+                    <settings.recordstorage>
                         <TCEforms>
                             <label>Record Storage Folder</label>
                             <config>
@@ -47,7 +47,7 @@
                                 </wizards>
                             </config>
                         </TCEforms>
-                    </settings.recordStorage>
+                    </settings.recordstorage>
 
                     <settings.listlayout>
                         <TCEforms>
@@ -248,6 +248,25 @@
                             </config>
                         </TCEforms>
                     </settings.showcategorymenu>
+
+                    <settings.categoryroot>
+                        <TCEforms>
+                            <label>Category Root</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>sys_category</allowed>
+                                <minitems>1</minitems>
+                                <maxitems>1</maxitems>
+                                <wizards>
+                                    <suggest>
+                                        <type>suggest</type>
+                                    </suggest>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.categoryroot>
+
                 </el>
             </ROOT>
         </sheet2>
