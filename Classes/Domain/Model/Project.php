@@ -13,6 +13,13 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $categories;
 
     /**
+    * categoriesString
+    *
+    * @var string
+    */
+    protected $categoriesString;
+
+    /**
     * urls
     *
     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SIMONKOEHLER\Showcase\Domain\Model\Url>
@@ -200,6 +207,25 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     */
     public function setCategories(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $categories) {
         $this->categories = $categories;
+    }
+
+    /**
+     * Returns the categoriesString
+     *
+     * @return string $categoriesString
+     */
+    public function getCategoriesString() {
+        return $this->categoriesString;
+    }
+
+    /**
+     * Sets the categoriesString
+     *
+     * @param string $categoriesString
+     * @return void
+     */
+    public function setCategoriesString($categoriesString) {
+        $this->categoriesString = $categoriesString;
     }
 
     /**

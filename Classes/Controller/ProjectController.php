@@ -27,6 +27,13 @@ class ProjectController extends ActionController
         $pageUid = (int)\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('id');
         $projects = $this->projectRepository->findAll();
         $categories = $this->projectRepository->getCategoriesFromRoot($this->settings['categories']['root']);
+        foreach ($projects as $project) {
+            $string = '';
+            foreach ($project->getCategories() as $category) {
+                $string .= 'cat-'.$category->getUid().' ';
+            }
+            $project->setCategoriesString($string);
+        }
         $this->view->assign('categories',$categories);
         $this->view->assign('projects',$projects);
         $this->view->assign('settings',$this->settings);
