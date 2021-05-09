@@ -25,19 +25,31 @@ class ProjectController extends ActionController
     public function listAction()
     {
         $pageUid = (int)\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('id');
-        $projects = $this->projectRepository->findAll();
-        $categories = $this->projectRepository->getCategoriesFromRoot($this->settings['categories']['root']);
-        foreach ($projects as $project) {
-            $string = '';
-            foreach ($project->getCategories() as $category) {
-                $string .= 'cat-'.$category->getUid().' ';
+
+        if($this->settings['recordStorage']){
+            $projects = $this->projectRepository->findByPid($this->settings['recordStorage']);
+            $categories = $this->projectRepository->getCategoriesFromRoot($this->settings['categories']['root']);
+            foreach ($projects as $project) {
+                $string = '';
+                foreach ($project->getCategories() as $category) {
+                    $string .= 'cat-'.$category->getUid().' ';
+                }
+                $project->setCategoriesString($string);
             }
-            $project->setCategoriesString($string);
+            $this->view->assign('categories',$categories);
+            $this->view->assign('projects',$projects);
+            $this->view->assign('settings',$this->settings);
+            $this->view->assign('pageUid',$pageUid);
         }
-        $this->view->assign('categories',$categories);
-        $this->view->assign('projects',$projects);
-        $this->view->assign('settings',$this->settings);
-        $this->view->assign('pageUid',$pageUid);
+        else{
+            $this->addFlashMessage(
+               'Missing recordStorage in your plugin!',
+               $messageTitle = 'Note',
+               $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
+               $storeInSession = FALSE
+            );
+        }
+
     }
 
     /**
@@ -71,7 +83,7 @@ class ProjectController extends ActionController
                    'No single record given',
                    $messageTitle = 'Note',
                    $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
-                   $storeInSession = TRUE
+                   $storeInSession = FALSE
                 );
             }
         }
