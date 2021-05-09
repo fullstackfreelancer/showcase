@@ -12,7 +12,7 @@ call_user_func(
                 \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'list,modal,show',
             ],
             [
-                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'list,modal,show',
+                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'modal',
             ]
         );
 
