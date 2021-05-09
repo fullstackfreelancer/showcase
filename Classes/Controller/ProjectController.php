@@ -26,15 +26,18 @@ class ProjectController extends ActionController
     {
         $pageUid = (int)\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('id');
 
-        if($this->settings['recordStorage']){
-            $projects = $this->projectRepository->findByPid($this->settings['recordStorage']);
-            $categories = $this->projectRepository->getCategoriesFromRoot($this->settings['categories']['root']);
+        if($this->settings['recordstorage']){
+            $projects = $this->projectRepository->findByPid($this->settings['recordstorage']);
+            $categories = $this->projectRepository->getCategoriesFromRoot($this->settings['categoryroot']);
             foreach ($projects as $project) {
                 $string = '';
-                foreach ($project->getCategories() as $category) {
-                    $string .= 'cat-'.$category->getUid().' ';
+                $projectCategories = $project->getCategories();
+                if($projectCategories){
+                    foreach ($project->getCategories() as $category) {
+                        $string .= 'cat-'.$category->getUid().' ';
+                    }
+                    $project->setCategoriesString($string);
                 }
-                $project->setCategoriesString($string);
             }
             $this->view->assign('categories',$categories);
             $this->view->assign('projects',$projects);
