@@ -26,6 +26,10 @@
                                    <numIndex index="0">Show</numIndex>
                                    <numIndex index="1">Project->show</numIndex>
                                 </numIndex>
+                                <numIndex index="3">
+                                   <numIndex index="0">Slider</numIndex>
+                                   <numIndex index="1">Project->slider</numIndex>
+                                </numIndex>
                              </items>
                           </config>
                        </TCEforms>
