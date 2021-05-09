@@ -31,6 +31,24 @@
                        </TCEforms>
                     </switchableControllerActions>
 
+                    <settings.recordStorage>
+                        <TCEforms>
+                            <label>Record Storage Folder</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <minitems>1</minitems>
+                                <maxitems>1</maxitems>
+                                <wizards>
+                                    <suggest>
+                                        <type>suggest</type>
+                                    </suggest>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.recordStorage>
+
                     <settings.listlayout>
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.listlayout</label>
