@@ -9,12 +9,6 @@ plugin.tx_showcase {
 		pagetypes{
 			project_ajax = {$plugin.tx_showcase.settings.pagetypes.project_ajax}
 		}
-		show{
-			type = {$plugin.tx_showcase.settings.show.type}
-		}
-		categories{
-			root = {$plugin.tx_showcase.settings.categories.root}
-		}
 	}
 }
 

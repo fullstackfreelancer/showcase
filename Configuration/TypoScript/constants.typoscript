@@ -4,13 +4,5 @@ plugin.tx_showcase {
 		pagetypes{
 			project_ajax = 78
 		}
-		show{
-			# cat=plugin.tx_showcase//a; type=string; label=Type can be modal or page
-			type = modal
-		}
-		categories{
-			# cat=plugin.tx_showcase//a; type=string; label=Root category that contains showcase categories
-			root =
-		}
 	}
 }
