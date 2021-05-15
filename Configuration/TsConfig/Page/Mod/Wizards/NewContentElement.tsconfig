@@ -11,7 +11,31 @@ mod.wizards {
                         list_type = showcase_showcase
                     }
                 }
+                showcase_showcase_show {
+                    iconIdentifier = showcase
+                    title = Showcase Detail Page
+                    description = LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = showcase_showcase
+                        pi_flexform (
+                            <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+                            <T3FlexForms>
+                                <data>
+                                    <sheet index="sDEF">
+                                        <language index="lDEF">
+                                            <field index="switchableControllerActions">
+                                                <value index="vDEF">Project->show</value>
+                                            </field>
+                                        </language>
+                                    </sheet>
+                                </data>
+                            </T3FlexForms>
+                        )
+                    }
+                }
             }
+            show := addToList(showcase_showcase,showcase_showcase_show)
         }
     }
 }
