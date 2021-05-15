@@ -57,6 +57,30 @@
 
 }
 
+// Slider hover description
+.glide__slide{
+    .image{
+        position: relative;
+        .description{
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            text-align: center;
+            background: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            transition: all 0.2s ease-in-out;
+        }
+        &:hover{
+            .description{
+                opacity: 1;
+            }
+        }
+    }
+}
+
 a.showcase-cat-link{
     &.active{
         position: relative;
