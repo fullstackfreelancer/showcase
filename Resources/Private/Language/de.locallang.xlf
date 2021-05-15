@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2021-05-13T12:05:37Z" product-name="showcase">
+		<header/>
+		<body>
+
+			<trans-unit id="plugin.title">
+				<target>Showcase</target>
+			</trans-unit>
+			<trans-unit id="plugin.description">
+				<target>Erstellt einen Showcase von Projekten mit verschiedenen Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="plugin.orderby">
+				<target>Sortieren nach</target>
+			</trans-unit>
+			<trans-unit id="plugin.columns">
+				<target>Spalten pro Reihe</target>
+			</trans-unit>
+			<trans-unit id="plugin.columns.description">
+				<target>Definiere die Anzahl der Spalten, die das Raster ab Tablet-Bildschirmgröße aufwärts haben soll</target>
+			</trans-unit>
+			<trans-unit id="plugin.listlayout">
+				<target>Listen-Layout</target>
+			</trans-unit>
+			<trans-unit id="plugin.listlayout.description">
+				<target>Wählen Sie ein Layout für alle Listenelemente, oder wähle "individuell", um unterschiedlich aussehende Listenelemente zu erzeugen</target>
+			</trans-unit>
+			<trans-unit id="plugin.sliderlayout">
+				<target>Slider-Layout</target>
+			</trans-unit>
+			<trans-unit id="plugin.sliderlayout.description">
+				<target>Wählen Sie ein Layout für alle Slider-Elemente, oder wähle "individuell", um unterschiedlich aussehende Slider-Elemente zu erzeugen</target>
+			</trans-unit>
+			<trans-unit id="plugin.displaymode">
+				<target>Anzeigemodus</target>
+			</trans-unit>
+			<trans-unit id="plugin.displaymode.description">
+				<target>Wähle entweder die Listenansicht, eine Detailansicht, oder einen Slider</target>
+			</trans-unit>
+			<trans-unit id="plugin.detailmode">
+				<target>Detail-Modus</target>
+			</trans-unit>
+			<trans-unit id="plugin.detailmode.description">
+				<target>Wählen Sie einen Modus, um die Projektdetails anzuzeigen, wenn auf ein Listen- oder Slider-Element geklickt wird</target>
+			</trans-unit>
+			<trans-unit id="plugin.detailmode.modal">
+				<target>Popup-Fenster</target>
+			</trans-unit>
+			<trans-unit id="plugin.detailmode.page">
+				<target>Detailseite</target>
+			</trans-unit>
+			<trans-unit id="plugin.categories">
+				<target>Kategorien</target>
+			</trans-unit>
+			<trans-unit id="plugin.categoryroot">
+				<target>Wurzel-Kategorie</target>
+			</trans-unit>
+			<trans-unit id="plugin.categoryroot.description">
+				<target>Wählen Sie die übergeordnete Kategorie, die Ihre Showcase-Kategorien enthält</target>
+			</trans-unit>
+			<trans-unit id="plugin.gridlayout">
+				<target>Raster-Layout</target>
+			</trans-unit>
+			<trans-unit id="plugin.gridlayout.description">
+				<target>Definiert das Layout des Rasters, das von Isotop erzeugt wird (https://isotope.metafizzy.co/layout-modes.html)</target>
+			</trans-unit>
+			<trans-unit id="plugin.showcategorymenu">
+				<target>Kategorie-Menü anzeigen</target>
+			</trans-unit>
+			<trans-unit id="plugin.detailpage">
+				<target>Detailseite</target>
+			</trans-unit>
+			<trans-unit id="plugin.detailpage.description">
+				<target>Wählen Sie eine Seite, die das Plugin mit einem ausgewählten Detail-Modus enthält</target>
+			</trans-unit>
+			<trans-unit id="plugin.teaserlength">
+				<target>Teaser-Länge</target>
+			</trans-unit>
+			<trans-unit id="plugin.teaserlength.description">
+				<target>Maximale Zeichen des Teaser-Textes für Listen- und Slider-Elemente</target>
+			</trans-unit>
+			<trans-unit id="plugin.previewimagemaxwidth">
+				<target>Maximale Breite der Vorschaubilder</target>
+			</trans-unit>
+			<trans-unit id="plugin.singlerecord">
+				<target>Referenz zu Projektdatensatz</target>
+			</trans-unit>
+			<trans-unit id="plugin.singlerecord.description">
+				<target>Dieser Datensatz wird angezeigt, wenn das Plugin im Frontend ohne weitere Parameter aufgerufen wird. Wenn ein Projekt als GET-Parameter vom Listen-Plugin gesetzt wird, überschreibt es diese Auswahl.</target>
+			</trans-unit>
+			<trans-unit id="plugin.recordstorage">
+				<target>Projekt-Speicherordner</target>
+			</trans-unit>
+			<trans-unit id="plugin.recordstorage.description">
+				<target>Wähle einen Ordner, in dem deine Projekte gespeichert sind</target>
+			</trans-unit>
+
+			<trans-unit id="plugin.action.list">
+				<target>Listenansicht</target>
+			</trans-unit>
+			<trans-unit id="plugin.action.show">
+				<target>Detailansicht</target>
+			</trans-unit>
+			<trans-unit id="plugin.action.slider">
+				<target>Slider</target>
+			</trans-unit>
+
+			<trans-unit id="fe.project_urls_header">
+				<target>Links</target>
+			</trans-unit>
+			<trans-unit id="fe.project_related_header">
+				<target>Related</target>
+			</trans-unit>
+
+			<trans-unit id="alert.no_detail_mode_selected">
+				<target>Es wurde kein Detail-Mode ausgewählt. Bitte prüfe die Plugin-Einstellungen im Backend.</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
