@@ -110,7 +110,18 @@ class ProjectController extends ActionController
      */
     public function sliderAction()
     {
-        $projects = $this->projectRepository->findAll();
+        if($this->settings['recordstorage']){
+            $projects = $this->projectRepository->findByPid($this->settings['recordstorage']);
+        }
+        else{
+            $this->addFlashMessage(
+               'Missing recordStorage in your plugin!',
+               $messageTitle = 'Note',
+               $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
+               $storeInSession = FALSE
+            );
+        }
+
         $this->view->assign('projects',$projects);
         $this->view->assign('settings',$this->settings);
     }
