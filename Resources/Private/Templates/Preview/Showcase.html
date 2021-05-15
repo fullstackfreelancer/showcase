@@ -1,0 +1,23 @@
+<div class="plugin-preview-showcase">
+
+    <table class="table">
+    <f:for each="{pi_flexform_transformed.settings}" as="value" key="key" >
+    <tr>
+        <th><f:translate key="LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.{key}" extensionName="showcase"/></th>
+        <td>{value}</td>
+    </tr>
+    </f:for>
+    </table>
+
+    <f:if condition="{pi_flexform_transformed.settings.recordStorage} || {pi_flexform_transformed.settings.demo}">
+        <div class="alert alert-info">
+            <h4>Note</h4>
+            The flexform XML structure of this plugin contains old values from former versions. We <strong>highly recommend</strong> to delete and create this plugin again to prevent possible errors in your website.
+        </div>
+    </f:if>
+
+    <a href="#" class="btn extension-feedback-modal-button" title="Extension Support">
+        <core:icon identifier="content-info" size="small" />
+    </a>
+
+</div>
