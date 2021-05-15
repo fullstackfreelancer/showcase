@@ -13,51 +13,34 @@
                     <switchableControllerActions>
                        <TCEforms>
                           <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.displaymode</label>
+                          <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.displaymode.description</description>
                           <onChange>reload</onChange>
                           <config>
                               <type>select</type>
                              <renderType>selectSingle</renderType>
                              <items>
                                 <numIndex index="1">
-                                   <numIndex index="0">List</numIndex>
+                                   <numIndex index="0">LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.action.list</numIndex>
                                    <numIndex index="1">Project->list</numIndex>
                                 </numIndex>
                                 <numIndex index="2">
-                                   <numIndex index="0">Show</numIndex>
-                                   <numIndex index="1">Project->show</numIndex>
+                                    <numIndex index="0">LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.action.show</numIndex>
+                                    <numIndex index="1">Project->show</numIndex>
                                 </numIndex>
                                 <numIndex index="3">
-                                   <numIndex index="0">Slider (Prototype)</numIndex>
-                                   <numIndex index="1">Project->slider</numIndex>
+                                    <numIndex index="0">LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.action.slider</numIndex>
+                                    <numIndex index="1">Project->slider</numIndex>
                                 </numIndex>
                              </items>
                           </config>
                        </TCEforms>
                     </switchableControllerActions>
 
-                    <settings.recordstorage>
+                    <settings.sliderlayout>
                         <TCEforms>
-                            <label>Record Storage Folder</label>
-                            <displayCond>FIELD:switchableControllerActions:=:Project->list</displayCond>
-                            <config>
-                                <type>group</type>
-                                <internal_type>db</internal_type>
-                                <allowed>pages</allowed>
-                                <minitems>1</minitems>
-                                <maxitems>1</maxitems>
-                                <wizards>
-                                    <suggest>
-                                        <type>suggest</type>
-                                    </suggest>
-                                </wizards>
-                            </config>
-                        </TCEforms>
-                    </settings.recordstorage>
-
-                    <settings.listlayout>
-                        <TCEforms>
-                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.listlayout</label>
-                            <displayCond>FIELD:switchableControllerActions:=:Project->list</displayCond>
+                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.sliderlayout</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.sliderlayout.description</description>
+                            <displayCond>FIELD:switchableControllerActions:=:Project->slider</displayCond>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
@@ -99,12 +82,92 @@
                                 </fieldWizard>
                             </config>
                         </TCEforms>
+                    </settings.sliderlayout>
+
+                    <settings.recordstorage>
+                        <TCEforms>
+                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordstorage</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordstorage.description</description>
+                            <displayCond>
+                                <OR>
+                                    <numIndex index="0">FIELD:switchableControllerActions:=:Project->list</numIndex>
+                                    <numIndex index="1">FIELD:switchableControllerActions:=:Project->slider</numIndex>
+                                </OR>
+                            </displayCond>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <minitems>1</minitems>
+                                <maxitems>1</maxitems>
+                                <wizards>
+                                    <suggest>
+                                        <type>suggest</type>
+                                    </suggest>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.recordstorage>
+
+                    <settings.listlayout>
+                        <TCEforms>
+                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.listlayout</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.listlayout.description</description>
+                            <displayCond>FIELD:switchableControllerActions:=:Project->list</displayCond>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">Indiviual (for each single record)</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">Card with Image on Top</numIndex>
+                                        <numIndex index="1">card-img-top</numIndex>
+                                        <numIndex index="2">EXT:showcase/Resources/Public/Images/Listlayout/card-img-top.png</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">Card with Image at Bottom</numIndex>
+                                        <numIndex index="1">card-img-bottom</numIndex>
+                                        <numIndex index="2">EXT:showcase/Resources/Public/Images/Listlayout/card-img-bottom.png</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">Card with Image Left</numIndex>
+                                        <numIndex index="1">card-img-left</numIndex>
+                                        <numIndex index="2">EXT:showcase/Resources/Public/Images/Listlayout/card-img-left.png</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">Card with Image Right</numIndex>
+                                        <numIndex index="1">card-img-right</numIndex>
+                                        <numIndex index="2">EXT:showcase/Resources/Public/Images/Listlayout/card-img-right.png</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">Card Hover</numIndex>
+                                        <numIndex index="1">card-hover</numIndex>
+                                        <numIndex index="2">EXT:showcase/Resources/Public/Images/Listlayout/card-hover.png</numIndex>
+                                    </numIndex>
+                                </items>
+                                <fieldWizard>
+                                    <selectIcons>
+                                        <disabled>0</disabled>
+                                    </selectIcons>
+                                </fieldWizard>
+                                <default>card-img-top</default>
+                            </config>
+                        </TCEforms>
                     </settings.listlayout>
 
                     <settings.teaserlength>
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.teaserlength</label>
-                            <displayCond>FIELD:switchableControllerActions:=:Project->list</displayCond>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.teaserlength.description</description>
+                            <displayCond>
+                                <OR>
+                                    <numIndex index="0">FIELD:switchableControllerActions:=:Project->list</numIndex>
+                                    <numIndex index="1">FIELD:switchableControllerActions:=:Project->slider</numIndex>
+                                </OR>
+                            </displayCond>
                             <config>
                                 <type>input</type>
                                 <default>60</default>
@@ -115,20 +178,28 @@
                     <settings.detailmode>
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailmode</label>
-                            <displayCond>FIELD:switchableControllerActions:=:Project->list</displayCond>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailmode.description</description>
+                            <displayCond>
+                                <OR>
+                                    <numIndex index="0">FIELD:switchableControllerActions:=:Project->list</numIndex>
+                                    <numIndex index="1">FIELD:switchableControllerActions:=:Project->slider</numIndex>
+                                </OR>
+                            </displayCond>
+                            <onChange>reload</onChange>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
                                 <items>
                                     <numIndex index="0">
-                                        <numIndex index="0">Modal Window</numIndex>
+                                        <numIndex index="0">LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailmode.modal</numIndex>
                                         <numIndex index="1">modal</numIndex>
                                     </numIndex>
                                     <numIndex index="1">
-                                        <numIndex index="0">Page</numIndex>
+                                        <numIndex index="0">LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailmode.page</numIndex>
                                         <numIndex index="1">page</numIndex>
                                     </numIndex>
                                 </items>
+                                <default>page</default>
                             </config>
                         </TCEforms>
                     </settings.detailmode>
@@ -137,7 +208,12 @@
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailpage</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailpage.description</description>
-                            <displayCond>FIELD:settings.detailmode:=:page</displayCond>
+                            <displayCond>
+                                <OR>
+                                    <numIndex index="0">FIELD:switchableControllerActions:=:Project->list</numIndex>
+                                    <numIndex index="1">FIELD:switchableControllerActions:=:Project->slider</numIndex>
+                                </OR>
+                            </displayCond>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>
@@ -171,6 +247,7 @@
                     <settings.columns>
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.columns</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.columns.description</description>
                             <displayCond>FIELD:switchableControllerActions:=:Project->list</displayCond>
                             <config>
                                 <type>select</type>
@@ -197,9 +274,33 @@
                                         <numIndex index="1">6</numIndex>
                                     </numIndex>
                                 </items>
+                                <default>3</default>
                             </config>
                         </TCEforms>
                     </settings.columns>
+
+                    <settings.gridlayout>
+                        <TCEforms>
+                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.gridlayout</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.gridlayout.description</description>
+                            <displayCond>FIELD:switchableControllerActions:=:Project->list</displayCond>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">Masonry</numIndex>
+                                        <numIndex index="1">masonry</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">Fit Rows</numIndex>
+                                        <numIndex index="1">fitRows</numIndex>
+                                    </numIndex>
+                                </items>
+                                <default>fitRows</default>
+                            </config>
+                        </TCEforms>
+                    </settings.gridlayout>
 
                     <settings.previewimagemaxwidth>
                         <TCEforms>
@@ -218,15 +319,22 @@
                             <displayCond>FIELD:switchableControllerActions:=:Project->list</displayCond>
                             <config>
                                 <type>check</type>
-                                <default>1</default>
+                                <default>0</default>
                             </config>
                         </TCEforms>
                     </settings.showcategorymenu>
 
                     <settings.categoryroot>
                         <TCEforms>
-                            <label>Category Root</label>
+                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.categoryroot</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.categoryroot.description</description>
                             <displayCond>FIELD:switchableControllerActions:=:Project->list</displayCond>
+                            <displayCond>
+                                <AND>
+                                    <numIndex index="0">FIELD:switchableControllerActions:=:Project->list</numIndex>
+                                    <numIndex index="1">FIELD:settings.showcategorymenu:=:1</numIndex>
+                                </AND>
+                            </displayCond>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>
