@@ -1,10 +1,20 @@
+<f:flashMessages />
+
 <div class="glide">
   <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">
       <f:for each="{projects}" as="project">
-          <li class="glide__slide">
-              <f:image image="{project.previewImage.0}" width="480c" height="270c" class="img-fluid" />
-          </li>
+        <f:if condition="{settings.sliderlayout}">
+          <f:then>
+              <f:variable name="sliderlayout" value="{settings.sliderlayout}"/>
+          </f:then>
+          <f:else>
+              <f:variable name="sliderlayout" value="{project.sliderlayout}"/>
+          </f:else>
+        </f:if>
+        <li class="glide__slide">
+            <f:render section="SliderRecord" arguments="{layout:sliderlayout,project:project,columnClass:'image',settings:settings}"/>
+        </li>
       </f:for>
     </ul>
   </div>
@@ -15,6 +25,12 @@
       </f:for>
   </div>
 </div>
+
+<f:if condition="{settings.detailmode} == ''">
+    <div class="alert alert-info">
+        <f:translate key="alert.no_detail_mode_selected" extensionName="showcase"/>
+    </div>
+</f:if>
 
 <f:section name="FooterAssets">
 <script>
@@ -35,4 +51,28 @@
   }
 }).mount()
 </script>
+</f:section>
+
+
+<f:section name="SliderRecord">
+    <f:switch expression="{layout}">
+        <f:case value="card-img-top">
+            <f:render partial="List/CardImageTop" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:case value="card-img-bottom">
+            <f:render partial="List/CardImageBottom" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:case value="card-img-left">
+            <f:render partial="List/CardImageLeft" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:case value="card-img-right">
+            <f:render partial="List/CardImageRight" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:case value="card-hover">
+            <f:render partial="List/CardHoverSlider" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:defaultCase>
+
+        </f:defaultCase>
+    </f:switch>
 </f:section>
