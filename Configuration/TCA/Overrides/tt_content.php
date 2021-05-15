@@ -15,3 +15,6 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['showcase_sho
     'showcase_showcase',
     'FILE:EXT:showcase/Configuration/FlexForms/Plugin.xml'
 );
+
+// Hide pages and recursive fields fields for specific plugin
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['showcase_showcase'] = 'recursive,pages';
