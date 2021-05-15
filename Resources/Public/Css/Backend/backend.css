@@ -1,0 +1,8 @@
+.plugin-preview-showcase table td,
+.plugin-preview-showcase table th{
+    font-size: 11px;
+    background-color: #fff;
+}
+.plugin-preview-showcase table{
+    max-width: 420px;
+}
