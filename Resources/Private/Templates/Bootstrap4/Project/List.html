@@ -54,24 +54,22 @@
     <hr>
     </f:if>
 
-    <f:if condition="{settings.listlayout}">
-        <f:then>
-            <f:variable name="listlayout" value="{settings.listlayout}"/>
-        </f:then>
-        <f:else>
-            <f:variable name="listlayout" value="{project.listlayout}"/>
-        </f:else>
-    </f:if>
-
     <f:if condition="{settings.detailmode} == ''">
         <div class="alert alert-info">
-            No detail mode set, please check plugin settings!
+            <f:translate key="alert.no_detail_mode_selected" extensionName="showcase"/>
         </div>
     </f:if>
 
-
-    <div class="row grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'>
+    <div class="row grid" data-isotope="{f:format.json(value: {itemSelector: '.grid-item', layoutMode: settings.gridlayout})}">
         <f:for each="{projects}" as="project">
+            <f:if condition="{settings.listlayout}">
+                <f:then>
+                    <f:variable name="listlayout" value="{settings.listlayout}"/>
+                </f:then>
+                <f:else>
+                    <f:variable name="listlayout" value="{project.listlayout}"/>
+                </f:else>
+            </f:if>
             <f:render section="ProjectRecord" arguments="{layout:listlayout,project:project,columnClass:columnClass,settings:settings}"/>
         </f:for>
     </div>
