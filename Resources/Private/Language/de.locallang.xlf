@@ -111,6 +111,9 @@
 			<trans-unit id="fe.project_related_header">
 				<target>Related</target>
 			</trans-unit>
+			<trans-unit id="fe.read_more">
+				<target>Mehr Erfahren</target>
+			</trans-unit>
 
 			<trans-unit id="alert.no_detail_mode_selected">
 				<target>Es wurde kein Detail-Mode ausgewählt. Bitte prüfe die Plugin-Einstellungen im Backend.</target>

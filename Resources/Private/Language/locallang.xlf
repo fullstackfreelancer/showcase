@@ -111,6 +111,9 @@
 			<trans-unit id="fe.project_related_header">
 				<source>Related</source>
 			</trans-unit>
+			<trans-unit id="fe.read_more">
+				<source>Read More</source>
+			</trans-unit>
 
 			<trans-unit id="alert.no_detail_mode_selected">
 				<source>No detail mode selected, please check your plugin settings!</source>
