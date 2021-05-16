@@ -80,6 +80,7 @@
                                         <disabled>0</disabled>
                                     </selectIcons>
                                 </fieldWizard>
+                                <default>card-img-top</default>
                             </config>
                         </TCEforms>
                     </settings.sliderlayout>
