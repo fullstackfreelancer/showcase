@@ -7,7 +7,7 @@
                     <p class="d-none d-lg-block">
                         <f:format.raw>{project.teaser -> f:format.crop(maxCharacters: settings.teaserlength)}</f:format.raw>
                     </p>
-                    <f:link.action action="show" pageUid="{settings.detailpage}" arguments="{project:project}" additionalAttributes="{data-toggle:'{settings.detailmode}',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">more</f:link.action>
+                    <f:render partial="List/ReadMore" arguments="{_all}"/>
                 </div>
             </div>
             <div class="col-5 display-flex align-items-center">

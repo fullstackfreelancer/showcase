@@ -204,7 +204,7 @@
                                         <numIndex index="1">none</numIndex>
                                     </numIndex>
                                 </items>
-                                <default>page</default>
+                                <default>none</default>
                             </config>
                         </TCEforms>
                     </settings.detailmode>

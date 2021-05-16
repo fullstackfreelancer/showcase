@@ -49,6 +49,9 @@
 			<trans-unit id="plugin.detailmode.page">
 				<target>Detailseite</target>
 			</trans-unit>
+			<trans-unit id="plugin.detailmode.none">
+				<target>Kein Link</target>
+			</trans-unit>
 			<trans-unit id="plugin.categories">
 				<target>Kategorien</target>
 			</trans-unit>
