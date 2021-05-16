@@ -4,12 +4,13 @@
   <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">
       <f:for each="{projects}" as="project">
-        <f:if condition="{settings.sliderlayout}">
+        <f:if condition="{settings.sliderlayout} !== 'individual'">
           <f:then>
-              <f:variable name="sliderlayout" value="{settings.sliderlayout}"/>
+          <f:variable name="sliderlayout" value="{project.sliderlayout}"/>
+              <f:variable name="sliderlayout" value="{project.listlayout}"/>
           </f:then>
           <f:else>
-              <f:variable name="sliderlayout" value="{project.sliderlayout}"/>
+              <f:variable name="sliderlayout" value="{settings.sliderlayout}"/>
           </f:else>
         </f:if>
         <li class="glide__slide">

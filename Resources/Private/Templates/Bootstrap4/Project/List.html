@@ -62,21 +62,21 @@
 
     <div class="row grid" data-isotope="{f:format.json(value: {itemSelector: '.grid-item', layoutMode: settings.gridlayout})}">
         <f:for each="{projects}" as="project">
-            <f:if condition="{settings.listlayout}">
+            <f:if condition="{settings.listlayout} !== 'individual'">
                 <f:then>
-                    <f:variable name="listlayout" value="{settings.listlayout}"/>
+                    <f:render section="ProjectRecord" arguments="{layout:settings.listlayout,project:project,columnClass:columnClass,settings:settings}"/>
                 </f:then>
                 <f:else>
-                    <f:variable name="listlayout" value="{project.listlayout}"/>
+                    <f:render section="ProjectRecord" arguments="{layout:project.listlayout,project:project,columnClass:columnClass,settings:settings}"/>
                 </f:else>
             </f:if>
-            <f:render section="ProjectRecord" arguments="{layout:listlayout,project:project,columnClass:columnClass,settings:settings}"/>
         </f:for>
     </div>
 
 </div>
 
 <f:section name="ProjectRecord">
+    <f:debug title="layout">{layout}</f:debug>
     <f:switch expression="{layout}">
         <f:case value="card-img-top">
             <f:render partial="List/CardImageTop" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
