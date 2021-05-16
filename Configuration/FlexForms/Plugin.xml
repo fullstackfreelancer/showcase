@@ -218,6 +218,9 @@
                                     <numIndex index="0">FIELD:switchableControllerActions:=:Project->list</numIndex>
                                     <numIndex index="1">FIELD:switchableControllerActions:=:Project->slider</numIndex>
                                 </OR>
+                                <AND>
+                                    <numIndex index="1">FIELD:settings.detailmode:=:page</numIndex>
+                                </AND>
                             </displayCond>
                             <config>
                                 <type>group</type>
