@@ -36,8 +36,11 @@ class ProjectController extends ActionController
                     foreach ($project->getCategories() as $category) {
                         $string .= 'cat-'.$category->getUid().' ';
                     }
-                    $project->setCategoriesString($string);
                 }
+                else{
+                    $string = 'cat-none';
+                }
+                $project->setCategoriesString($string);
             }
             $this->view->assign('categories',$categories);
             $this->view->assign('projects',$projects);
