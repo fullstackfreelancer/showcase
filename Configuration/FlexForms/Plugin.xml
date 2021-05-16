@@ -199,6 +199,10 @@
                                         <numIndex index="0">LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailmode.page</numIndex>
                                         <numIndex index="1">page</numIndex>
                                     </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailmode.none</numIndex>
+                                        <numIndex index="1">none</numIndex>
+                                    </numIndex>
                                 </items>
                                 <default>page</default>
                             </config>
