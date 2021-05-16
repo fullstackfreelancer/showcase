@@ -47,7 +47,7 @@
                                 <items>
                                     <numIndex index="0">
                                         <numIndex index="0">Indiviual (for each single record)</numIndex>
-                                        <numIndex index="1"></numIndex>
+                                        <numIndex index="1">individual</numIndex>
                                     </numIndex>
                                     <numIndex index="1">
                                         <numIndex index="0">Card with Image on Top</numIndex>
@@ -121,7 +121,7 @@
                                 <items>
                                     <numIndex index="0">
                                         <numIndex index="0">Indiviual (for each single record)</numIndex>
-                                        <numIndex index="1"></numIndex>
+                                        <numIndex index="1">individual</numIndex>
                                     </numIndex>
                                     <numIndex index="1">
                                         <numIndex index="0">Card with Image on Top</numIndex>
