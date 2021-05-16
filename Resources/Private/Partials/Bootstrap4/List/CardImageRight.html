@@ -11,17 +11,7 @@
                 </div>
             </div>
             <div class="col-5 display-flex align-items-center">
-                <f:link.action action="show" pageUid="{settings.detailpage}" arguments="{project:project}" additionalAttributes="{data-toggle:'{settings.detailmode}',data-target:'#project-modal',data-project:project.uid}">
-                    <f:variable name="image" value="{project.previewImage.0}"/>
-                    <picture>
-                        <source srcset="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" media="(min-width: 1200px)">
-                        <source srcset="{f:uri.image(image: image, maxWidth: '992', cropVariant: 'default')}, {f:uri.image(image: image, maxWidth: '1984', cropVariant: 'default')} 2x" media="(min-width: 992px)">
-                        <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'tablet')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'tablet')} 2x" media="(min-width: 768px)">
-                        <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'mobile')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'mobile')} 2x" media="(max-width: 767px)">
-                        <!---Fallback--->
-                        <img class="img-fluid w-100" src="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" alt="{image.alternative}" longdesc="{image.description}" title="{image.title}">
-                    </picture>
-                </f:link.action>
+                <f:render partial="List/PreviewImage" arguments="{project:project,imgclass:'img-fluid w-100'}"/>
             </div>
         </div>
     </div>
