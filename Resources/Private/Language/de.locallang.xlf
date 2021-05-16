@@ -112,7 +112,7 @@
 				<target>Related</target>
 			</trans-unit>
 			<trans-unit id="fe.read_more">
-				<target>Mehr Erfahren</target>
+				<target>Mehr</target>
 			</trans-unit>
 
 			<trans-unit id="alert.no_detail_mode_selected">

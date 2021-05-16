@@ -112,7 +112,7 @@
 				<source>Related</source>
 			</trans-unit>
 			<trans-unit id="fe.read_more">
-				<source>Read More</source>
+				<source>More</source>
 			</trans-unit>
 
 			<trans-unit id="alert.no_detail_mode_selected">
