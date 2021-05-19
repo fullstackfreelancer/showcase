@@ -60,18 +60,31 @@
         </div>
     </f:if>
 
-    <div class="row grid" data-isotope="{f:format.json(value: {itemSelector: '.grid-item', layoutMode: settings.gridlayout})}">
-        <f:for each="{projects}" as="project">
-            <f:if condition="{settings.listlayout} !== 'individual'">
-                <f:then>
-                    <f:render section="ProjectRecord" arguments="{layout:settings.listlayout,project:project,columnClass:columnClass,settings:settings}"/>
-                </f:then>
-                <f:else>
-                    <f:render section="ProjectRecord" arguments="{layout:project.listlayout,project:project,columnClass:columnClass,settings:settings}"/>
-                </f:else>
-            </f:if>
-        </f:for>
-    </div>
+    <f:if condition="{projects}">
+        <f:then>
+
+            <div class="row grid" data-isotope="{f:format.json(value: {itemSelector: '.grid-item', layoutMode: settings.gridlayout})}">
+                <f:for each="{projects}" as="project">
+                    <f:if condition="{settings.listlayout} !== 'individual'">
+                        <f:then>
+                            <f:render section="ProjectRecord" arguments="{layout:settings.listlayout,project:project,columnClass:columnClass,settings:settings}"/>
+                        </f:then>
+                        <f:else>
+                            <f:render section="ProjectRecord" arguments="{layout:project.listlayout,project:project,columnClass:columnClass,settings:settings}"/>
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </div>
+
+        </f:then>
+        <f:else>
+
+            <div class="alert alert-info">
+                No projects found...
+            </div>
+
+        </f:else>
+    </f:if>
 
 </div>
 
