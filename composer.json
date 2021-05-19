@@ -13,7 +13,7 @@
     ],
     "license": "GPL-3.0-or-later",
     "require": {
-        "typo3/cms-core": "^9.5 || ^10.5"
+        "typo3/cms-core": "^9.5 || ^10.4 || ^11.2.0"
     },
     "replace": {
         "simonkoehler/showcase": "self.version",
