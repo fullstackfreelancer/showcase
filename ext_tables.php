@@ -22,7 +22,9 @@
 
 // Add TSConfig to the Backend
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
-    mod.web_layout.tt_content.preview.list.showcase_showcase = EXT:showcase/Resources/Private/Templates/Preview/Showcase.html
+    mod.web_layout.tt_content.preview.list.showcase_list = EXT:showcase/Resources/Private/Templates/Preview/Showcase.html
+    mod.web_layout.tt_content.preview.list.showcase_slider = EXT:showcase/Resources/Private/Templates/Preview/Showcase.html
+    mod.web_layout.tt_content.preview.list.showcase_show = EXT:showcase/Resources/Private/Templates/Preview/Showcase.html
 ');
 
 // Add CSS to the Backend
