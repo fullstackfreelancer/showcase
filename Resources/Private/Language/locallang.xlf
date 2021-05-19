@@ -11,15 +11,24 @@
 			<trans-unit id="plugin.list.title">
 				<source>Showcase List</source>
 			</trans-unit>
+			<trans-unit id="plugin.list.description">
+				<source>Creates a list or grid of projects with various settings</source>
+			</trans-unit>
 			<trans-unit id="plugin.slider.title">
 				<source>Showcase Slider</source>
+			</trans-unit>
+			<trans-unit id="plugin.slider.description">
+				<source>Creates a slider of projects with various settings</source>
 			</trans-unit>
 			<trans-unit id="plugin.show.title">
 				<source>Showcase Details</source>
 			</trans-unit>
+			<trans-unit id="plugin.show.description">
+				<source>Creates a detail view of a project</source>
+			</trans-unit>
 
 			<trans-unit id="plugin.description">
-				<source>Creates a showcase of projects with various settings</source>
+				<source>OLD DESCRIPTION, REPLACE!</source>
 			</trans-unit>
 			<trans-unit id="plugin.orderby">
 				<source>Order by</source>
@@ -114,11 +123,20 @@
 			<trans-unit id="plugin.recordsource.description">
 				<source>From where do you want to pull your project records?</source>
 			</trans-unit>
+			<trans-unit id="plugin.recordsource.selected">
+				<source>Selection of projects</source>
+			</trans-unit>
+			<trans-unit id="plugin.recordsource.storage">
+				<source>From a storage folder</source>
+			</trans-unit>
 			<trans-unit id="plugin.recordlist">
 				<source>Selected records</source>
 			</trans-unit>
 			<trans-unit id="plugin.recordlist.description">
-				<source>Select up to 999 project records</source>
+				<source>Projects to be represented in the list. For translations, the projects must be selected in the appropriate language!</source>
+			</trans-unit>
+			<trans-unit id="plugin.please_select">
+				<source>Please select...</source>
 			</trans-unit>
 
 			<trans-unit id="plugin.action.list">
@@ -143,6 +161,9 @@
 
 			<trans-unit id="alert.no_detail_mode_selected">
 				<source>No detail mode selected, please check your plugin settings!</source>
+			</trans-unit>
+			<trans-unit id="alert.no_projects_found">
+				<source>No projects found</source>
 			</trans-unit>
 
 		</body>

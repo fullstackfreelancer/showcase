@@ -19,15 +19,15 @@
                                 <renderType>selectSingle</renderType>
                                 <items>
                                     <numIndex index="0">
-                                        <numIndex index="0">Please select</numIndex>
+                                        <numIndex index="0">LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.please_select</numIndex>
                                         <numIndex index="1">0</numIndex>
                                     </numIndex>
                                     <numIndex index="1">
-                                        <numIndex index="0">From storage folder</numIndex>
+                                        <numIndex index="0">LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordsource.storage</numIndex>
                                         <numIndex index="1">storage</numIndex>
                                     </numIndex>
                                     <numIndex index="2">
-                                        <numIndex index="0">Selected projects</numIndex>
+                                        <numIndex index="0">LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordsource.selected</numIndex>
                                         <numIndex index="1">selected</numIndex>
                                     </numIndex>
                                 </items>

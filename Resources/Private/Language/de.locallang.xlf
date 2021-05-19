@@ -4,11 +4,31 @@
 		<header/>
 		<body>
 
-			<trans-unit id="plugin.title">
+			<trans-unit id="plugin.tab.title">
 				<target>Showcase</target>
 			</trans-unit>
+
+			<trans-unit id="plugin.list.title">
+				<target>Showcase Listenansicht</target>
+			</trans-unit>
+			<trans-unit id="plugin.list.description">
+				<target>Erzeugt eine Liste oder ein Raster von Projekten mit verschiedenen Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="plugin.slider.title">
+				<target>Showcase Slider</target>
+			</trans-unit>
+			<trans-unit id="plugin.slider.description">
+				<target>Erzeugt einen Slider für Projekte mit verschiedenen Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="plugin.show.title">
+				<target>Showcase Detailansicht</target>
+			</trans-unit>
+			<trans-unit id="plugin.show.description">
+				<target>Erzeugt eine Detailansicht eines Projekts</target>
+			</trans-unit>
+
 			<trans-unit id="plugin.description">
-				<target>Erstellt einen Showcase von Projekten mit verschiedenen Einstellungen</target>
+				<target>Alte Beschreibung!</target>
 			</trans-unit>
 			<trans-unit id="plugin.orderby">
 				<target>Sortieren nach</target>
@@ -103,11 +123,20 @@
 			<trans-unit id="plugin.recordsource.description">
 				<target>Die Quelle kann ein Ordner oder eine Liste ausgewählter Projekte sein.</target>
 			</trans-unit>
+			<trans-unit id="plugin.recordsource.selected">
+				<target>Ausgewählte Projekte</target>
+			</trans-unit>
+			<trans-unit id="plugin.recordsource.storage">
+				<target>Projekte aus einem Ordner</target>
+			</trans-unit>
 			<trans-unit id="plugin.recordlist">
 				<target>Ausgewählte Projekte</target>
 			</trans-unit>
 			<trans-unit id="plugin.recordlist.description">
-				<target>Projekte die in der Liste dargestellt werden sollen.</target>
+				<target>Projekte die in der Liste dargestellt werden sollen. Bei Übersetzungen müssen die Projekte in der entsprechenden Sprache ausgewählt werden!</target>
+			</trans-unit>
+			<trans-unit id="plugin.please_select">
+				<target>Bitte wählen...</target>
 			</trans-unit>
 
 			<trans-unit id="plugin.action.list">
@@ -132,6 +161,9 @@
 
 			<trans-unit id="alert.no_detail_mode_selected">
 				<target>Es wurde kein Detail-Mode ausgewählt. Bitte prüfe die Plugin-Einstellungen im Backend.</target>
+			</trans-unit>
+			<trans-unit id="alert.no_projects_found">
+				<target>No projects found</target>
 			</trans-unit>
 
 		</body>
