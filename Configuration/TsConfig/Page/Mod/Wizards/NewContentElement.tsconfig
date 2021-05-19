@@ -1,41 +1,37 @@
 mod.wizards {
     newContentElement.wizardItems {
-        plugins {
+        showcase.header = LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.tab.title
+        showcase {
             elements {
-                showcase_showcase {
+                showcase_list {
                     iconIdentifier = showcase
-                    title = LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.title
-                    description = LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.description
+                    title = LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.list.title
+                    description = LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.list.description
                     tt_content_defValues {
                         CType = list
-                        list_type = showcase_showcase
+                        list_type = showcase_list
                     }
                 }
-                showcase_showcase_show {
+                showcase_slider {
                     iconIdentifier = showcase
-                    title = Showcase Detail Page
-                    description = LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.description
+                    title = LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.slider.title
+                    description = LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.slider.description
                     tt_content_defValues {
                         CType = list
-                        list_type = showcase_showcase
-                        pi_flexform (
-                            <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-                            <T3FlexForms>
-                                <data>
-                                    <sheet index="sDEF">
-                                        <language index="lDEF">
-                                            <field index="switchableControllerActions">
-                                                <value index="vDEF">Project->show</value>
-                                            </field>
-                                        </language>
-                                    </sheet>
-                                </data>
-                            </T3FlexForms>
-                        )
+                        list_type = showcase_slider
+                    }
+                }
+                showcase_show {
+                    iconIdentifier = showcase
+                    title = LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.show.title
+                    description = LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.show.description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = showcase_show
                     }
                 }
             }
-            show := addToList(showcase_showcase,showcase_showcase_show)
+            show := addToList(showcase_list,showcase_slider,showcase_show)
         }
     }
 }
