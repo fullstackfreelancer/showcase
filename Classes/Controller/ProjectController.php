@@ -26,35 +26,53 @@ class ProjectController extends ActionController
     {
         $pageUid = (int)\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('id');
 
-        if($this->settings['recordstorage']){
-            $projects = $this->projectRepository->findByPid($this->settings['recordstorage']);
-            $categories = $this->projectRepository->getCategoriesFromRoot($this->settings['categoryroot']);
-            foreach ($projects as $project) {
-                $string = '';
-                $projectCategories = $project->getCategories();
-                if($projectCategories){
-                    foreach ($project->getCategories() as $category) {
-                        $string .= 'cat-'.$category->getUid().' ';
-                    }
+        switch ($this->settings['recordsource']) {
+
+            // Selected projects mode / get selected projects from a list
+            case 'selected':
+
+                $projects = $this->projectRepository->findByUids($this->settings['recordlist']);
+                $projectsFinal = $this->projectRepository->addCategoryStringToProjects($projects);
+                $this->view->assign('projects',$projectsFinal);
+
+            break;
+
+            // Storage folder mode / get projects from specific folder
+            case 'storage':
+
+                if($this->settings['recordstorage']){
+                    $projects = $this->projectRepository->findByPid($this->settings['recordstorage']);
+                    $projectsFinal = $this->projectRepository->addCategoryStringToProjects($projects);
+                    $this->view->assign('projects',$projectsFinal);
                 }
                 else{
-                    $string = 'cat-none';
+                    $this->addFlashMessage(
+                        'Missing record storage pid in your plugin settings!',
+                        $messageTitle = 'Note',
+                        $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
+                        $storeInSession = FALSE
+                    );
                 }
-                $project->setCategoriesString($string);
-            }
+
+            break;
+
+            default:
+                $this->addFlashMessage(
+                    'No record source selected in your plugin settings!',
+                    $messageTitle = 'Oops!',
+                    $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING,
+                    $storeInSession = FALSE
+                );
+            break;
+        }
+
+        if($this->settings['showcategorymenu']){
+            $categories = $this->projectRepository->getCategoriesFromRoot($this->settings['categoryroot']);
             $this->view->assign('categories',$categories);
-            $this->view->assign('projects',$projects);
-            $this->view->assign('settings',$this->settings);
-            $this->view->assign('pageUid',$pageUid);
         }
-        else{
-            $this->addFlashMessage(
-               'Missing recordStorage in your plugin!',
-               $messageTitle = 'Note',
-               $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
-               $storeInSession = FALSE
-            );
-        }
+
+        $this->view->assign('settings',$this->settings);
+        $this->view->assign('pageUid',$pageUid);
 
     }
 
@@ -86,7 +104,7 @@ class ProjectController extends ActionController
             }
             else{
                 $this->addFlashMessage(
-                   'No single record given',
+                   'No single record uid given',
                    $messageTitle = 'Note',
                    $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
                    $storeInSession = FALSE
@@ -113,6 +131,48 @@ class ProjectController extends ActionController
      */
     public function sliderAction()
     {
+
+        switch ($this->settings['recordsource']) {
+
+            // Selected projects mode / get selected projects from a list
+            case 'selected':
+
+                $projects = $this->projectRepository->findByUids($this->settings['recordlist']);
+                $projectsFinal = $this->projectRepository->addCategoryStringToProjects($projects);
+                $this->view->assign('projects',$projectsFinal);
+
+            break;
+
+            // Storage folder mode / get projects from specific folder
+            case 'storage':
+
+                if($this->settings['recordstorage']){
+                    $projects = $this->projectRepository->findByPid($this->settings['recordstorage']);
+                    $projectsFinal = $this->projectRepository->addCategoryStringToProjects($projects);
+                    $this->view->assign('projects',$projectsFinal);
+                }
+                else{
+                    $this->addFlashMessage(
+                       'Missing record storage pid in your plugin settings!',
+                       $messageTitle = 'Note',
+                       $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
+                       $storeInSession = FALSE
+                    );
+                }
+
+            break;
+
+            default:
+                $this->addFlashMessage(
+                    'No record source selected in your plugin settings!',
+                    $messageTitle = 'Oops!',
+                    $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
+                    $storeInSession = FALSE
+                );
+            break;
+        }
+
+        /*
         if($this->settings['recordstorage']){
             $projects = $this->projectRepository->findByPid($this->settings['recordstorage']);
         }
@@ -124,8 +184,9 @@ class ProjectController extends ActionController
                $storeInSession = FALSE
             );
         }
+        */
 
-        $this->view->assign('projects',$projects);
+        //$this->view->assign('projects',$projects);
         $this->view->assign('settings',$this->settings);
     }
 
