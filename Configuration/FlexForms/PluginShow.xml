@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.title</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+
+                    <settings.singlerecord>
+                        <TCEforms>
+                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.singlerecord</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.singlerecord.description</description>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>tx_showcase_domain_model_project</allowed>
+                                <size>1</size>
+                                <minitems>0</minitems>
+                                <maxitems>1</maxitems>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.singlerecord>
+
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>
