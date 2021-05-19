@@ -7,9 +7,31 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Showcase',
-            'Showcase',
+            'List',
             [
-                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'list,modal,show,slider',
+                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'list',
+            ],
+            [
+                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => '',
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Showcase',
+            'Slider',
+            [
+                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'slider',
+            ],
+            [
+                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => '',
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Showcase',
+            'Show',
+            [
+                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'show,modal',
             ],
             [
                 \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'modal',
