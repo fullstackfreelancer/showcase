@@ -49,7 +49,7 @@ project_ajax {
         10 {
             userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
             extensionName = Showcase
-            pluginName = Showcase
+            pluginName = Show
             vendorName = SIMONKOEHLER
             controller = Project
             action = modal
