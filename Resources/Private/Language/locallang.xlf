@@ -4,9 +4,20 @@
 		<header/>
 		<body>
 
-			<trans-unit id="plugin.title">
+			<trans-unit id="plugin.tab.title">
 				<source>Showcase</source>
 			</trans-unit>
+
+			<trans-unit id="plugin.list.title">
+				<source>Showcase List</source>
+			</trans-unit>
+			<trans-unit id="plugin.slider.title">
+				<source>Showcase Slider</source>
+			</trans-unit>
+			<trans-unit id="plugin.show.title">
+				<source>Showcase Details</source>
+			</trans-unit>
+
 			<trans-unit id="plugin.description">
 				<source>Creates a showcase of projects with various settings</source>
 			</trans-unit>
@@ -96,6 +107,18 @@
 			</trans-unit>
 			<trans-unit id="plugin.recordstorage.description">
 				<source>Choose a folder where your projects are stored</source>
+			</trans-unit>
+			<trans-unit id="plugin.recordsource">
+				<source>Record Source</source>
+			</trans-unit>
+			<trans-unit id="plugin.recordsource.description">
+				<source>From where do you want to pull your project records?</source>
+			</trans-unit>
+			<trans-unit id="plugin.recordlist">
+				<source>Selected records</source>
+			</trans-unit>
+			<trans-unit id="plugin.recordlist.description">
+				<source>Select up to 999 project records</source>
 			</trans-unit>
 
 			<trans-unit id="plugin.action.list">

@@ -95,7 +95,19 @@
 				<target>Projekt-Speicherordner</target>
 			</trans-unit>
 			<trans-unit id="plugin.recordstorage.description">
-				<target>Wähle einen Ordner, in dem deine Projekte gespeichert sind</target>
+				<target>Ordner in dem Projekte gespeichert sind.</target>
+			</trans-unit>
+			<trans-unit id="plugin.recordsource">
+				<target>Datensatz-Quelle</target>
+			</trans-unit>
+			<trans-unit id="plugin.recordsource.description">
+				<target>Die Quelle kann ein Ordner oder eine Liste ausgewählter Projekte sein.</target>
+			</trans-unit>
+			<trans-unit id="plugin.recordlist">
+				<target>Ausgewählte Projekte</target>
+			</trans-unit>
+			<trans-unit id="plugin.recordlist.description">
+				<target>Projekte die in der Liste dargestellt werden sollen.</target>
 			</trans-unit>
 
 			<trans-unit id="plugin.action.list">
