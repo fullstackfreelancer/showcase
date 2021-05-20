@@ -85,11 +85,17 @@ a.showcase-cat-link{
             content: '';
             position: absolute;
             bottom: 0;
-            left: 50%;
+            left: 0%;
             width: 50%;
             height: 2px;
             background-color: #ccc;
-            transform: translateX(-50%);
+            transform: translateX(0%);
+        }
+        @media(min-width: 768px){
+            &:after{
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
 }
