@@ -45,11 +45,7 @@
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordlist</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordlist.description</description>
-                            <displayCond>
-                                <AND>
-                                    <numIndex index="0">FIELD:settings.recordsource:=:selected</numIndex>
-                                </AND>
-                            </displayCond>
+                            <displayCond>FIELD:settings.recordsource:=:selected</displayCond>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>
@@ -69,11 +65,7 @@
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordstorage</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordstorage.description</description>
-                            <displayCond>
-                                <AND>
-                                    <numIndex index="0">FIELD:settings.recordsource:=:storage</numIndex>
-                                </AND>
-                            </displayCond>
+                            <displayCond>FIELD:settings.recordsource:=:storage</displayCond>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>
@@ -188,11 +180,7 @@
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailpage</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailpage.description</description>
-                            <displayCond>
-                                <AND>
-                                    <numIndex index="1">FIELD:settings.detailmode:=:page</numIndex>
-                                </AND>
-                            </displayCond>
+                            <displayCond>FIELD:settings.detailmode:=:page</displayCond>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>
@@ -296,11 +284,7 @@
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.categoryroot</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.categoryroot.description</description>
-                            <displayCond>
-                                <AND>
-                                    <numIndex index="1">FIELD:settings.showcategorymenu:=:1</numIndex>
-                                </AND>
-                            </displayCond>
+                            <displayCond>FIELD:settings.showcategorymenu:=:1</displayCond>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>

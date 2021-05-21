@@ -45,11 +45,7 @@
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordlist</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordlist.description</description>
-                            <displayCond>
-                                <AND>
-                                    <numIndex index="0">FIELD:settings.recordsource:=:selected</numIndex>
-                                </AND>
-                            </displayCond>
+                            <displayCond>FIELD:settings.recordsource:=:selected</displayCond>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>
@@ -69,11 +65,7 @@
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordstorage</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordstorage.description</description>
-                            <displayCond>
-                                <AND>
-                                    <numIndex index="0">FIELD:settings.recordsource:=:storage</numIndex>
-                                </AND>
-                            </displayCond>
+                            <displayCond>FIELD:settings.recordsource:=:storage</displayCond>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>
@@ -207,11 +199,7 @@
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailpage</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailpage.description</description>
-                            <displayCond>
-                                <AND>
-                                    <numIndex index="1">FIELD:settings.detailmode:=:page</numIndex>
-                                </AND>
-                            </displayCond>
+                            <displayCond>FIELD:settings.detailmode:=:page</displayCond>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>
@@ -224,28 +212,6 @@
                             </config>
                         </TCEforms>
                     </settings.detailpage>
-
-                    <!--
-                    <settings.orderby>
-                        <TCEforms>
-                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.orderby</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="0">LLL:EXT:example/Resources/Private/Language/Backend.xlf:settings.registration.orderBy.crdate</numIndex>
-                                        <numIndex index="1">crdate</numIndex>
-                                    </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="0">LLL:EXT:example/Resources/Private/Language/Backend.xlf:settings.registration.orderBy.title</numIndex>
-                                        <numIndex index="1">title</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
-                    </settings.orderby>
-                    -->
 
                 </el>
             </ROOT>
