@@ -5,14 +5,14 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'plugin',
     'author' => 'Simon Köhler',
     'author_email' => 'info@simon-koehler.com',
-    'state' => 'beta',
+    'state' => 'stable',
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
     'version' => '1.2.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.4.99-11.4.0',
+            'typo3' => '10.4.0-11.4.0',
         ],
         'conflicts' => [],
         'suggests' => [
