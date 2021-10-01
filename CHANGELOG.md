@@ -1,3 +1,8 @@
+## 2021-10-01
+- Added default YAML configuration for URL routing (Configuration/Routes/Default.yaml)
+- Updated dependencies in emconf and composer file
+- Changed version from 1.0.1 to 1.2.0
+
 ## 2021-05-19
 - Plugin 'showcase_showcase' replaced by 3 new plugins for better handling
 - More translations added for German
