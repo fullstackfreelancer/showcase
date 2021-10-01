@@ -130,7 +130,15 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
+                'valuePicker' => [
+                    'items' => [
+                        ['_blank', '_blank'],
+                        ['_parent', '_parent'],
+                        ['_self', '_self'],
+                    ],
+                ],
+                'default' => '_blank'
             ],
         ],
         'hover_title' => [
