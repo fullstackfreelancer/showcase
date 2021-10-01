@@ -3,6 +3,7 @@
 - Updated dependencies in emconf and composer file
 - Changed version from 1.0.1 to 1.2.0
 - Added iteration and comma to category list in detail view
+- Added GERMAN translations to the backend forms
 
 ## 2021-05-19
 - Plugin 'showcase_showcase' replaced by 3 new plugins for better handling
