@@ -46,6 +46,9 @@
 			<trans-unit id="tx_showcase_domain_model_project.slug">
 				<source>URL Slug</source>
 			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.related_projects">
+				<source>Related Projects</source>
+			</trans-unit>
 
 
 			<trans-unit id="tx_showcase_domain_model_url">
