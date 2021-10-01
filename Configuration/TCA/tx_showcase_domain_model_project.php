@@ -114,11 +114,11 @@ return [
                 'renderType' => 'selectSingle',
                 'default' => 'card-img-top',
                 'items' => [
-                    ['Card Image Top', 'card-img-top'],
-                    ['Card Image Bottom', 'card-img-bottom'],
-                    ['Card Image Left', 'card-img-left'],
-                    ['Card Image Right', 'card-img-right'],
-                    ['Hover Title', 'card-hover']
+                    ['LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tx_showcase_domain_model_project.list_layout.card_image_top', 'card-img-top'],
+                    ['LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tx_showcase_domain_model_project.list_layout.card_image_bottom', 'card-img-bottom'],
+                    ['LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tx_showcase_domain_model_project.list_layout.card_image_left', 'card-img-left'],
+                    ['LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tx_showcase_domain_model_project.list_layout.card_image_right', 'card-img-right'],
+                    ['LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tx_showcase_domain_model_project.list_layout.card_hover', 'card-hover']
                 ],
             ],
         ],

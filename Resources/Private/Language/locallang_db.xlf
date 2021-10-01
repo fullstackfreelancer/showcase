@@ -43,6 +43,21 @@
 			<trans-unit id="tx_showcase_domain_model_project.list_layout">
 				<source>List Layout</source>
 			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.list_layout.card_image_top">
+				<source>Card Image Top</source>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.list_layout.card_image_bottom">
+				<source>Card Image Bottom</source>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.list_layout.card_image_left">
+				<source>Card Image Left</source>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.list_layout.card_image_right">
+				<source>Card Image Right</source>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.list_layout.card_hover">
+				<source>Card Hover</source>
+			</trans-unit>
 			<trans-unit id="tx_showcase_domain_model_project.slug">
 				<source>URL Slug</source>
 			</trans-unit>

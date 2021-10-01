@@ -43,6 +43,21 @@
 			<trans-unit id="tx_showcase_domain_model_project.list_layout">
 				<target>Listen-Layout</target>
 			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.list_layout.card_image_top">
+				<target>Karte mit Bild oben</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.list_layout.card_image_bottom">
+				<target>Karte mit Bild unten</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.list_layout.card_image_left">
+				<target>Karte mit Bild links</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.list_layout.card_image_right">
+				<target>Karte mit Bild rechts</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.list_layout.card_hover">
+				<target>Karte mit Titel und Hover-Effekt</target>
+			</trans-unit>
 			<trans-unit id="tx_showcase_domain_model_project.slug">
 				<target>URL-Slug</target>
 			</trans-unit>
