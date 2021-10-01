@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file target-language="de" datatype="plaintext" original="messages" date="2021-10-01T12:35:37Z" product-name="showcase">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_showcase_domain_model_project">
+				<target>Projekt</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.title">
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.teaser">
+				<target>Teaser</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.description">
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.preview_image">
+				<target>Vorschaubild</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.media">
+				<target>Medien</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.urls">
+				<target>URLs</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.seotitle">
+				<target>SEO-Seitentitel</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.seotitle.description">
+				<target>Wir empfehlen, Titel zwischen 30 und 60 Zeichen lang zu halten, damit sie nicht zu lang werden und die Zeichenbegrenzung von Google überschreiten.</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.seodescription">
+				<target>Meta-Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.seodescription.description">
+				<target>Meta-Beschreibungen können beliebig lang sein, aber Google schneidet Snippets im Allgemeinen auf ~155-160 Zeichen ab.</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.seopreview">
+				<target>Google-Vorschau</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.list_layout">
+				<target>Listen-Layout</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.slug">
+				<target>URL-Slug</target>
+			</trans-unit>
+
+
+			<trans-unit id="tx_showcase_domain_model_url">
+				<target>Url</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_url.title">
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_url.url">
+				<target>URL</target>
+			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_url.target">
+				<target>URL-Ziel</target>
+			</trans-unit>
+
+
+			<trans-unit id="tab.media">
+				<target>Medien</target>
+			</trans-unit>
+			<trans-unit id="tab.seo">
+				<target>SEO</target>
+			</trans-unit>
+			<trans-unit id="tab.layout">
+				<target>Layout</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
