@@ -311,7 +311,7 @@ return [
         ],
         'related' => [
             'exclude' => true,
-            'label' => 'Related Projects',
+            'label' => 'LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tx_showcase_domain_model_project.related_projects',
             'config' => [
                 'type' => 'group',
                 'internal_type' => 'db',
