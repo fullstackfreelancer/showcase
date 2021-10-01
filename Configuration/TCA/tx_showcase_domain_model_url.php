@@ -21,10 +21,10 @@ return [
         'iconfile' => 'EXT:showcase/ext_icon.svg',
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, title, url, target, hover_title, starttime, endtime',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, title, url, target, starttime, endtime',
     ],
     'types' => [
-        '1' => ['showitem' => 'l10n_parent, l10n_diffsource, title, url, target, hover_title, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'l10n_parent, l10n_diffsource, title, url, target, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'palettes' =>[
 
