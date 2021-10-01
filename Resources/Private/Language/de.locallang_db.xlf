@@ -10,6 +10,9 @@
 			<trans-unit id="tx_showcase_domain_model_project.title">
 				<target>Titel</target>
 			</trans-unit>
+			<trans-unit id="tx_showcase_domain_model_project.hover_title">
+				<target>Hover Title</target>
+			</trans-unit>
 			<trans-unit id="tx_showcase_domain_model_project.teaser">
 				<target>Teaser</target>
 			</trans-unit>
