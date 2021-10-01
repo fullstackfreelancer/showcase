@@ -1,0 +1,17 @@
+routeEnhancers:
+  ProjectDetails:
+    type: Extbase
+    extension: Showcase
+    plugin: Detail
+    routes:
+      - { routePath: '{project_title}', _controller: 'Project::show', _arguments: {'project_title': 'project'} }
+    defaultController: 'Project::show'
+    defaults:
+      page: '0'
+    requirements:
+      project_title: '[a-zA-Z0-9].*'
+    aspects:
+      project_title:
+        type: PersistedAliasMapper
+        tableName: 'tx_showcase_domain_model_project'
+        routeFieldName: 'slug'
