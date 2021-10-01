@@ -94,13 +94,14 @@ class ProjectController extends ActionController
      */
     public function showAction()
     {
+        $project = null;
 
         if($this->request->hasArgument('project')){
-            $projectRender = $this->projectRepository->findByUid($this->request->getArgument('project'));
+            $project = $this->projectRepository->findByUid($this->request->getArgument('project'));
         }
         else{
             if($this->settings['singlerecord']){
-                $projectRender = $this->projectRepository->findByUid($this->settings['singlerecord']);
+                $project = $this->projectRepository->findByUid($this->settings['singlerecord']);
             }
             else{
                 $this->addFlashMessage(
@@ -112,15 +113,18 @@ class ProjectController extends ActionController
             }
         }
 
-        // Set page title
-        $titleProvider = GeneralUtility::makeInstance(\SIMONKOEHLER\Showcase\PageTitle\TitleProvider::class);
-        $titleProvider->setTitle($projectRender->getSeotitle() ?: $projectRender->getTitle());
+        if($project !== null){
+            // Set page title
+            $titleProvider = GeneralUtility::makeInstance(\SIMONKOEHLER\Showcase\PageTitle\TitleProvider::class);
+            $titleProvider->setTitle($project->getSeotitle() ?: $project->getTitle());
 
-        // Set meta description
-        $metaTagManager = GeneralUtility::makeInstance(MetaTagManagerRegistry::class)->getManagerForProperty('description');
-        $metaTagManager->addProperty('description', $projectRender->getSeodescription());
+            // Set meta description
+            $metaTagManager = GeneralUtility::makeInstance(MetaTagManagerRegistry::class)->getManagerForProperty('description');
+            $metaTagManager->addProperty('description', $project->getSeodescription());
 
-        $this->view->assign('project',$projectRender);
+            $this->view->assign('project',$project);
+        }
+
         $this->view->assign('settings',$this->settings);
     }
 
