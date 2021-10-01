@@ -2,7 +2,7 @@ routeEnhancers:
   ProjectDetails:
     type: Extbase
     extension: Showcase
-    plugin: Detail
+    plugin: Show
     routes:
       - { routePath: '{project_title}', _controller: 'Project::show', _arguments: {'project_title': 'project'} }
     defaultController: 'Project::show'
