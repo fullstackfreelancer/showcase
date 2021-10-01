@@ -1,7 +1,7 @@
 {
     "name": "simonkoehler/showcase",
     "type": "typo3-cms-extension",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Create beautiful showcases and portfolios with the Bootstrap Package or other Themes",
     "authors": [
         {

@@ -4,6 +4,8 @@
 - Changed version from 1.0.1 to 1.2.0
 - Added iteration and comma to category list in detail view
 - Added GERMAN translations to the backend forms
+- Cleaned up backend TCA form configuration
+- Changed version from 1.2.0 to 1.2.1
 
 ## 2021-05-19
 - Plugin 'showcase_showcase' replaced by 3 new plugins for better handling
