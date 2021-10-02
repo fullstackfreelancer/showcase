@@ -21,8 +21,6 @@
    'showcase'
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('showcase', 'Configuration/TypoScript', 'Showcase');
-
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['showcase_list'] = 'pi_flexform';
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
     'showcase_list',
