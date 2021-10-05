@@ -1,3 +1,8 @@
+## 2021-10-04
+- Added Documentation folders and some files (in progress and not working yet!)
+- URL child records of a project are now hidden in the backend list view by default
+
+
 ## 2021-10-01
 - Added default YAML configuration for URL routing (Configuration/Routes/Default.yaml)
 - Updated dependencies in emconf and composer file
