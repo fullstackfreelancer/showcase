@@ -13,7 +13,7 @@ Properties
 	Property                             Title                                  Sheet          Type
 	==================================== ====================================== ============== ===============
 	recordsource                         Record Source                          General        string
-	recordlist                           Record List							General		   string
+	recordlist                           Record List                            General        string
 	recordstorage                        Record Storage							General        int
 	listlayout                           List Layout							General        int
 	teaserlength                         Teaser Length							General        string
