@@ -1,1 +1,5 @@
-TCEFORM.tt_content.categories.types.showcase_list.disabled = 1
+TCEFORM{
+    tt_content{
+
+    }
+}
