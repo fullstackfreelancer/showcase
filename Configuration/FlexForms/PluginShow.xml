@@ -25,6 +25,40 @@
                         </TCEforms>
                     </settings.singlerecord>
 
+                    <settings.mediacolumns>
+                        <TCEforms>
+                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.mediacolumns</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.mediacolumns.description</description>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">1 column</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">2 columns</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">3 columns</numIndex>
+                                        <numIndex index="1">3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">4 columns</numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">6 columns</numIndex>
+                                        <numIndex index="1">6</numIndex>
+                                    </numIndex>
+                                </items>
+                                <default>3</default>
+                            </config>
+                        </TCEforms>
+                    </settings.mediacolumns>
+
                 </el>
             </ROOT>
         </sDEF>
