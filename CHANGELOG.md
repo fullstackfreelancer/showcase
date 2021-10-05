@@ -1,7 +1,7 @@
 ## 2021-10-05
 - URL child records of a project are now hidden in the backend list view by default
-- Added static width of 720px to project detail media elements / images (Todo: make width configurable)
-- 
+- Added static width of 720px to project detail media elements / images (Requires: image generation. Todo: make configurable)
+- Images of detail views are now ABOVE the text content on mobile devices (requires grid system of Bootstrap v4 or higher)
 
 ## 2021-10-04
 - Added Documentation folders and some files (in progress and not working yet!)
