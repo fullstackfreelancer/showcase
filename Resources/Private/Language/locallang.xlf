@@ -39,6 +39,12 @@
 			<trans-unit id="plugin.columns.description">
 				<source>Define the number of columns the grid should have from tablet screen size upwards</source>
 			</trans-unit>
+			<trans-unit id="plugin.mediacolumns">
+				<source>Media columns per row</source>
+			</trans-unit>
+			<trans-unit id="plugin.mediacolumns.description">
+				<source>Define the number of media columns the grid should have from tablet screen size upwards</source>
+			</trans-unit>
 			<trans-unit id="plugin.listlayout">
 				<source>List Layout</source>
 			</trans-unit>
