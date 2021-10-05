@@ -1,7 +1,10 @@
+## 2021-10-05
+- URL child records of a project are now hidden in the backend list view by default
+- Added static width of 720px to project detail media elements / images (Todo: make width configurable)
+- 
+
 ## 2021-10-04
 - Added Documentation folders and some files (in progress and not working yet!)
-- URL child records of a project are now hidden in the backend list view by default
-
 
 ## 2021-10-01
 - Added default YAML configuration for URL routing (Configuration/Routes/Default.yaml)
