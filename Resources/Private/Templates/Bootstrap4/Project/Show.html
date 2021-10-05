@@ -1,6 +1,6 @@
 <f:flashMessages />
 <div class="row">
-    <div class="col-md-5 col-lg-4 order-1 order-lg-0">
+    <div class="col-md-5 col-lg-4 order-1 order-md-0">
         <h1>{project.title}</h1>
         <f:if condition="{project.categories}">
             <div class="mb-3">
@@ -22,7 +22,7 @@
             <f:render partial="RelatedProjects" arguments="{projects:project.related}"/>
         </f:if>
     </div>
-    <div class="col-md-7 col-lg-8 order-0 order-lg-1">
+    <div class="col-md-7 col-lg-8 order-0 order-md-1">
         <f:if condition="{project.media}">
             <div class="row">
                 <f:for each="{project.media}" as="media">
