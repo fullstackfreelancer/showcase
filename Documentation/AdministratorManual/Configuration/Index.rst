@@ -12,5 +12,3 @@ Configuration
 	:titlesonly:
 
 	TypoScript/Index
-	TsConfig/Index
-	ExtensionManager/Index
