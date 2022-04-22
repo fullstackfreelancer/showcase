@@ -3,19 +3,19 @@ $defaultCropSettings = [
     'title' => 'Default',
     'allowedAspectRatios' => [
         '16:9' => [
-            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
+            'title' => 'LLL:EXT:showcase/Resources/Private/Language/backend.xlf:ratio.16_9',
             'value' => 16 / 9
         ],
         '4:3' => [
-            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
+            'title' => 'LLL:EXT:showcase/Resources/Private/Language/backend.xlf:ratio.4_3',
             'value' => 4 / 3
         ],
         '1:1' => [
-            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
+            'title' => 'LLL:EXT:showcase/Resources/Private/Language/backend.xlf:ratio.1_1',
             'value' => 1.0
         ],
         'NaN' => [
-            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
+            'title' => 'LLL:EXT:showcase/Resources/Private/Language/backend.xlf:ratio.free',
             'value' => 0.0
         ],
     ],

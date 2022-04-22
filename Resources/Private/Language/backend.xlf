@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2021-05-05T12:05:37Z" product-name="showcase">
+		<header/>
+		<body>
+
+			<trans-unit id="ratio.16_9">
+				<source>16:9</source>
+			</trans-unit>
+            <trans-unit id="ratio.4_3">
+				<source>4:3</source>
+			</trans-unit>
+            <trans-unit id="ratio.1_1">
+				<source>1:1</source>
+			</trans-unit>
+            <trans-unit id="ratio.free">
+				<source>free</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
