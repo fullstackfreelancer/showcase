@@ -5,7 +5,7 @@
         <f:if condition="{project.categories}">
             <div class="mb-3">
             <f:for each="{project.categories}" as="category" iteration="i">
-                <span class="text-primary">{category.title}</span><f:if condition="!{i.isLast}">, </f:if>
+                <span class="text-muted">{category.title}</span><f:if condition="!{i.isLast}">, </f:if>
             </f:for>
             </div>
         </f:if>
