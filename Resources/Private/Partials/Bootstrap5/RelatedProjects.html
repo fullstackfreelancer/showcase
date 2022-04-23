@@ -1,0 +1,5 @@
+<ul class="list-group">
+<f:for each="{projects}" as="project">
+    <li class="list-group-item"><f:link.action action="show" arguments="{project:project}"><i class="fa fa-link"></i> {project.title}</f:link.action></li>
+</f:for>
+</ul>

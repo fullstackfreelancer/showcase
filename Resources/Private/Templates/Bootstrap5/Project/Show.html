@@ -1,0 +1,36 @@
+<f:flashMessages />
+<div class="row">
+    <div class="col-md-5 col-lg-4 order-1 order-md-0">
+        <h1>{project.title}</h1>
+        <f:if condition="{project.categories}">
+            <div class="mb-3">
+            <f:for each="{project.categories}" as="category" iteration="i">
+                <span class="text-muted">{category.title}</span><f:if condition="!{i.isLast}">, </f:if>
+            </f:for>
+            </div>
+        </f:if>
+        <p class="lead">{project.teaser}</p>
+        <f:format.html>{project.description}</f:format.html>
+        <f:if condition="{project.urls}">
+            <hr class="my-5">
+            <h3><f:translate key="fe.project_urls_header" extensionName="showcase"/></h3>
+            <f:render partial="UrlList" arguments="{urls:project.urls}"/>
+        </f:if>
+        <f:if condition="{project.related}">
+            <hr class="my-5">
+            <h3><f:translate key="fe.project_related_header" extensionName="showcase"/></h3>
+            <f:render partial="RelatedProjects" arguments="{projects:project.related}"/>
+        </f:if>
+    </div>
+    <div class="col-md-7 col-lg-8 order-0 order-md-1">
+        <f:if condition="{project.media}">
+            <div class="row row-cols-{settings.mediacolumns}">
+                <f:for each="{project.media}" as="media">
+                    <div class="col">
+                        <f:media file="{media}" class="showcase-media-item" width="720"/>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="{columnClass} mb-4 grid-item {project.categoriesString}">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{project.title}</h5>
+            <p class="card-text">
+                <f:format.raw>{project.teaser -> f:format.crop(maxCharacters: settings.teaserlength)}</f:format.raw>
+            </p>
+            <f:render partial="List/ReadMore" arguments="{_all}"/>
+        </div>
+        <f:render partial="List/PreviewImage" arguments="{project:project,imgclass:'img-fluid w-100'}"/>
+    </div>
+</div>

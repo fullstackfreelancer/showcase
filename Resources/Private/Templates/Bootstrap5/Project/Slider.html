@@ -1,0 +1,85 @@
+<f:flashMessages />
+
+<div class="glide">
+  <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+      <f:for each="{projects}" as="project">
+        <f:if condition="{settings.sliderlayout} == 'individual'">
+          <f:then>
+              <f:variable name="sliderlayout" value="{project.listlayout}"/>
+          </f:then>
+          <f:else>
+              <f:variable name="sliderlayout" value="{settings.sliderlayout}"/>
+          </f:else>
+        </f:if>
+        <li class="glide__slide">
+            <f:render section="SliderRecord" arguments="{layout:sliderlayout,project:project,columnClass:'image',settings:settings}"/>
+        </li>
+      </f:for>
+    </ul>
+  </div>
+
+  <div class="glide__bullets" data-glide-el="controls[nav]">
+      <f:for each="{projects}" as="project" iteration="i">
+            <button class="glide__bullet" data-glide-dir="={i.index}"></button>
+      </f:for>
+  </div>
+</div>
+
+<f:if condition="{settings.detailmode} == ''">
+    <div class="alert alert-info">
+        <f:translate key="alert.no_detail_mode_selected" extensionName="showcase"/>
+    </div>
+</f:if>
+
+<f:section name="FooterAssets">
+<script>
+  new Glide('.glide', {
+  type: 'carousel',
+  focusAt: 'center',
+  startAt: 0,
+  perView: 3,
+  gap: 20,
+  autoplay: 4000,
+  breakpoints: {
+    1024: {
+      perView: 2
+    },
+    600: {
+      perView: 1
+    }
+  }
+}).mount()
+</script>
+</f:section>
+
+
+<f:section name="SliderRecord">
+    <f:switch expression="{layout}">
+        <f:case value="card-img-top">
+            <f:render partial="List/CardImageTop" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:case value="card-img-bottom">
+            <f:render partial="List/CardImageBottom" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:case value="card-img-left">
+            <f:render partial="List/CardImageLeft" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:case value="card-img-right">
+            <f:render partial="List/CardImageRight" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:case value="card-hover">
+            <f:render partial="List/CardHoverSlider" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:defaultCase>
+
+        </f:defaultCase>
+    </f:switch>
+</f:section>
+
+<!-- Modal -->
+<div class="modal fade" id="project-modal" tabindex="-1" role="dialog" aria-labelledby="project-modal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-showcase" role="document">
+    <div class="modal-content modal-content-showcase"><!-- Dynamic Content from Ajax --></div>
+  </div>
+</div>

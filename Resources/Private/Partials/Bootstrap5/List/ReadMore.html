@@ -1,0 +1,15 @@
+<f:switch expression="{settings.detailmode}">
+    <f:case value="modal">
+        <f:link.action action="show" pageUid="{settings.detailpage}" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}" class="card-link btn btn-primary">
+            <f:translate key="fe.read_more" extensionName="showcase"/>
+        </f:link.action>
+    </f:case>
+    <f:case value="page">
+        <f:link.action action="show" pageUid="{settings.detailpage}" arguments="{project:project}" class="card-link btn btn-primary">
+            <f:translate key="fe.read_more" extensionName="showcase"/>
+        </f:link.action>
+    </f:case>
+    <f:defaultCase>
+
+    </f:defaultCase>
+</f:switch>

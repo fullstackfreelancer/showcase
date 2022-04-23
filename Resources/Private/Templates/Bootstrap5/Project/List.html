@@ -1,0 +1,120 @@
+<f:if condition="{settings.columns}">
+    <f:switch expression="{settings.columns}">
+        <f:case value="1">
+            <f:variable name="columnClass" value="col-lg-12"/>
+        </f:case>
+        <f:case value="2">
+            <f:variable name="columnClass" value="col-lg-6"/>
+        </f:case>
+        <f:case value="3">
+            <f:variable name="columnClass" value="col-lg-4"/>
+        </f:case>
+        <f:case value="4">
+            <f:variable name="columnClass" value="col-lg-3"/>
+        </f:case>
+        <f:case value="6">
+            <f:variable name="columnClass" value="col-lg-2"/>
+        </f:case>
+        <f:defaultCase>
+            <f:variable name="columnClass" value="col-lg-3"/>
+        </f:defaultCase>
+    </f:switch>
+</f:if>
+
+<div class="tx-showcase-plugin">
+
+    <f:flashMessages />
+
+    <f:if condition="{settings.showcategorymenu}">
+
+    <nav class="navbar navbar-expand-md">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showcaseCategoryMenu" aria-controls="showcaseCategoryMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="showcaseCategoryMenu">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link active showcase-cat-link" data-cat="*" href="#">
+                    <span class="nav-link-text">All</span>
+                </a>
+            </li>
+            <f:for each="{categories}" as="category">
+                <li class="nav-item">
+                    <a class="nav-link showcase-cat-link" data-cat=".cat-{category.uid}" href="#">
+                        <span class="nav-link-text">{category.title}</span>
+                    </a>
+                </li>
+            </f:for>
+        </ul>
+      </div>
+    </nav>
+
+    <hr>
+    </f:if>
+
+    <f:if condition="{settings.detailmode} == ''">
+        <div class="alert alert-info">
+            <f:translate key="alert.no_detail_mode_selected" extensionName="showcase"/>
+        </div>
+    </f:if>
+
+    <f:if condition="{projects}">
+        <f:then>
+
+            <div class="row grid" data-isotope="{f:format.json(value: {itemSelector: '.grid-item', layoutMode: settings.gridlayout})}">
+                <f:for each="{projects}" as="project">
+                    <f:if condition="{settings.listlayout} !== 'individual'">
+                        <f:then>
+                            <f:render section="ProjectRecord" arguments="{layout:settings.listlayout,project:project,columnClass:columnClass,settings:settings}"/>
+                        </f:then>
+                        <f:else>
+                            <f:render section="ProjectRecord" arguments="{layout:project.listlayout,project:project,columnClass:columnClass,settings:settings}"/>
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </div>
+
+        </f:then>
+        <f:else>
+
+            <div class="alert alert-info">
+                <f:translate key="alert.no_projects_found" extensionName="showcase"/>
+            </div>
+
+        </f:else>
+    </f:if>
+
+</div>
+
+<f:section name="ProjectRecord">
+    <f:switch expression="{layout}">
+        <f:case value="card-img-top">
+            <f:render partial="List/CardImageTop" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:case value="card-img-bottom">
+            <f:render partial="List/CardImageBottom" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:case value="card-img-left">
+            <f:render partial="List/CardImageLeft" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:case value="card-img-right">
+            <f:render partial="List/CardImageRight" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:case value="card-hover">
+            <f:render partial="List/CardHover" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
+        <f:defaultCase>
+
+        </f:defaultCase>
+    </f:switch>
+</f:section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="project-modal" tabindex="-1" role="dialog" aria-labelledby="project-modal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-showcase" role="document">
+    <div class="modal-content modal-content-showcase"><!-- Dynamic Content from Ajax --></div>
+  </div>
+</div>

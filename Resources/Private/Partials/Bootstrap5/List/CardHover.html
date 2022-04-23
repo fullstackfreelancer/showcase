@@ -1,0 +1,47 @@
+<div class="{columnClass} mb-4 grid-item {project.categoriesString}">
+
+    <f:switch expression="{settings.detailmode}">
+        <f:case value="modal">
+        <f:link.action class="card-hover" action="show" pageUid="{settings.detailpage}" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
+            <f:render section="Image" arguments="{settings:settings,image:project.previewImage.0,imgclass:'w-100 h-auto'}"/>
+            <f:render section="Overlay" arguments="{_all}"/>
+        </f:link.action>
+        </f:case>
+        <f:case value="page">
+        <f:link.action class="card-hover" action="show" pageUid="{settings.detailpage}" arguments="{project:project}">
+            <f:render section="Image" arguments="{settings:settings,image:project.previewImage.0,imgclass:'w-100 h-auto'}"/>
+            <f:render section="Overlay" arguments="{_all}"/>
+        </f:link.action>
+        </f:case>
+        <f:defaultCase>
+            <div class="card-hover">
+                <f:render section="Image" arguments="{settings:settings,image:project.previewImage.0,imgclass:'w-100 h-auto'}"/>
+                <f:render section="Overlay" arguments="{_all}"/>
+            </div>
+        </f:defaultCase>
+    </f:switch>
+
+</div>
+
+
+<f:section name="Image">
+<picture>
+    <source srcset="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" media="(min-width: 1200px)">
+    <source srcset="{f:uri.image(image: image, maxWidth: '992', cropVariant: 'default')}, {f:uri.image(image: image, maxWidth: '1984', cropVariant: 'default')} 2x" media="(min-width: 992px)">
+    <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'tablet')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'tablet')} 2x" media="(min-width: 768px)">
+    <source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'mobile')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'mobile')} 2x" media="(max-width: 767px)">
+    <img class="{imgclass}" src="{f:uri.image(image: image, maxWidth: settings.previewimagemaxwidth, cropVariant: 'default')}" alt="{image.alternative}" longdesc="{image.description}" title="{image.title}">
+</picture>
+</f:section>
+
+
+<f:section name="Overlay">
+<div class="overlay text-light text-center">
+    <div>
+    <h5 class="overlay-title m-0">{project.title}</h5>
+    <p class="overlay-teaser m-0">
+        <f:format.raw>{project.teaser -> f:format.crop(maxCharacters: settings.teaserlength)}</f:format.raw>
+    </p>
+    </div>
+</div>
+</f:section>
