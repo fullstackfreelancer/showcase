@@ -21,15 +21,21 @@ return [
         'iconfile' => 'EXT:showcase/ext_icon.svg',
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, title, description, media, starttime, endtime',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, title, description, media, starttime, endtime, categories',
     ],
     'types' => [
-        '1' => ['showitem' => 'l10n_parent, l10n_diffsource, urls, title, slug, teaser, description, preview_image, related, --div--;LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tab.media, media, --div--;LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tab.layout, list_layout,--div--;LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tab.seo, seotitle, seodescription, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'l10n_parent, l10n_diffsource, urls, title, slug, teaser, description, preview_image, related, --div--;LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tab.media, media, --div--;LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tab.layout, list_layout,--div--;LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tab.seo, seotitle, seodescription, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime, --div--;LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tab.categories, categories'],
     ],
     'palettes' =>[
 
     ],
     'columns' => [
+        'categories' => [
+            'config' => [
+               'type' => 'category',
+               'relationship' => 'oneToMany'
+            ]
+        ],
         'sys_language_uid' => [
             'exclude' => true,
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
