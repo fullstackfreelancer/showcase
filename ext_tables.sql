@@ -23,7 +23,7 @@ CREATE TABLE tx_showcase_domain_model_project (
 	starttime int(11) unsigned DEFAULT '0' NOT NULL,
 	endtime int(11) unsigned DEFAULT '0' NOT NULL,
 	sorting int(11) unsigned DEFAULT '0' NOT NULL,
-	categories int(11) unsigned DEFAULT '0' NOT NULL,
+	categories varchar(255) DEFAULT '' NOT NULL,
 	seotitle varchar(255) DEFAULT '' NOT NULL,
 	seodescription text DEFAULT '' NOT NULL,
 
