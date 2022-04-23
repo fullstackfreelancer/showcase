@@ -8,4 +8,7 @@ plugin.tx_showcase {
 		# cat=plugin.tx_showcase/file; type=string; label=Path to template layouts (FE)
 		layoutRootPath = EXT:showcase/Resources/Private/Layouts/Bootstrap4/
 	}
+	settings{
+		scriptPath = EXT:showcase/Resources/Public/Js/Bootstrap4/Showcase.js
+	}
 }
