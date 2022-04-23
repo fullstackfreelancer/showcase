@@ -12,11 +12,8 @@
     'Showcase: Bootstrap 4 Templates'
 );
 
-/* COMING SOON!
-*
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     'showcase',
     'Configuration/TypoScript/Bootstrap5',
     'Showcase: Bootstrap 5 Templates'
 );
-*/
