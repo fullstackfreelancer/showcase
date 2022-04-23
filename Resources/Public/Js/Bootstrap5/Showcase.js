@@ -24,17 +24,28 @@ document.addEventListener('DOMContentLoaded',function(){
 
     var posts = document.querySelectorAll('.grid-item');
     imagesLoaded( posts, function() {
+        /*
         let grid = $('.tx-showcase-plugin .grid').isotope({});
+        */
+
+        var elem = document.querySelector('.tx-showcase-plugin > .grid');
+        var iso = new Isotope( elem, {
+          // options
+          itemSelector: '.grid-item',
+          layoutMode: 'fitRows'
+        });
+
         let categoryLinks = document.querySelectorAll('.showcase-cat-link');
         categoryLinks.forEach((item, i) => {
             item.addEventListener('click',function(e){
                 resetCategoryLinks(categoryLinks);
                 item.classList.add('active');
-                grid.isotope({ filter: e.currentTarget.getAttribute('data-cat') });
+                iso.arrange({ filter: e.currentTarget.getAttribute('data-cat') });
                 e.preventDefault();
             });
             return false;
         });
+
     });
 
 });
