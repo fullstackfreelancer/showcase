@@ -22,7 +22,6 @@ Benefit from frequent updates and new features:
 
 - make detail view awesome
 - update translations
-- add Bootstrap 5 templates
 - fix bugs
 
 ## Support Development

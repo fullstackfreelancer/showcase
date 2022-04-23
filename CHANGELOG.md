@@ -1,3 +1,7 @@
+## 2022-04-23
+- Bootstrap 5 templates added
+- JavaScript now works without jQuery (Bootstrap 5)
+
 ## 2021-10-05
 - URL child records of a project are now hidden in the backend list view by default
 - Added static width of 720px to project detail media elements / images (Requires: image generation. Todo: make configurable)
