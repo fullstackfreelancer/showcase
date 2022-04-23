@@ -92,6 +92,9 @@
 			<trans-unit id="tab.layout">
 				<source>Layout</source>
 			</trans-unit>
+			<trans-unit id="tab.categories">
+				<source>Categories</source>
+			</trans-unit>
 
 		</body>
 	</file>
