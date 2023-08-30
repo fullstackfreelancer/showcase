@@ -1,6 +1,4 @@
-# Showcase / Portfolio Extension for TYPO3
-
-# IMPORTANT: THIS REPOSITORY WILL NO LONGER BE MAINTAINED! PLEASE VISIT MY NEW GITHUB ACCOUNT: <a href="https://github.com/phpfreelancer">phpfreelancer</a>
+# IMPORTANT NOTE: THIS REPOSITORY WILL NO LONGER BE MAINTAINED! PLEASE VISIT MY NEW GITHUB ACCOUNT: <a href="https://github.com/phpfreelancer">phpfreelancer</a>
 
 OFFICIAL DOCS: https://simonkoehler.com
 
