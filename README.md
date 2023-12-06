@@ -1,6 +1,5 @@
-# IMPORTANT NOTE: THIS REPOSITORY WILL NO LONGER BE MAINTAINED! PLEASE VISIT MY NEW GITHUB ACCOUNT: <a href="https://github.com/phpfreelancer">phpfreelancer</a>
+# ![](https://github.com/fullstackfreelancer/showcase/blob/master/ext_icon.png?raw=true) Showcase / Project Gallery Plugin for TYPO3 CMS (ce_timeline)
 
-OFFICIAL DOCS: https://simonkoehler.com
 
 ## Support Development
 Benefit from frequent updates and new features:
