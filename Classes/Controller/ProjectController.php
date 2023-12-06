@@ -24,7 +24,8 @@ class ProjectController extends ActionController
      */
     public function listAction()
     {
-        $pageUid = (int)\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('id');
+        //$pageUid = (int)\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('id');
+        $pageUid = $request->getParsedBody()['id'] ?? $request->getQueryParams()['id'] ?? null;
 
         switch ($this->settings['recordsource']) {
 
