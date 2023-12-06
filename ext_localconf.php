@@ -34,7 +34,7 @@ call_user_func(
                 \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'show,modal',
             ],
             [
-                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'modal',
+                \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'show,modal',
             ]
         );
 
@@ -55,6 +55,8 @@ call_user_func(
                 ['source' => $path]
             );
         }
+
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_showcase_show[project]';
 
     }
 );
