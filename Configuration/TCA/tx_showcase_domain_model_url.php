@@ -24,10 +24,10 @@ return [
         ]
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, title, url, target, starttime, endtime',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, title, url, url_target, starttime, endtime',
     ],
     'types' => [
-        '1' => ['showitem' => 'l10n_parent, l10n_diffsource, title, url, target, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'l10n_parent, l10n_diffsource, title, url, url_target, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'palettes' =>[
 
@@ -127,9 +127,9 @@ return [
                 'eval' => 'url,required'
             ],
         ],
-        'target' => [
+        'url_target' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tx_showcase_domain_model_url.target',
+            'label' => 'LLL:EXT:showcase/Resources/Private/Language/locallang_db.xlf:tx_showcase_domain_model_url.url_target',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
