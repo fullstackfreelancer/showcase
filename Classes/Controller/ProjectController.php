@@ -102,7 +102,7 @@ class ProjectController extends ActionController
             $project = $this->projectRepository->findByUid($this->request->getArgument('project'));
         }
         else{
-            if($this->settings['singlerecord']){
+            if(isset($this->settings['singlerecord']) && $this->settings['singlerecord'] > 0){
                 $project = $this->projectRepository->findByUid($this->settings['singlerecord']);
             }
             else{
