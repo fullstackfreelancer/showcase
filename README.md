@@ -1,18 +1,19 @@
-# ![](https://github.com/fullstackfreelancer/showcase/blob/master/ext_icon.png?raw=true) Showcase / Project Gallery Plugin for TYPO3 CMS (ce_timeline)
+# ![](https://github.com/fullstackfreelancer/showcase/blob/master/ext_icon.png?raw=true) Showcase / Project Gallery Plugin for TYPO3 CMS (showcase)
 
 
 ## Support Development
 Benefit from frequent updates and new features:
+
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypalme/fullstackfreelancer/25)
 
 ## Screenshots
 <table>
 <tr>
 <td width="50%" valign="top">
-<img src="https://raw.githubusercontent.com/koehlersimon/showcase/master/Resources/Public/Images/Screenshots/list-hover-title.png">
+<img src="https://raw.githubusercontent.com/fullstackfreelancer/showcase/master/Resources/Public/Images/Screenshots/list-hover-title.png">
 </td>
 <td width="50%" valign="top">
-<img src="https://raw.githubusercontent.com/koehlersimon/showcase/master/Resources/Public/Images/Screenshots/plugin.jpg">
+<img src="https://raw.githubusercontent.com/fullstackfreelancer/showcase/master/Resources/Public/Images/Screenshots/plugin.jpg">
 </td>
 </tr>
 </table>
@@ -25,6 +26,7 @@ Benefit from frequent updates and new features:
 
 ## Support Development
 Benefit from frequent updates and new features:
+
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypalme/fullstackfreelancer/25)
 
 ## Contact Developer
