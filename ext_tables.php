@@ -1,6 +1,4 @@
 <?php
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_showcase_domain_model_project');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_showcase_domain_model_url');
 
 // Add TSConfig to the Backend
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
