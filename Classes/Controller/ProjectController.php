@@ -1,5 +1,6 @@
 <?php
 namespace SIMONKOEHLER\Showcase\Controller;
+use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\MetaTag\MetaTagManagerRegistry;
@@ -22,10 +23,10 @@ class ProjectController extends ActionController
      *
      * @return string
      */
-    public function listAction()
+    public function listAction(): ResponseInterface
     {
         //$pageUid = (int)\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('id');
-        $pageUid = $request->getParsedBody()['id'] ?? $request->getQueryParams()['id'] ?? null;
+        $pageUid = $this->request->getParsedBody()['id'] ?? $this->request->getQueryParams()['id'] ?? null;
 
         switch ($this->settings['recordsource']) {
 
@@ -50,7 +51,7 @@ class ProjectController extends ActionController
                     $this->addFlashMessage(
                         'Missing record storage pid in your plugin settings!',
                         $messageTitle = 'Note',
-                        $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
+                        $severity = \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::OK,
                         $storeInSession = FALSE
                     );
                 }
@@ -61,7 +62,7 @@ class ProjectController extends ActionController
                 $this->addFlashMessage(
                     'No record source selected in your plugin settings!',
                     $messageTitle = 'Oops!',
-                    $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING,
+                    $severity = \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::WARNING,
                     $storeInSession = FALSE
                 );
             break;
@@ -74,7 +75,7 @@ class ProjectController extends ActionController
 
         $this->view->assign('settings',$this->settings);
         $this->view->assign('pageUid',$pageUid);
-
+        return $this->htmlResponse();
     }
 
     /**
@@ -108,7 +109,7 @@ class ProjectController extends ActionController
                 $this->addFlashMessage(
                    'No single record uid given',
                    $messageTitle = 'Note',
-                   $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
+                   $severity = \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::OK,
                    $storeInSession = FALSE
                 );
             }
@@ -121,7 +122,7 @@ class ProjectController extends ActionController
 
             // Set meta description
             $metaTagManager = GeneralUtility::makeInstance(MetaTagManagerRegistry::class)->getManagerForProperty('description');
-            $metaTagManager->addProperty('description', $project->getSeodescription());
+            //$metaTagManager->addProperty('description', $project->getSeodescription());
 
             $this->view->assign('project',$project);
         }
@@ -134,7 +135,7 @@ class ProjectController extends ActionController
      *
      * @return string
      */
-    public function sliderAction()
+    public function sliderAction(): ResponseInterface
     {
 
         switch ($this->settings['recordsource']) {
@@ -160,7 +161,7 @@ class ProjectController extends ActionController
                     $this->addFlashMessage(
                        'Missing record storage pid in your plugin settings!',
                        $messageTitle = 'Note',
-                       $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
+                       $severity = \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::OK,
                        $storeInSession = FALSE
                     );
                 }
@@ -171,7 +172,7 @@ class ProjectController extends ActionController
                 $this->addFlashMessage(
                     'No record source selected in your plugin settings!',
                     $messageTitle = 'Oops!',
-                    $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
+                    $severity = \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::OK,
                     $storeInSession = FALSE
                 );
             break;
@@ -193,6 +194,7 @@ class ProjectController extends ActionController
 
         //$this->view->assign('projects',$projects);
         $this->view->assign('settings',$this->settings);
+        return $this->htmlResponse();
     }
 
 }
