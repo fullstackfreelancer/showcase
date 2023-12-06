@@ -163,7 +163,7 @@
 				<target>Es wurde kein Detail-Mode ausgewählt. Bitte prüfe die Plugin-Einstellungen im Backend.</target>
 			</trans-unit>
 			<trans-unit id="alert.no_projects_found">
-				<target>No projects found</target>
+				<target>Keine Projekte gefunden</target>
 			</trans-unit>
 
 		</body>
