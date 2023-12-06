@@ -1,14 +1,19 @@
+# customcategory=signup=Showcase
+# customsubcategory=frontend=Frontend
+# customsubcategory=files=Files
 
 plugin.tx_showcase {
 	view {
-		# cat=plugin.tx_showcase/file; type=string; label=Path to template root (FE)
+		# cat=Showcase/files; type=string; label=Path to template root (FE)
 		templateRootPath = EXT:showcase/Resources/Private/Templates/Bootstrap5/
-		# cat=plugin.tx_showcase/file; type=string; label=Path to template partials (FE)
+		# cat=Showcase/files; type=string; label=Path to template partials (FE)
 		partialRootPath = EXT:showcase/Resources/Private/Partials/Bootstrap5/
-		# cat=plugin.tx_showcase/file; type=string; label=Path to template layouts (FE)
+		# cat=Showcase/files; type=string; label=Path to template layouts (FE)
 		layoutRootPath = EXT:showcase/Resources/Private/Layouts/Bootstrap5/
 	}
 	settings{
+		# cat=Showcase/resources; type=string; label=Plugin Custom Classes
+		frontend.plugin.customclasses = container
 		scriptPath = EXT:showcase/Resources/Public/Js/Bootstrap5/Showcase.js
 	}
 }
