@@ -97,7 +97,7 @@ class ProjectController extends ActionController
     public function showAction(): ResponseInterface
     {
         $project = null;
-        print_r($this->request->getArguments());
+
         if($this->request->hasArgument('project')){
             $project = $this->projectRepository->findByUid($this->request->getArgument('project'));
         }
