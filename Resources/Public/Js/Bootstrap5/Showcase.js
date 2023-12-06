@@ -7,11 +7,10 @@ document.addEventListener('DOMContentLoaded',function(){
     var projectModal = document.getElementById('project-modal')
 
     projectModal.addEventListener('show.bs.modal', event => {
-        console.log(event.relatedTarget)
         let projectUid = event.relatedTarget.getAttribute('data-project');
         ajaxLoader.loadProject(projectUid,listLoaded,event.currentTarget.querySelector('.modal-content'));
     })
-    
+
     projectModal.addEventListener('hide.bs.modal', event => {
         event.currentTarget.querySelector('.modal-content').innerHTML = '';
     })
