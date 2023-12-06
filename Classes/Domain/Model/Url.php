@@ -20,11 +20,11 @@ class Url extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $url;
 
     /**
-     * target
+     * urlTarget
      *
      * @var string
      */
-    protected $target;
+    protected $urlTarget;
 
     /**
      * hoverTitle
@@ -54,12 +54,12 @@ class Url extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the target
+     * Returns the urlTarget
      *
-     * @return string $target
+     * @return string $urlTarget
      */
-    public function getTarget() {
-        return $this->target;
+    public function getUrlTarget() {
+        return $this->urlTarget;
     }
 
     /**
