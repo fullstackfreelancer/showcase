@@ -8,12 +8,7 @@
     mod.web_list.table.tx_showcase_domain_model_url.hideTable = 1
 ');
 
-// Add CSS to the Backend
-$GLOBALS['TBE_STYLES']['skins']['showcase'] = [];
-$GLOBALS['TBE_STYLES']['skins']['showcase']['name'] = 'showcase';
-$GLOBALS['TBE_STYLES']['skins']['showcase']['stylesheetDirectories'] = [
-    'theme' => 'EXT:showcase/Resources/Public/Css/Backend'
-];
+$GLOBALS['TYPO3_CONF_VARS']['BE']['stylesheets']['showcase'] = 'EXT:showcase/Resources/Public/Css/Backend';
 
 // Add JavaScript to the Backend
 $renderer = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
