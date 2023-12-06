@@ -9,6 +9,7 @@ plugin.tx_showcase {
 		pagetypes{
 			project_ajax = {$plugin.tx_showcase.settings.pagetypes.project_ajax}
 		}
+		frontend.plugin.customclasses = {$plugin.tx_showcase.settings.frontend.plugin.customclasses}
 	}
 }
 
