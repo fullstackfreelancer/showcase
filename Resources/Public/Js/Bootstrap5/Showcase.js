@@ -4,17 +4,17 @@ document.addEventListener('DOMContentLoaded',function(){
     const listLoaded = function(data,targetObject){
         targetObject.innerHTML = data;
     }
+    var projectModal = document.getElementById('project-modal')
 
-    /*
-    $('#project-modal').on('show.bs.modal', function (event) {
+    projectModal.addEventListener('show.bs.modal', event => {
+        console.log(event.relatedTarget)
         let projectUid = event.relatedTarget.getAttribute('data-project');
         ajaxLoader.loadProject(projectUid,listLoaded,event.currentTarget.querySelector('.modal-content'));
-    });
-
-    $('#project-modal').on('hide.bs.modal', function (event) {
+    })
+    
+    projectModal.addEventListener('hide.bs.modal', event => {
         event.currentTarget.querySelector('.modal-content').innerHTML = '';
     })
-    */
 
     function resetCategoryLinks(categoryLinks){
         categoryLinks.forEach((item, i) => {
