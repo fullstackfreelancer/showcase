@@ -1,19 +1,19 @@
 {
     "name": "simonkoehler/showcase",
     "type": "typo3-cms-extension",
-    "version": "1.4.0",
+    "version": "2.0.0",
     "description": "Create beautiful showcases and portfolios with the Bootstrap Package or other Themes",
     "authors": [
         {
             "name": "Simon Köhler",
-            "email": "info@simon-koehler.com",
-            "homepage": "https://simon-koehler.com/en",
+            "email": "info@simonkoehler.com",
+            "homepage": "https://simonkoehler.com",
             "role": "Developer"
         }
     ],
     "license": "GPL-3.0-or-later",
     "require": {
-        "typo3/cms-core": "^10.4 || ^11.5"
+        "typo3/cms-core": "^10.4 || ^12.5"
     },
     "replace": {
         "simonkoehler/showcase": "self.version",

@@ -4,7 +4,7 @@ OFFICIAL DOCS: https://simonkoehler.com
 
 ## Support Development
 Benefit from frequent updates and new features:
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/typo3freelancer/25)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypalme/fullstackfreelancer/25)
 
 ## Screenshots
 <table>
@@ -26,7 +26,7 @@ Benefit from frequent updates and new features:
 
 ## Support Development
 Benefit from frequent updates and new features:
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/typo3freelancer/25)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypalme/fullstackfreelancer/25)
 
 ## Contact Developer
 

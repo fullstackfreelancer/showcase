@@ -21,4 +21,4 @@ Showcase Demo
 -------------
 
 - `Alex Euler <https://alexeuler.de/projekte>`_
-- `Simon Köhler <https://simon-koehler.com/portfolio>`_
+- `Simon Köhler <https://simonkoehler.com>`_

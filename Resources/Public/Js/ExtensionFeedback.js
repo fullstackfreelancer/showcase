@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded',function(){
               var configuration = {
                  type: Modal.types.ajax,
                  title: 'Extension Support',
-                 content: 'https://simon-koehler.com/extension-feedback/form.php?extkey=showcase',
+                 content: 'https://simonkoehler.com/contact',
                  size: Modal.sizes.large,
                  callback: function(currentModal) {
                     currentModal.find('.t3js-modal-body').addClass('bg-dark');
