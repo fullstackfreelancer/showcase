@@ -94,10 +94,10 @@ class ProjectController extends ActionController
      *
      * @return string
      */
-    public function showAction()
+    public function showAction(): ResponseInterface
     {
         $project = null;
-
+        print_r($this->request->getArguments());
         if($this->request->hasArgument('project')){
             $project = $this->projectRepository->findByUid($this->request->getArgument('project'));
         }
@@ -128,6 +128,7 @@ class ProjectController extends ActionController
         }
 
         $this->view->assign('settings',$this->settings);
+        return $this->htmlResponse();
     }
 
     /**
