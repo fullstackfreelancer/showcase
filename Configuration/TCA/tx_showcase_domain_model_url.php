@@ -19,6 +19,9 @@ return [
             'endtime' => 'endtime'
         ],
         'iconfile' => 'EXT:showcase/ext_icon.svg',
+        'security' => [
+            'ignorePageTypeRestriction' => true
+        ]
     ],
     'interface' => [
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, title, url, target, starttime, endtime',
