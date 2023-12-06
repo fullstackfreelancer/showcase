@@ -45,7 +45,7 @@ CREATE TABLE tx_showcase_domain_model_url (
 
 	title varchar(255) DEFAULT '' NOT NULL,
 	url varchar(255) DEFAULT '' NOT NULL,
-	target varchar(255) DEFAULT '' NOT NULL,
+	url_target varchar(255) DEFAULT '' NOT NULL,
 	hover_title varchar(255) DEFAULT '' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
