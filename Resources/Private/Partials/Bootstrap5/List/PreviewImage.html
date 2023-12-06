@@ -2,7 +2,7 @@
     <f:then>
         <f:switch expression="{settings.detailmode}">
             <f:case value="modal">
-            <f:link.action action="show" pageUid="{settings.detailpage}" arguments="{project:project}" additionalAttributes="{data-toggle:'modal',data-target:'#project-modal',data-project:project.uid}">
+            <f:link.action action="show" pageUid="{settings.detailpage}" arguments="{project:project}" additionalAttributes="{data-bs-toggle:'modal',data-bs-target:'#project-modal',data-project:project.uid}">
                 <f:render section="Image" arguments="{settings:settings,image:project.previewImage.0,imgclass:imgclass}"/>
             </f:link.action>
             </f:case>
