@@ -1,3 +1,11 @@
+## 2023-12-06
+- Bootstrap 5 templates updated with data attributes "data-bs-toggle" etc..
+- JavaScript updated
+- Modal functionality optimized, modal header added
+- Many PHP changes for compatibility with TYPO3 version 12.4
+- Many Fluid-Template changes for Bootstrap 5.3 compatibility
+- New GitHub repository URL: https://github.com/fullstackfreelancer/showcase
+
 ## 2022-04-23
 - Bootstrap 5 templates added
 - JavaScript now works without jQuery (Bootstrap 5)
