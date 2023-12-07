@@ -16,7 +16,6 @@
         "typo3/cms-core": "^10.4 || ^12.5"
     },
     "replace": {
-        "fullstackfreelancer/showcase": "self.version",
         "typo3-ter/showcase": "self.version"
     },
     "extra": {
