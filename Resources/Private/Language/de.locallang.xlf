@@ -155,6 +155,9 @@
 			<trans-unit id="fe.project_related_header">
 				<target>Related</target>
 			</trans-unit>
+			<trans-unit id="fe.project_backlink">
+				<target>Zurück zur Übersicht</target>
+			</trans-unit>
 			<trans-unit id="fe.read_more">
 				<target>Mehr</target>
 			</trans-unit>
