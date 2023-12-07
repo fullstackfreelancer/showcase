@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded',function(){
         var iso = new Isotope( elem, {
           // options
           itemSelector: '.grid-item',
-          layoutMode: gridlayout
+          layoutMode: tx_showcase_gridlayout
         });
 
         let categoryLinks = document.querySelectorAll('.showcase-cat-link');
