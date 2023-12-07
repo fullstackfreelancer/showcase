@@ -27,5 +27,24 @@
         "psr-4": {
             "SIMONKOEHLER\\Showcase\\": "Classes/"
         }
-    }
+    },
+    "keywords": [
+        "TYPO3",
+        "extension",
+        "showcase",
+        "portfolio",
+        "frontend",
+        "plugin",
+        "gallery",
+        "masonry",
+        "projectgallery",
+        "modal",
+        "presentation"
+    ],
+    "funding": [
+        {
+            "type": "paypal",
+            "url": "https://paypal.me/fullstackfreelancer"
+        }
+    ],
 }
