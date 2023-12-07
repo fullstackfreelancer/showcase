@@ -13,4 +13,8 @@ class AjaxLoader {
         request.send();
     }
 
+    getSpinner(){
+        return '<div class="d-flex h-100 w-100 align-items-center text-center"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div></div>'
+    }
+
 }
