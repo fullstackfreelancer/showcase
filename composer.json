@@ -1,5 +1,5 @@
 {
-    "name": "simonkoehler/showcase",
+    "name": "fullstackfreelancer/showcase",
     "type": "typo3-cms-extension",
     "version": "2.0.0",
     "description": "Create beautiful showcases and portfolios with the Bootstrap Package or other Themes",
@@ -16,7 +16,7 @@
         "typo3/cms-core": "^10.4 || ^12.5"
     },
     "replace": {
-        "simonkoehler/showcase": "self.version",
+        "fullstackfreelancer/showcase": "self.version",
         "typo3-ter/showcase": "self.version"
     },
     "extra": {
