@@ -1,3 +1,10 @@
+## 2023-12-07
+- Changed composer namespace to "fullstackfreelancer/showcase" instead of "simonkoehler/showcase"
+- Added composer information
+- Bugfix: constant editor category name collision fixed
+- New setting added for detail plugin: "back page"
+- Changed bg classes for better compatibility with dark/light themes in Bootstrap
+
 ## 2023-12-06
 - Bootstrap 5 templates updated with data attributes "data-bs-toggle" etc..
 - JavaScript updated
