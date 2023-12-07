@@ -25,6 +25,25 @@
                         </TCEforms>
                     </settings.singlerecord>
 
+                    <settings.backpage>
+                        <TCEforms>
+                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.backpage</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.backpage.description</description>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <minitems>0</minitems>
+                                <maxitems>1</maxitems>
+                                <wizards>
+                                    <suggest>
+                                        <type>suggest</type>
+                                    </suggest>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.backpage>
+
                     <settings.mediacolumns>
                         <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.mediacolumns</label>
