@@ -118,6 +118,11 @@
                                         <numIndex index="1">card-hover</numIndex>
                                         <numIndex index="2">EXT:showcase/Resources/Public/Images/Listlayout/card-hover.png</numIndex>
                                     </numIndex>
+                                    <numIndex index="6">
+                                        <numIndex index="0">Image Only</numIndex>
+                                        <numIndex index="1">image-only</numIndex>
+                                        <numIndex index="2">EXT:showcase/Resources/Public/Images/Listlayout/card-hover.png</numIndex>
+                                    </numIndex>
                                 </items>
                                 <fieldWizard>
                                     <selectIcons>
