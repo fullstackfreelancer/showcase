@@ -63,7 +63,7 @@
     <f:if condition="{projects}">
         <f:then>
 
-            <div class="row grid" data-isotope="{f:format.json(value: {itemSelector: '.grid-item', layoutMode: settings.gridlayout})}">
+            <div class="row grid">
                 <f:for each="{projects}" as="project">
                     <f:if condition="{settings.listlayout} !== 'individual'">
                         <f:then>
@@ -119,3 +119,7 @@
     </div>
   </div>
 </div>
+
+<f:asset.script identifier="dewd">
+let gridlayout = '{settings.gridlayout}'
+</f:asset.script>
