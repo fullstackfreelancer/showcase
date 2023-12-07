@@ -5,7 +5,7 @@
                 <f:render partial="List/PreviewImage" arguments="{project:project,imgclass:'img-fluid w-100'}"/>
             </div>
             <div class="col-7 display-flex align-items-center">
-                <div class="p-3 p-lg-5">
+                <div class="p-3">
                     <h5 class="m-0">{project.title}</h5>
                     <p class="d-none d-lg-block">
                         <f:format.raw>{project.teaser -> f:format.crop(maxCharacters: settings.teaserlength)}</f:format.raw>
