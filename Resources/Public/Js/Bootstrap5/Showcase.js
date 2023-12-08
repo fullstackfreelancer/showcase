@@ -6,17 +6,20 @@ document.addEventListener('DOMContentLoaded',function(){
         let modalBody = '<div class="modal-body"><div class="container">'+data+'</div></div>';
         targetObject.innerHTML = modalHeader + modalBody;
     }
+
     var projectModal = document.getElementById('project-modal')
 
-    projectModal.addEventListener('show.bs.modal', event => {
-        let projectUid = event.relatedTarget.getAttribute('data-project');
-        ajaxLoader.loadProject(projectUid,listLoaded,event.currentTarget.querySelector('.modal-content'));
-        event.currentTarget.querySelector('.modal-content').innerHTML = ajaxLoader.getSpinner()
-    })
+    if(projectModal){
+        projectModal.addEventListener('show.bs.modal', event => {
+            let projectUid = event.relatedTarget.getAttribute('data-project');
+            ajaxLoader.loadProject(projectUid,listLoaded,event.currentTarget.querySelector('.modal-content'));
+            event.currentTarget.querySelector('.modal-content').innerHTML = ajaxLoader.getSpinner()
+        })
 
-    projectModal.addEventListener('hide.bs.modal', event => {
-        event.currentTarget.querySelector('.modal-content').innerHTML = '';
-    })
+        projectModal.addEventListener('hide.bs.modal', event => {
+            event.currentTarget.querySelector('.modal-content').innerHTML = '';
+        })
+    }
 
     function resetCategoryLinks(categoryLinks){
         categoryLinks.forEach((item, i) => {
