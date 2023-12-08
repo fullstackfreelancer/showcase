@@ -1,7 +1,7 @@
 <div class="{columnClass} mb-4 grid-item {project.categoriesString}">
     <div class="bg-light-subtle">
         <div class="row no-gutters">
-            <div class="col-7 display-flex align-items-center">
+            <div class="col-7 d-flex align-items-center">
                 <div class="p-3">
                     <h5 class="m-0">{project.title}</h5>
                     <p class="d-none d-lg-block">
@@ -10,7 +10,7 @@
                     <f:render partial="List/ReadMore" arguments="{_all}"/>
                 </div>
             </div>
-            <div class="col-5 display-flex align-items-center">
+            <div class="col-5 d-flex align-items-center">
                 <f:render partial="List/PreviewImage" arguments="{project:project,imgclass:'img-fluid w-100'}"/>
             </div>
         </div>
