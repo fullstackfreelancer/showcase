@@ -105,6 +105,9 @@
         <f:case value="card-hover">
             <f:render partial="List/CardHover" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
         </f:case>
+        <f:case value="image-only">
+            <f:render partial="List/ImageOnly" arguments="{project:project,columnClass:columnClass,settings:settings}"/>
+        </f:case>
         <f:defaultCase>
         </f:defaultCase>
     </f:switch>

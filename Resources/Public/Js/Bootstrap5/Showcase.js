@@ -26,16 +26,14 @@ document.addEventListener('DOMContentLoaded',function(){
 
     var posts = document.querySelectorAll('.grid-item');
     imagesLoaded( posts, function() {
-        /*
-        let grid = $('.tx-showcase-plugin .grid').isotope({});
-        */
 
-        var elem = document.querySelector('.tx-showcase-plugin > .grid');
-        var iso = new Isotope( elem, {
-          // options
-          itemSelector: '.grid-item',
-          layoutMode: tx_showcase_gridlayout
-        });
+        var gridElement = document.querySelector('.tx-showcase-plugin > .grid')
+        if(gridElement){
+            var iso = new Isotope( gridElement, {
+              itemSelector: '.grid-item',
+              layoutMode: tx_showcase_gridlayout
+            })
+        }
 
         let categoryLinks = document.querySelectorAll('.showcase-cat-link');
         categoryLinks.forEach((item, i) => {
