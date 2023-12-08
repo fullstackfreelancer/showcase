@@ -1,15 +1,13 @@
-<f:debug>{project}</f:debug>
-
 <f:if condition="{project.previewImage.0}">
     <f:then>
         <f:switch expression="{settings.detailmode}">
             <f:case value="modal">
-            <f:link.action action="show" pageUid="{settings.detailpage}" arguments="{project:project}" additionalAttributes="{data-bs-toggle:'modal',data-bs-target:'#project-modal',data-project:project.uid}">
+            <f:link.action class="h-100" action="show" pageUid="{settings.detailpage}" arguments="{project:project}" additionalAttributes="{data-bs-toggle:'modal',data-bs-target:'#project-modal',data-project:project.uid}">
                 <f:render section="Image" arguments="{settings:settings,project:project,imgclass:imgclass}"/>
             </f:link.action>
             </f:case>
             <f:case value="page">
-            <f:link.action action="show" pageUid="{settings.detailpage}" arguments="{project:project}">
+            <f:link.action class="h-100" action="show" pageUid="{settings.detailpage}" arguments="{project:project}">
                 <f:render section="Image" arguments="{settings:settings,project:project,imgclass:imgclass}"/>
             </f:link.action>
             </f:case>
