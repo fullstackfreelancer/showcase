@@ -138,7 +138,8 @@ class ProjectController extends ActionController
      */
     public function sliderAction(): ResponseInterface
     {
-
+        $contentObj = $this->configurationManager->getContentObject();
+        $this->view->assign('content_element_uid',$contentObj->data['uid']);
         switch ($this->settings['recordsource']) {
 
             // Selected projects mode / get selected projects from a list
