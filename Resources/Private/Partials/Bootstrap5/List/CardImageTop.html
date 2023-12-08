@@ -1,7 +1,7 @@
 <div class="{columnClass} mb-4 grid-item {project.categoriesString}">
-    <div class="card">
+    <div class="card bg-light-subtle">
         <f:render partial="List/PreviewImage" arguments="{project:project,imgclass:'img-fluid w-100'}"/>
-        <div class="card-body">
+        <div class="card-body p-2">
             <h5 class="card-title">{project.title}</h5>
             <p class="card-text">
                 <f:format.raw>{project.teaser -> f:format.crop(maxCharacters: settings.teaserlength)}</f:format.raw>
