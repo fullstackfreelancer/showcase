@@ -1,7 +1,7 @@
 <?php
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Showcase',
-    'description' => 'The Showcase extension for TYPO3 is a versatile tool designed for creating dynamic portfolios, engaging galleries, and impressive presentations.',
+    'description' => 'Showcase is a versatile tool designed for creating dynamic portfolios, engaging galleries, and impressive presentations.',
     'category' => 'plugin',
     'author' => 'Simon Köhler',
     'author_email' => 'info@simonkoehler.com',
