@@ -1,8 +1,8 @@
 {
     "name": "fullstackfreelancer/showcase",
     "type": "typo3-cms-extension",
-    "version": "2.0.1",
-    "description": "Create beautiful showcases and portfolios with the Bootstrap Package or other Themes",
+    "version": "2.0.2",
+    "description": "Showcase is a versatile tool designed for creating dynamic portfolios, engaging galleries, and impressive presentations.",
     "authors": [
         {
             "name": "Simon Köhler",
@@ -13,7 +13,7 @@
     ],
     "license": "GPL-3.0-or-later",
     "require": {
-        "typo3/cms-core": "^10.4 || ^12.5"
+        "typo3/cms-core": "^12.0"
     },
     "replace": {
         "typo3-ter/showcase": "self.version"

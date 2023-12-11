@@ -9,14 +9,14 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '2.0.1',
+    'version' => '2.0.2',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.4.0-12.4.99',
+            'typo3' => '12.4.0-12.4.99',
         ],
         'conflicts' => [],
         'suggests' => [
-            'bootstrap_package' => '11.0.3-12.0.99'
+            'bootstrap_package' => '13.0.2-14.0.99'
         ],
     ],
     'autoload' => [
