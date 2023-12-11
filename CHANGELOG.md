@@ -1,4 +1,9 @@
-## 2023-12-09
+## 2023-12-11
+- Version update to 2.0.2
+- Updated dependencies in ext_emconf.php and composer.json to correct versions!
+- Made extension support Modal link in Backend work again
+
+## 2023-12-10
 - Version update to 2.0.1
 
 ## 2023-12-07
