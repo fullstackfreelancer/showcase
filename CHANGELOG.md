@@ -1,3 +1,6 @@
+## 2023-12-09
+- Version update to 2.0.1
+
 ## 2023-12-07
 - Changed composer namespace to "fullstackfreelancer/showcase" instead of "simonkoehler/showcase"
 - Added composer information
