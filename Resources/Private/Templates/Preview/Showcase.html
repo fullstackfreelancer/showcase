@@ -16,8 +16,24 @@
         </div>
     </f:if>
 
-    <a href="#" class="btn extension-feedback-modal-button" title="Extension Support">
+    <a href="#" class="btn btn-default" data-bs-toggle="modal" title="Extension Support" data-bs-target="#test">
         <core:icon identifier="content-info" size="small" />
     </a>
+
+    <div class="modal" id="test">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Extension Support</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Any problems with this extension?</p>
+                    <p class="mb-2 fw-bold">Support for Users: <a href="https://simonkoehler.com/contact" target="_blank" class="link-primary">Contact me</a></p>
+                    <p class="fw-bold">Support for Developers: <a href="https://github.com/fullstackfreelancer/showcase/issues" target="_blank" class="link-primary">GitHub Issue Tracker</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
