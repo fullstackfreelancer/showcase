@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <T3DataStructure>
     <sheets>
-        <sDEF>
+        <showcase_show>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.title</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.title</sheetTitle>
                 <type>array</type>
                 <el>
 
                     <settings.singlerecord>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.singlerecord</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.singlerecord.description</description>
                             <config>
@@ -22,11 +19,9 @@
                                 <maxitems>1</maxitems>
                                 <show_thumbs>1</show_thumbs>
                             </config>
-                        </TCEforms>
                     </settings.singlerecord>
 
                     <settings.backpage>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.backpage</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.backpage.description</description>
                             <config>
@@ -41,11 +36,9 @@
                                     </suggest>
                                 </wizards>
                             </config>
-                        </TCEforms>
                     </settings.backpage>
 
                     <settings.mediacolumns>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.mediacolumns</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.mediacolumns.description</description>
                             <config>
@@ -75,11 +68,10 @@
                                 </items>
                                 <default>3</default>
                             </config>
-                        </TCEforms>
                     </settings.mediacolumns>
 
                 </el>
             </ROOT>
-        </sDEF>
+        </showcase_show>
     </sheets>
 </T3DataStructure>

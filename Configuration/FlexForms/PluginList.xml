@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
     <sheets>
-        <sDEF>
+        <showcase_list>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.title</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.title</sheetTitle>
                 <type>array</type>
                 <el>
 
                     <settings.recordsource>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordsource</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordsource.description</description>
                             <onChange>reload</onChange>
@@ -38,11 +38,9 @@
                                 </fieldWizard>
                                 <default>0</default>
                             </config>
-                        </TCEforms>
                     </settings.recordsource>
 
                     <settings.recordlist>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordlist</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordlist.description</description>
                             <displayCond>FIELD:settings.recordsource:=:selected</displayCond>
@@ -58,11 +56,9 @@
                                     </suggest>
                                 </wizards>
                             </config>
-                        </TCEforms>
                     </settings.recordlist>
 
                     <settings.recordstorage>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordstorage</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordstorage.description</description>
                             <displayCond>FIELD:settings.recordsource:=:storage</displayCond>
@@ -78,11 +74,9 @@
                                     </suggest>
                                 </wizards>
                             </config>
-                        </TCEforms>
                     </settings.recordstorage>
 
                     <settings.listlayout>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.listlayout</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.listlayout.description</description>
                             <config>
@@ -131,11 +125,9 @@
                                 </fieldWizard>
                                 <default>card-img-top</default>
                             </config>
-                        </TCEforms>
                     </settings.listlayout>
 
                     <settings.teaserlength>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.teaserlength</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.teaserlength.description</description>
                             <config>
@@ -151,11 +143,9 @@
                                     <step>1</step>
                                 </slider>
                             </config>
-                        </TCEforms>
                     </settings.teaserlength>
 
                     <settings.detailmode>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailmode</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailmode.description</description>
                             <onChange>reload</onChange>
@@ -178,11 +168,9 @@
                                 </items>
                                 <default>none</default>
                             </config>
-                        </TCEforms>
                     </settings.detailmode>
 
                     <settings.detailpage>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailpage</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailpage.description</description>
                             <displayCond>FIELD:settings.detailmode:=:page</displayCond>
@@ -196,11 +184,9 @@
                                 <show_thumbs>1</show_thumbs>
                                 <required>1</required>
                             </config>
-                        </TCEforms>
                     </settings.detailpage>
 
                     <settings.columns>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.columns</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.columns.description</description>
                             <config>
@@ -230,11 +216,9 @@
                                 </items>
                                 <default>3</default>
                             </config>
-                        </TCEforms>
                     </settings.columns>
 
                     <settings.gridlayout>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.gridlayout</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.gridlayout.description</description>
                             <config>
@@ -252,11 +236,9 @@
                                 </items>
                                 <default>fitRows</default>
                             </config>
-                        </TCEforms>
                     </settings.gridlayout>
 
                     <settings.previewimagemaxwidth>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.previewimagemaxwidth</label>
                             <config>
                                 <type>input</type>
@@ -271,22 +253,18 @@
                                     <step>1</step>
                                 </slider>
                             </config>
-                        </TCEforms>
                     </settings.previewimagemaxwidth>
 
                     <settings.showcategorymenu>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.showcategorymenu</label>
                             <onChange>reload</onChange>
                             <config>
                                 <type>check</type>
                                 <default>0</default>
                             </config>
-                        </TCEforms>
                     </settings.showcategorymenu>
 
                     <settings.categoryroot>
-                        <TCEforms>
                             <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.categoryroot</label>
                             <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.categoryroot.description</description>
                             <displayCond>FIELD:settings.showcategorymenu:=:1</displayCond>
@@ -302,11 +280,10 @@
                                     </suggest>
                                 </wizards>
                             </config>
-                        </TCEforms>
                     </settings.categoryroot>
 
                 </el>
             </ROOT>
-        </sDEF>
+        </showcase_list>
     </sheets>
 </T3DataStructure>
