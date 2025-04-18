@@ -138,7 +138,7 @@ class ProjectController extends ActionController
      */
     public function sliderAction(): ResponseInterface
     {
-        $contentObj = $this->configurationManager->getContentObject();
+        $contentObj = $this->configurationManager->getContentObjectRenderer();
         $this->view->assign('content_element_uid',$contentObj->data['uid']);
         switch ($this->settings['recordsource']) {
 
