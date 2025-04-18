@@ -4,7 +4,7 @@ $EM_CONF[$_EXTKEY] = [
     'description' => 'Showcase is a versatile tool designed for creating dynamic portfolios, engaging galleries, and impressive presentations.',
     'category' => 'plugin',
     'author' => 'Simon Köhler',
-    'author_email' => 'info@simonkoehler.com',
+    'author_email' => 'simonkoehler1978@gmail.com',
     'state' => 'stable',
     'uploadfolder' => 0,
     'createDirs' => '',
@@ -12,7 +12,7 @@ $EM_CONF[$_EXTKEY] = [
     'version' => '2.0.2',
     'constraints' => [
         'depends' => [
-            'typo3' => '12.0.0-12.4.99',
+            'typo3' => '12.0.0-13.4.99',
         ],
         'conflicts' => [],
         'suggests' => [
