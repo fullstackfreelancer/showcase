@@ -27,12 +27,6 @@
 				<target>Erzeugt eine Detailansicht eines Projekts</target>
 			</trans-unit>
 
-			<trans-unit id="plugin.backpage">
-				<target>Seite zum Zurückgehen</target>
-			</trans-unit>
-			<trans-unit id="plugin.backpage.description">
-				<target>Wählen Sie die Seite, zu der Sie zurückkehren möchten, nachdem Sie die Details eines Projekts angesehen haben.</target>
-			</trans-unit>
 			<trans-unit id="plugin.description">
 				<target>Alte Beschreibung!</target>
 			</trans-unit>

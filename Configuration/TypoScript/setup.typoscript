@@ -1,3 +1,4 @@
+
 plugin.tx_showcase {
 	view {
 		templateRootPaths.0 = {$plugin.tx_showcase.view.templateRootPath}

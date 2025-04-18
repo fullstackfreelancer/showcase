@@ -78,7 +78,7 @@
 			<trans-unit id="tx_showcase_domain_model_url.url">
 				<source>URL</source>
 			</trans-unit>
-			<trans-unit id="tx_showcase_domain_model_url.url_target">
+			<trans-unit id="tx_showcase_domain_model_url.target">
 				<source>Target</source>
 			</trans-unit>
 
