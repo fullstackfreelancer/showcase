@@ -1,8 +1,0 @@
-
-plugin.tx_showcase {
-	settings{
-		pagetypes{
-			project_ajax = 78
-		}
-	}
-}
