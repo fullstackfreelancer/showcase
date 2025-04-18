@@ -1,3 +1,7 @@
+## 2025-04-17
+- Version update to 3.0.0
+- Added compatibility for TYPO3 v13
+
 ## 2023-12-11
 - Version update to 2.0.2
 - Updated dependencies in ext_emconf.php and composer.json to correct versions!
