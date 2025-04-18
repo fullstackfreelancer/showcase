@@ -16,7 +16,6 @@ call_user_func(
             [
                 \SIMONKOEHLER\Showcase\Controller\ProjectController::class => '',
             ],
-            ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT,
         );
 
         ExtensionUtility::configurePlugin(
@@ -28,7 +27,6 @@ call_user_func(
             [
                 \SIMONKOEHLER\Showcase\Controller\ProjectController::class => '',
             ],
-            ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT,
         );
 
         ExtensionUtility::configurePlugin(
@@ -40,7 +38,6 @@ call_user_func(
             [
                 \SIMONKOEHLER\Showcase\Controller\ProjectController::class => 'show,modal',
             ],
-            ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT,
         );
 
         $icons = [
