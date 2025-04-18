@@ -40,10 +40,6 @@ call_user_func(
             ]
         );
 
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:showcase/Configuration/TsConfig/Showcase.tsconfig">'
-        );
-
         $icons = [
             'showcase_icon' => 'EXT:showcase/ext_icon.svg',
         ];
