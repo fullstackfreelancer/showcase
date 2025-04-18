@@ -1,0 +1,76 @@
+<div class="plugin-preview-showcase">
+
+    <table class="table">
+        <tr>
+            <th><f:translate key="LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordsource" extensionName="showcase"/></th>
+            <td>{pi_flexform_transformed.settings.recordsource}</td>
+        </tr>
+
+        <f:if condition="{pi_flexform_transformed.settings.recordsource} == 'storage'">
+        <tr>
+            <th><f:translate key="LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.recordstorage" extensionName="showcase"/></th>
+            <td><f:link.page pageUid="{pi_flexform_transformed.settings.recordstorage}" class="btn btn-default btn-sm"><core:icon identifier="apps-pagetree-folder-default" size="small" /> Storage Page ({pi_flexform_transformed.settings.recordstorage})</f:link.page></td>
+        </tr>
+        </f:if>
+
+        <tr>
+            <th><f:translate key="LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.listlayout" extensionName="showcase"/></th>
+            <td>{pi_flexform_transformed.settings.listlayout}</td>
+        </tr>
+        <tr>
+            <th><f:translate key="LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.teaserlength" extensionName="showcase"/></th>
+            <td>{pi_flexform_transformed.settings.teaserlength}</td>
+        </tr>
+        <tr>
+            <th><f:translate key="LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailmode" extensionName="showcase"/></th>
+            <td>{pi_flexform_transformed.settings.detailmode}</td>
+        </tr>
+        <f:if condition="{pi_flexform_transformed.settings.detailmode} == 'page'">
+        <tr>
+            <th><f:translate key="LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.detailpage" extensionName="showcase"/></th>
+            <td><f:link.page pageUid="{pi_flexform_transformed.settings.detailpage}" class="btn btn-default btn-sm"><core:icon identifier="apps-pagetree-folder-default" size="small" /> Detail Page ({pi_flexform_transformed.settings.detailpage})</f:link.page></td>
+        </tr>
+        </f:if>
+        <tr>
+            <th><f:translate key="LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.gridlayout" extensionName="showcase"/></th>
+            <td>{pi_flexform_transformed.settings.gridlayout}</td>
+        </tr>
+        <tr>
+            <th><f:translate key="LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.columns" extensionName="showcase"/></th>
+            <td>{pi_flexform_transformed.settings.columns}</td>
+        </tr>
+        <tr>
+            <th><f:translate key="LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.previewimagemaxwidth" extensionName="showcase"/></th>
+            <td>{pi_flexform_transformed.settings.previewimagemaxwidth}</td>
+        </tr>
+        <tr>
+            <th><f:translate key="LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.showcategorymenu" extensionName="showcase"/></th>
+            <td>{pi_flexform_transformed.settings.showcategorymenu}</td>
+        </tr>
+        <tr>
+            <th><f:translate key="LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.categoryroot" extensionName="showcase"/></th>
+            <td>{pi_flexform_transformed.settings.categoryroot}</td>
+        </tr>
+    </table>
+
+    <a href="#" class="btn btn-default" data-bs-toggle="modal" title="Extension Support" data-bs-target="#test">
+        <core:icon identifier="content-info" size="small" />
+    </a>
+
+    <div class="modal" id="test">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title fw-bold">Extension Support</h4>
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Any problems with this extension? Or would you like some additional features?</p>
+                    <p class="mb-2 fw-bold">Support for Users: <a href="https://kohlercode.com/contact" target="_blank" class="link-primary">Contact Me</a></p>
+                    <p class="fw-bold">Support for Developers: <a href="https://github.com/fullstackfreelancer/showcase/issues" target="_blank" class="link-primary">GitHub Issue Tracker</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
