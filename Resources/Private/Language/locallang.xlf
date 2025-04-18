@@ -27,6 +27,12 @@
 				<source>Creates a detail view of a project</source>
 			</trans-unit>
 
+			<trans-unit id="plugin.backpage">
+				<source>Page to go back</source>
+			</trans-unit>
+			<trans-unit id="plugin.backpage.description">
+				<source>Choose the page to go back to after viewing details of a project</source>
+			</trans-unit>
 			<trans-unit id="plugin.description">
 				<source>OLD DESCRIPTION, REPLACE!</source>
 			</trans-unit>
