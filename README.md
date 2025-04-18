@@ -16,7 +16,7 @@ The Showcase extension for TYPO3 is a versatile tool designed for creating dynam
 ## Live Demos
 
 ### Simple Project Gallery
-https://simonkoehler.com/typo3-extensions/showcase/simple-image-gallery
+https://kohlercode.com/portfolio
 
 ## Important Update Note 1.4 to 2.0
 If you are updating from 1.4.0 or older: The templates and JavaScript files in Showcase 2.0 have been adapted to the latest version of Bootstrap 5.3. Therefore, make sure that your theme is using Bootstrap 5.3, otherwise there may be problems with the modal windows.
