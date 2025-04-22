@@ -39,7 +39,7 @@ class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
             ->where(
               $queryBuilder->expr()->eq('parent', $queryBuilder->createNamedParameter($root, \PDO::PARAM_INT))
             )
-            ->execute();
+            ->executeQuery();
         $output = array();
         while ($row = $statement->fetch()) {
             array_push($output, $row);
@@ -66,7 +66,7 @@ class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
             ->from('tx_showcase_domain_model_project')
             ->where($queryBuilder->expr()->in('uid', $uids))
             ->add('orderBy', 'FIELD(tx_showcase_domain_model_project.uid,' . implode(',', $uids) . ')')
-            ->execute()
+            ->executeQuery()
             ->fetchAll();
             return $this->dataMapper->map(Project::class, $rows);
     }
