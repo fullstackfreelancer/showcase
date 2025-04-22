@@ -30,23 +30,6 @@ class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
         $this->setDefaultQuerySettings($querySettings);
     }
 
-    public function getCategoriesFromRoot($root) {
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('sys_category');
-        $statement = $queryBuilder
-            ->select('*')
-            ->from('sys_category')
-            ->orderBy('sorting')
-            ->where(
-              $queryBuilder->expr()->eq('parent', $queryBuilder->createNamedParameter($root, \PDO::PARAM_INT))
-            )
-            ->executeQuery();
-        $output = array();
-        while ($row = $statement->fetch()) {
-            array_push($output, $row);
-        }
-        return $output;
-    }
-
     /**
      * Returns all matching records for the given list of uids and applies the uidList sorting for the result
      *

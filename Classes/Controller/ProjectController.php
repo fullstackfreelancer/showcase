@@ -1,5 +1,7 @@
 <?php
 namespace SIMONKOEHLER\Showcase\Controller;
+use SIMONKOEHLER\Showcase\Domain\Repository\ProjectRepository;
+use SIMONKOEHLER\Showcase\Domain\Repository\CategoryRepository;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -8,14 +10,13 @@ use TYPO3\CMS\Core\MetaTag\MetaTagManagerRegistry;
 class ProjectController extends ActionController
 {
 
-    /**
-     * Inject the project repository
-     *
-     * @param \SIMONKOEHLER\Showcase\Domain\Repository\ProjectRepository $projectRepository
-     */
-    public function injectProjectRepository(\SIMONKOEHLER\Showcase\Domain\Repository\ProjectRepository $projectRepository)
+    protected ProjectRepository $projectRepository;
+    protected CategoryRepository $categoryRepository;
+
+    public function __construct(ProjectRepository $projectRepository, CategoryRepository $categoryRepository)
     {
-       $this->projectRepository = $projectRepository;
+        $this->projectRepository = $projectRepository;
+        $this->categoryRepository = $categoryRepository;
     }
 
     /**
@@ -69,7 +70,8 @@ class ProjectController extends ActionController
         }
 
         if($this->settings['showcategorymenu']){
-            $categories = $this->projectRepository->getCategoriesFromRoot($this->settings['categoryroot']);
+            //$categories = $this->projectRepository->getCategoriesFromRoot($this->settings['categoryroot']);
+            $categories = $this->categoryRepository->findChildren($this->settings['showcategorymenu']);
             $this->view->assign('categories',$categories);
         }
 
