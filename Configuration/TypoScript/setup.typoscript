@@ -14,8 +14,6 @@ plugin.tx_showcase {
 
 page{
 	includeCSS {
-		glide = EXT:showcase/Resources/Public/Libs/glide/dist/css/glide.core.min.css
-		glidetheme = EXT:showcase/Resources/Public/Libs/glide/dist/css/glide.theme.min.css
 	    showcase = EXT:showcase/Resources/Public/Css/style.css
 	}
 	includeJSFooter{
@@ -24,7 +22,6 @@ page{
 		showcase_imagesloaded = EXT:showcase/Resources/Public/Libs/imagesloaded.pkgd.min.js
 		showcase_ajax = EXT:showcase/Resources/Public/Js/Classes/AjaxLoader.js
 		showcase_js = {$plugin.tx_showcase.settings.scriptPath}
-		glide = EXT:showcase/Resources/Public/Libs/glide/dist/glide.min.js
 	}
 	footerData{
 		300 = TEXT
