@@ -23,7 +23,7 @@ page{
 		showcase_isotope_cbc = EXT:showcase/Resources/Public/Libs/isotope.cellsByColumn.js
 		showcase_imagesloaded = EXT:showcase/Resources/Public/Libs/imagesloaded.pkgd.min.js
 		showcase_ajax = EXT:showcase/Resources/Public/Js/Classes/AjaxLoader.js
-		showcase_bootstrap = {$plugin.tx_showcase.settings.scriptPath}
+		showcase_js = {$plugin.tx_showcase.settings.scriptPath}
 		glide = EXT:showcase/Resources/Public/Libs/glide/dist/glide.min.js
 	}
 	footerData{
