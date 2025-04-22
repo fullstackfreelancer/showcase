@@ -65,9 +65,9 @@ class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
             ->select('*')
             ->from('tx_showcase_domain_model_project')
             ->where($queryBuilder->expr()->in('uid', $uids))
-            ->add('orderBy', 'FIELD(tx_showcase_domain_model_project.uid,' . implode(',', $uids) . ')')
+            ->orderBy('sorting')
             ->executeQuery()
-            ->fetchAll();
+            ->fetchAllAssociative();
             return $this->dataMapper->map(Project::class, $rows);
     }
 
