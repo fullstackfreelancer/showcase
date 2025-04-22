@@ -12,10 +12,12 @@ plugin.tx_showcase {
 		layoutRootPath = EXT:showcase/Resources/Private/Layouts/
 	}
 	settings{
-		# cat=Showcase/resources; type=string; label=Plugin Custom Classes
+		# cat=Showcase/frontend; type=string; label=Plugin Custom Classes : Adds one or more CSS classes to the main plugin container. (class="tx-showcase-plugin customclasses")
 		frontend.plugin.customclasses = container
+		# cat=Showcase/frontend; type=string; label=JavaScript Path : You can change this path if you want to use a custom JavaScript
 		scriptPath = EXT:showcase/Resources/Public/Js/Showcase.js
 		pagetypes{
+			# cat=Showcase/frontend; type=string; label=Page Type for Ajax Request : Only change this value if other code in your project conflicts with it.
 			project_ajax = 78
 		}
 	}
