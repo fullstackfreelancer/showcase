@@ -14,7 +14,7 @@ plugin.tx_showcase {
 	settings{
 		# cat=Showcase/resources; type=string; label=Plugin Custom Classes
 		frontend.plugin.customclasses = container
-		scriptPath = EXT:showcase/Resources/Public/Js/Bootstrap5/Showcase.js
+		scriptPath = EXT:showcase/Resources/Public/Js/Showcase.js
 		pagetypes{
 			project_ajax = 78
 		}
