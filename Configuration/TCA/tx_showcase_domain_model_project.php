@@ -8,7 +8,6 @@ return [
         'sortby' => 'sorting',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'cruser_id' => 'cruser_id',
         'languageField' => 'sys_language_uid',
         'transOrigDiffSourceField' => 'l10n_diffsource',
         'delete' => 'deleted',
