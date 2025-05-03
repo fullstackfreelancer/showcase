@@ -1,7 +1,7 @@
 {
     "name": "fullstackfreelancer/showcase",
     "type": "typo3-cms-extension",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "Showcase is a versatile tool designed for creating dynamic portfolios, engaging galleries, and impressive presentations.",
     "authors": [
         {

@@ -1,3 +1,8 @@
+## 2025-05-03
+- Added settings to adjust number of slider items on mobile, tablet and desktop
+- Improved accessibility by adding classes to slider navigation
+- Version update to 3.0.1
+
 ## 2025-04-17
 - Version update to 3.0.0
 - Added compatibility for TYPO3 v13
