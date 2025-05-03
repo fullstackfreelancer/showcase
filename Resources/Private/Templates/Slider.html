@@ -21,9 +21,9 @@
         </ul>
       </div>
 
-      <div class="glide__bullets" data-glide-el="controls[nav]">
+      <div class="glide__bullets mt-2" data-glide-el="controls[nav]">
           <f:for each="{projects}" as="project" iteration="i">
-                <button class="glide__bullet" data-glide-dir="={i.index}" aria-label="Slide {i.index}"></button>
+                <button class="glide__bullet mx-3 p-2 p-lg-1" data-glide-dir="={i.index}" aria-label="Slide {i.index}"></button>
           </f:for>
       </div>
     </div>
@@ -37,8 +37,10 @@
     <f:asset.css identifier="glide_core" href="EXT:showcase/Resources/Public/Libs/glide/dist/css/glide.core.min.css" />
     <f:asset.css identifier="glide_theme" href="EXT:showcase/Resources/Public/Libs/glide/dist/css/glide.theme.min.css" />
     <f:asset.script identifier="glide_js" src="EXT:showcase/Resources/Public/Libs/glide/dist/glide.min.js" />
-    <f:section name="FooterAssets">
     <script>
+        const showcase_item_count = [{settings.items_large},{settings.items_medium},{settings.items_small}];
+    </script>
+    <f:asset.script identifier="showcase_glide">
         document.addEventListener('DOMContentLoaded',function(){
             let glidesFound = document.querySelectorAll('.glide')
             if(glidesFound){
@@ -48,23 +50,22 @@
                     type: 'carousel',
                     focusAt: 'center',
                     startAt: 0,
-                    perView: 3,
+                    perView: showcase_item_count[0],
                     gap: 20,
                     autoplay: 4000,
                     breakpoints: {
                       1024: {
-                        perView: 2
+                        perView: showcase_item_count[1]
                       },
                       600: {
-                        perView: 1
+                        perView: showcase_item_count[2]
                       }
                     }
                   }).mount()
                 });
             }
         })
-    </script>
-    </f:section>
+    </f:asset.script>
 
 
     <f:section name="SliderRecord">

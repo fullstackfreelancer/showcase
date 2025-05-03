@@ -200,6 +200,163 @@
                             </config>
                     </settings.detailpage>
 
+                    <settings.items_large>
+                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.slider.items_large.title</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.slider.items_large.description</description>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">1</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">2</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">3</numIndex>
+                                        <numIndex index="1">3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">4</numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">5</numIndex>
+                                        <numIndex index="1">5</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">6</numIndex>
+                                        <numIndex index="1">6</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6">
+                                        <numIndex index="0">7</numIndex>
+                                        <numIndex index="1">7</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7">
+                                        <numIndex index="0">8</numIndex>
+                                        <numIndex index="1">8</numIndex>
+                                    </numIndex>
+                                    <numIndex index="8">
+                                        <numIndex index="0">9</numIndex>
+                                        <numIndex index="1">9</numIndex>
+                                    </numIndex>
+                                    <numIndex index="9">
+                                        <numIndex index="0">10</numIndex>
+                                        <numIndex index="1">10</numIndex>
+                                    </numIndex>
+                                </items>
+                                <default>6</default>
+                            </config>
+                    </settings.items_large>
+
+                    <settings.items_medium>
+                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.slider.items_medium.title</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.slider.items_medium.description</description>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">1</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">2</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">3</numIndex>
+                                        <numIndex index="1">3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">4</numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">5</numIndex>
+                                        <numIndex index="1">5</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">6</numIndex>
+                                        <numIndex index="1">6</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6">
+                                        <numIndex index="0">7</numIndex>
+                                        <numIndex index="1">7</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7">
+                                        <numIndex index="0">8</numIndex>
+                                        <numIndex index="1">8</numIndex>
+                                    </numIndex>
+                                    <numIndex index="8">
+                                        <numIndex index="0">9</numIndex>
+                                        <numIndex index="1">9</numIndex>
+                                    </numIndex>
+                                    <numIndex index="9">
+                                        <numIndex index="0">10</numIndex>
+                                        <numIndex index="1">10</numIndex>
+                                    </numIndex>
+                                </items>
+                                <default>3</default>
+                            </config>
+                    </settings.items_medium>
+
+                    <settings.items_small>
+                            <label>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.slider.items_small.title</label>
+                            <description>LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.slider.items_small.description</description>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">1</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">2</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">3</numIndex>
+                                        <numIndex index="1">3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">4</numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">5</numIndex>
+                                        <numIndex index="1">5</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">6</numIndex>
+                                        <numIndex index="1">6</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6">
+                                        <numIndex index="0">7</numIndex>
+                                        <numIndex index="1">7</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7">
+                                        <numIndex index="0">8</numIndex>
+                                        <numIndex index="1">8</numIndex>
+                                    </numIndex>
+                                    <numIndex index="8">
+                                        <numIndex index="0">9</numIndex>
+                                        <numIndex index="1">9</numIndex>
+                                    </numIndex>
+                                    <numIndex index="9">
+                                        <numIndex index="0">10</numIndex>
+                                        <numIndex index="1">10</numIndex>
+                                    </numIndex>
+                                </items>
+                                <default>2</default>
+                            </config>
+                    </settings.items_small>
+
+
                 </el>
             </ROOT>
         </showcase_slider>

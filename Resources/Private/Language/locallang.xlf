@@ -161,6 +161,25 @@
 				<source>Slider</source>
 			</trans-unit>
 
+			<trans-unit id="plugin.slider.items_large.title">
+				<source>Items Desktop</source>
+			</trans-unit>
+			<trans-unit id="plugin.slider.items_large.description">
+				<source>Number of items on large displays</source>
+			</trans-unit>
+			<trans-unit id="plugin.slider.items_medium.title">
+				<source>Items Tablet</source>
+			</trans-unit>
+			<trans-unit id="plugin.slider.items_medium.description">
+				<source>Number of items on medium displays</source>
+			</trans-unit>
+			<trans-unit id="plugin.slider.items_small.title">
+				<source>Items Phone</source>
+			</trans-unit>
+			<trans-unit id="plugin.slider.items_small.description">
+				<source>Number of items on small displays</source>
+			</trans-unit>
+
 			<trans-unit id="fe.project_urls_header">
 				<source>Links</source>
 			</trans-unit>

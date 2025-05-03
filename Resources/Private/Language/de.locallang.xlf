@@ -155,6 +155,25 @@
 				<target>Slider</target>
 			</trans-unit>
 
+			<trans-unit id="plugin.slider.items_large.title">
+				<target>Anzahl Desktop</target>
+			</trans-unit>
+			<trans-unit id="plugin.slider.items_large.description">
+				<target>Anzahl der Elemente auf Desktop</target>
+			</trans-unit>
+			<trans-unit id="plugin.slider.items_medium.title">
+				<target>Anzahl Tablet</target>
+			</trans-unit>
+			<trans-unit id="plugin.slider.items_medium.description">
+				<target>Anzahl der Elemente auf Tablets</target>
+			</trans-unit>
+			<trans-unit id="plugin.slider.items_small.title">
+				<target>Anzahl Phone</target>
+			</trans-unit>
+			<trans-unit id="plugin.slider.items_small.description">
+				<target>Anzahl der Elemente auf Mobile</target>
+			</trans-unit>
+
 			<trans-unit id="fe.project_urls_header">
 				<target>Links</target>
 			</trans-unit>
