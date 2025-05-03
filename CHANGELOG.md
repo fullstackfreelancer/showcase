@@ -1,7 +1,8 @@
 ## 2025-05-03
 - Added settings to adjust number of slider items on mobile, tablet and desktop
+- Updated the glide.js scripts to version 3.7.1
 - Improved accessibility by adding classes to slider navigation
-- Version update to 3.0.1
+- Version update to 3.0.2
 
 ## 2025-04-17
 - Version update to 3.0.0
