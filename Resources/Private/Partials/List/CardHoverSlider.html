@@ -24,10 +24,10 @@
 <f:section name="Overlay">
 <div class="description">
     <div>
-    <h5 class="overlay-title m-2">{project.title}</h5>
-    <p class="overlay-teaser m-0">
-        <f:format.raw>{project.teaser -> f:format.crop(maxCharacters: settings.teaserlength)}</f:format.raw>
-    </p>
+        <h5 class="overlay-title m-2"><span>{project.title}</span></h5>
+        <p class="overlay-teaser m-0">
+            <f:format.raw>{project.teaser -> f:format.crop(maxCharacters: settings.teaserlength)}</f:format.raw>
+        </p>
     </div>
 </div>
 </f:section>
