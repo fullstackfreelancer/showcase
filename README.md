@@ -3,6 +3,9 @@
 ## What is Showcase for TYPO3?
 The Showcase extension for TYPO3 is a versatile tool designed for creating dynamic portfolios, engaging galleries, and impressive presentations. It’s an ideal solution for artists, designers, photographers, and businesses looking to display their work in a structured and visually appealing manner.
 
+### Working Demo
+https://kohlercode.com/portfolio
+
 ## Features
 - Categorization: Utilizes TYPO3 system categories for easy organization.
 - List View: Integrated Masonry layout for a responsive, grid-based display.
