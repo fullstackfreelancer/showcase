@@ -10,7 +10,6 @@
         }
         .overlay{
             position: absolute;
-            background-color: rgba(0,0,0,0.5);
             width: 100%;
             height: 100%;
             top: 0;
@@ -20,8 +19,11 @@
             justify-content: center;
             overflow: hidden;
             padding: 2rem;
+            transition: all 0.2s ease-in-out;
             .overlay-title{
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 position: absolute;
                 padding: 2rem;
                 perspective: 500px;
@@ -30,19 +32,27 @@
                 width: 100%;
                 transition: all 0.2s ease-in-out;
                 transform: translateY(-50%);
+                span{
+                    padding: .5rem;
+                    background-color: rgba(0,0,0,0.8);
+                }
             }
             .overlay-teaser{
                 opacity: 0;
                 perspective: 500px;
-                transition: all 0.2s ease-in-out;
                 transform: rotateX(90deg);
             }
             &:hover{
+                background-color: rgba(0,0,0,0.75);
                 .overlay-title{
                     position: static;
                     top: auto;
                     padding: 0;
                     transform: translateY(0%);
+                    span{
+                        padding: .5rem;
+                        background-color: transparent;
+                    }
                 }
                 .overlay-teaser{
                     transform: rotateX(0deg);
