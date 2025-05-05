@@ -157,7 +157,7 @@ class ProjectController extends ActionController
             case 'storage':
 
                 if($this->settings['recordstorage']){
-                    $projects = $this->projectRepository->findByPid($this->settings['recordstorage']);
+                    $projects = $this->projectRepository->findBy(['pid' => $this->settings['recordstorage']]);
                     $projectsFinal = $this->projectRepository->addCategoryStringToProjects($projects);
                     $this->view->assign('projects',$projectsFinal);
                 }
@@ -181,20 +181,6 @@ class ProjectController extends ActionController
                 );
             break;
         }
-
-        /*
-        if($this->settings['recordstorage']){
-            $projects = $this->projectRepository->findByPid($this->settings['recordstorage']);
-        }
-        else{
-            $this->addFlashMessage(
-               'Missing recordStorage in your plugin!',
-               $messageTitle = 'Note',
-               $severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::OK,
-               $storeInSession = FALSE
-            );
-        }
-        */
 
         //$this->view->assign('projects',$projects);
         $this->view->assign('settings',$this->settings);
