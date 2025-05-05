@@ -5,24 +5,14 @@ use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Core\DataHandling\DataHandler;
 use TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings;
-use TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use SIMONKOEHLER\Showcase\Domain\Model\Project;
 
 class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
 
-    private $dataMapper;
-
     protected $defaultOrderings = [
         'sorting' => QueryInterface::ORDER_ASCENDING,
     ];
-
-    /**
-     * @param DataMapper $dataMapper
-     */
-    public function injectDataMapper(DataMapper $dataMapper){
-        $this->dataMapper = $dataMapper;
-    }
 
     public function initializeObject() {
         $querySettings = GeneralUtility::makeInstance(Typo3QuerySettings::class);
@@ -30,28 +20,23 @@ class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
         $this->setDefaultQuerySettings($querySettings);
     }
 
-    /**
-     * Returns all matching records for the given list of uids and applies the uidList sorting for the result
-     *
-     * @param string $uidList
-     * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
-     */
     public function findByUids($uidList){
         $uids = GeneralUtility::intExplode(',', $uidList, true);
-        if ($uidList === '' || count($uids) === 0) {
-            return [];
-        }
+        $query = $this->createQuery();
+        $query->matching($query->in('uid', $uids));
+        $query->setOrderings([
+            'sorting' => QueryInterface::ORDER_ASCENDING
+        ]);
+        return $query->execute();
+    }
 
-        /** @var QueryBuilder $queryBuilder */
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_showcase_domain_model_project');
-        $rows = $queryBuilder
-            ->select('*')
-            ->from('tx_showcase_domain_model_project')
-            ->where($queryBuilder->expr()->in('uid', $uids))
-            ->orderBy('sorting')
-            ->executeQuery()
-            ->fetchAllAssociative();
-            return $this->dataMapper->map(Project::class, $rows);
+    public function getFromStorage($pid){
+        $query = $this->createQuery();
+        $query = $query->matching($query->equals('pid', $pid));
+        $query->setOrderings([
+            'sorting' => QueryInterface::ORDER_ASCENDING
+        ]);
+        return $query->execute();
     }
 
     // Adds the assigned categories as a string for CSS classes to the project
