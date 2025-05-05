@@ -44,7 +44,7 @@ class ProjectController extends ActionController
             case 'storage':
 
                 if($this->settings['recordstorage']){
-                    $projects = $this->projectRepository->findByPid($this->settings['recordstorage']);
+                    $projects = $this->projectRepository->findBy(['pid' => $this->settings['recordstorage']]);
                     $projectsFinal = $this->projectRepository->addCategoryStringToProjects($projects);
                     $this->view->assign('projects',$projectsFinal);
                 }
