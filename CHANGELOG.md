@@ -1,3 +1,9 @@
+## 2025-05-05
+- Several bug fixes in the Project Extbase Repository
+- Fixed a sorting issue for translated project records
+- Improved CSS styling: Made overlay only fade when mouse hovers
+- Version update to 3.0.3
+
 ## 2025-05-03
 - Added settings to adjust number of slider items on mobile, tablet and desktop
 - Updated the glide.js scripts to version 3.7.1
