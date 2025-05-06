@@ -16,12 +16,26 @@ The Showcase extension for TYPO3 is a versatile tool designed for creating dynam
 ## Screenshots
 <table>
 <tr>
-<td width="50%" valign="top">
-<img src="https://raw.githubusercontent.com/fullstackfreelancer/showcase/master/Resources/Public/Images/Screenshots/list_image_hover.webp">
-</td>
-<td width="50%" valign="top">
-<img src="https://raw.githubusercontent.com/fullstackfreelancer/showcase/master/Resources/Public/Images/Screenshots/plugin.jpg">
-</td>
+  <td width="33%" valign="top">
+  <img src="https://raw.githubusercontent.com/fullstackfreelancer/showcase/master/Resources/Public/Images/Screenshots/list_image_hover.webp">
+  </td>
+  <td width="33%" valign="top">
+  <img src="https://raw.githubusercontent.com/fullstackfreelancer/showcase/master/Resources/Public/Images/Screenshots/list_card_image_top.webp">
+  </td>
+  <td width="34%" valign="top">
+  <img src="https://raw.githubusercontent.com/fullstackfreelancer/showcase/master/Resources/Public/Images/Screenshots/detail_default.webp">
+  </td>
+</tr>
+<tr>
+  <td width="33%" valign="top">
+  <img src="https://raw.githubusercontent.com/fullstackfreelancer/showcase/master/Resources/Public/Images/Screenshots/showcase-full-plugin.png">
+  </td>
+  <td width="33%" valign="top">
+  <img src="https://raw.githubusercontent.com/fullstackfreelancer/showcase/master/Resources/Public/Images/Screenshots/showcase-new-plugin.png">
+  </td>
+  <td width="34%" valign="top">
+  <img src="https://raw.githubusercontent.com/fullstackfreelancer/showcase/master/Resources/Public/Images/Screenshots/plugin.jpg">
+  </td>
 </tr>
 </table>
 
