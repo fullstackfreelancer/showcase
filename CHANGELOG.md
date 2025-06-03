@@ -1,3 +1,8 @@
+## 2025-06-02
+- Fixed Bootstrap modal bug when using cards with buttons
+- Migrated plugins from list/list_type to CType! (Upgrade Wizard coming soon)
+- Version update to 3.1.0
+
 ## 2025-05-05
 - Several bug fixes in the Project Extbase Repository
 - Fixed a sorting issue for translated project records
