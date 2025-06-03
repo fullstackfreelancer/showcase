@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded',function(){
         targetObject.innerHTML = modalHeader + modalBody;
     }
 
-    var projectModal = document.getElementById('project-modal')
+    const projectModal = document.getElementById('project-modal')
 
     if(projectModal){
         projectModal.addEventListener('show.bs.modal', event => {
