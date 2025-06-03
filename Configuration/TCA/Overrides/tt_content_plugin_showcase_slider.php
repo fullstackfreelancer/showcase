@@ -5,26 +5,24 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') or die();
 
-$pluginSignature = 'slider';
-$extensionKey = 'showcase';
-
-ExtensionUtility::registerPlugin(
-    'showcase',         // extension name
-    'slider',            // plugin name
+$contentTypeName = ExtensionUtility::registerPlugin(
+    'Showcase',         // extension name
+    'Slider',            // plugin name
     'LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.slider.title',      // plugin title
     'showcase_icon',              // icon identifier
     'Showcase',              // group
     'LLL:EXT:showcase/Resources/Private/Language/locallang.xlf:plugin.slider.description' // plugin description
 );
 
+ExtensionManagementUtility::addPiFlexFormValue(
+    '*',
+    'FILE:EXT:showcase/Configuration/FlexForms/PluginSlider.xml',
+    $contentTypeName
+);
+
 ExtensionManagementUtility::addToAllTCAtypes(
     'tt_content',
     '--div--;Configuration,pi_flexform,',
-    $pluginSignature,
+    $contentTypeName,
     'after:subheader',
-);
-
-ExtensionManagementUtility::addPiFlexFormValue(
-    'showcase_slider',
-    'FILE:EXT:showcase/Configuration/FlexForms/PluginSlider.xml',
 );
