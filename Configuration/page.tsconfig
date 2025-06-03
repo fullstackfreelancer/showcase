@@ -1,4 +1,4 @@
-mod.web_layout.tt_content.preview.list.showcase_list = EXT:showcase/Resources/Private/Templates/Preview/ShowcaseList.html
-mod.web_layout.tt_content.preview.list.showcase_slider = EXT:showcase/Resources/Private/Templates/Preview/Showcase.html
-mod.web_layout.tt_content.preview.list.showcase_show = EXT:showcase/Resources/Private/Templates/Preview/Showcase.html
+mod.web_layout.tt_content.preview.showcase_list = EXT:showcase/Resources/Private/Templates/Preview/ShowcaseList.html
+mod.web_layout.tt_content.preview.showcase_slider = EXT:showcase/Resources/Private/Templates/Preview/Showcase.html
+mod.web_layout.tt_content.preview.showcase_show = EXT:showcase/Resources/Private/Templates/Preview/Showcase.html
 mod.web_list.table.tx_showcase_domain_model_url.hideTable = 1
