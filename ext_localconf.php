@@ -44,7 +44,7 @@ call_user_func(
         );
 
         $icons = [
-            'showcase_icon' => 'EXT:showcase/ext_icon.svg',
+            'showcase_icon' => 'EXT:showcase/Resources/Public/Icons/showcase.svg',
         ];
 
         $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);

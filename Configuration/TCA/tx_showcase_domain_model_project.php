@@ -18,7 +18,7 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime'
         ],
-        'iconfile' => 'EXT:showcase/ext_icon.svg',
+        'iconfile' => 'EXT:showcase/Resources/Public/Icons/showcase.svg',
         'security' => [
             'ignorePageTypeRestriction' => true
         ]
